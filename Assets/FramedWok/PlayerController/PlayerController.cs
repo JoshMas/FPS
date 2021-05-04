@@ -48,6 +48,7 @@ namespace FramedWok.PlayerController
         [SerializeField, Tooltip("The number of times the player can jump before landing")] private int numberOfJumps = 1;
         private int jumpCounter = 0;
         private bool isGrounded = true;
+        private float groundCheckCounter = 0.0f;
 
         /// <summary>
         /// Enables/disables the dash
@@ -98,6 +99,12 @@ namespace FramedWok.PlayerController
                 jumpCounter++;
                 isGrounded = false;
             }
+            groundCheckCounter += Time.deltaTime;
+            if(groundCheckCounter > 0.1f)
+            {
+                isGrounded = physics.IsGrounded();
+                groundCheckCounter = 0;
+            }
 
             //Dashing
             if(Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0)
@@ -119,7 +126,6 @@ namespace FramedWok.PlayerController
             physics.Dash(physics.GetDashDirection(horizontalDashOnly), dashStrength);
             isDashing = true;
             yield return new WaitForSeconds(dashDuration);
-            isGrounded = physics.IsGrounded();
             physics.RestrictVelocity(maxVelocity, 1);
             isDashing = false;
         }
