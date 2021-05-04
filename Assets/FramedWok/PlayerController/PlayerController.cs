@@ -65,6 +65,11 @@ namespace FramedWok.PlayerController
         /// How long the dash goes for before ending
         /// </summary>
         [SerializeField, Min(0)] private float dashDuration = 0.1f;
+        /// <summary>
+        /// How long it takes for the dash to become available again
+        /// </summary>
+        [SerializeField, Min(0)] private float dashCooldown = 1.0f;
+        public float dashTimer = 0.0f;
         private bool isDashing = false;
 
         // Start is called before the first frame update
@@ -95,9 +100,14 @@ namespace FramedWok.PlayerController
             }
 
             //Dashing
-            if(Input.GetKeyDown(input.dashKey) && canDash && !isDashing)
+            if(Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0)
             {
+                dashTimer = dashCooldown;
                 StartCoroutine(nameof(Dash));
+            }
+            if(dashTimer > 0)
+            {
+                dashTimer -= Time.deltaTime;
             }
         }
 

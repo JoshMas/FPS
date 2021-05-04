@@ -411,6 +411,8 @@ MonoBehaviour:
   horizontalDashOnly: 0
   dashStrength: 20
   dashDuration: 0.1
+  dashCooldown: 0.2
+  dashTimer: 0
 --- !u!114 &248342864
 MonoBehaviour:
   m_ObjectHideFlags: 0

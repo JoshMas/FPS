@@ -27,6 +27,8 @@ namespace FramedWok.PlayerController
         private SerializedProperty horizontalDashOnlyProperty;
         private SerializedProperty dashStrengthProperty;
         private SerializedProperty dashDurationProperty;
+        private SerializedProperty dashCooldownProperty;
+        private SerializedProperty dashTimerProperty;
 
         private AnimBool canJump = new AnimBool();
         private AnimBool canDash = new AnimBool();
@@ -48,6 +50,8 @@ namespace FramedWok.PlayerController
             horizontalDashOnlyProperty = serializedObject.FindProperty("horizontalDashOnly");
             dashStrengthProperty = serializedObject.FindProperty("dashStrength");
             dashDurationProperty = serializedObject.FindProperty("dashDuration");
+            dashCooldownProperty = serializedObject.FindProperty("dashCooldown");
+            dashTimerProperty = serializedObject.FindProperty("dashTimer");
 
             canJump.value = canJumpProperty.boolValue;
             canJump.valueChanged.AddListener(Repaint);
@@ -101,6 +105,9 @@ namespace FramedWok.PlayerController
                     EditorGUILayout.PropertyField(horizontalDashOnlyProperty);
                     EditorGUILayout.PropertyField(dashStrengthProperty);
                     EditorGUILayout.PropertyField(dashDurationProperty);
+                    EditorGUILayout.Space();
+                    EditorGUILayout.PropertyField(dashCooldownProperty);
+                    EditorGUILayout.PropertyField(dashTimerProperty);
 
                     EditorGUI.indentLevel--;
                 }
