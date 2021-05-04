@@ -1278,3 +1278,4 @@ Received Import Request.
 Start importing Assets/FramedWok/PlayerController/PlayerController.cs using Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f19dac1a4c30806ee6f0a5a1cd6f4f2f') in 0.006622 seconds
   Import took 0.010783 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
