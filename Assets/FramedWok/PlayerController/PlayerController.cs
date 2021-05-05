@@ -78,7 +78,7 @@ namespace FramedWok.PlayerController
         {
             input = GetComponent<PlayerInput>();
             physics = GetComponent<PlayerPhysics>();
-            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         // Update is called once per frame
@@ -123,7 +123,7 @@ namespace FramedWok.PlayerController
         /// </summary>
         private IEnumerator Dash()
         {
-            physics.Dash(physics.GetDashDirection(horizontalDashOnly), dashStrength);
+            physics.Dash(!horizontalDashOnly ? physics.GetDashDirection(horizontalDashOnly) : input.GetGroundMovementVector(), dashStrength);
             isDashing = true;
             yield return new WaitForSeconds(dashDuration);
             physics.RestrictVelocity(maxVelocity, 1);
