@@ -118,12 +118,17 @@ namespace FramedWok.PlayerController
             }
         }
 
+        private void FixedUpdate()
+        {
+            //Remove the walking physics from Update and put them in here
+        }
+
         /// <summary>
         /// Use the dash, and after a timer, cancel all momentum
         /// </summary>
         private IEnumerator Dash()
         {
-            physics.Dash(!horizontalDashOnly ? physics.GetDashDirection(horizontalDashOnly) : input.GetGroundMovementVector(), dashStrength);
+            physics.Dash(physics.GetDashDirection(horizontalDashOnly, input.GetGroundMovementVector().normalized), dashStrength);
             isDashing = true;
             yield return new WaitForSeconds(dashDuration);
             physics.RestrictVelocity(maxVelocity, 1);

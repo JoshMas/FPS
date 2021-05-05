@@ -14,6 +14,8 @@ namespace FramedWok.PlayerController
         private Rigidbody playerRigidbody;
         private Collider playerCollider;
 
+        private RaycastHit groundHit;
+
         /// <summary>
         /// The length of the Raycast used to check if the playerCollider is on top of another collider
         /// </summary>
@@ -34,6 +36,10 @@ namespace FramedWok.PlayerController
         /// <param name="_acceleration">The player's movement vector</param>
         public void AddGroundAcceleration(Vector3 _acceleration)
         {
+            if (groundHit.normal != null)
+            {
+
+            }
             playerRigidbody.AddForce(_acceleration, ForceMode.VelocityChange);
         }
 
@@ -82,9 +88,10 @@ namespace FramedWok.PlayerController
         /// Get the direction the camera is looking as a normalised vector3
         /// </summary>
         /// <param name="_restrictYAxis">If true, the dash can only travel on the XZ plane</param>
-        public Vector3 GetDashDirection(bool _restrictYAxis)
+        public Vector3 GetDashDirection(bool _restrictYAxis, Vector3 _moveDir)
         {
-            Vector3 direction = Camera.main.transform.TransformPoint(Vector3.forward) - Camera.main.transform.position;
+            Vector3 initialDir = Camera.main.transform.TransformPoint(Vector3.forward) - Camera.main.transform.position;
+            Vector3 direction = _moveDir == Vector3.zero ? initialDir : new Vector3(_moveDir.x, initialDir.y, _moveDir.z);
             if (_restrictYAxis)
             {
                 direction = new Vector3(direction.x, 0, direction.z);
@@ -97,7 +104,7 @@ namespace FramedWok.PlayerController
         /// </summary>
         public bool IsGrounded()
         {
-            return Physics.Raycast(transform.position, Vector3.down, groundCheckLength);
+            return Physics.Raycast(transform.position, Vector3.down, out groundHit, groundCheckLength);
         }
     }
 }
