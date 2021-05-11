@@ -14,8 +14,6 @@ namespace FramedWok.PlayerController
         private Rigidbody playerRigidbody;
         private Collider playerCollider;
 
-        private RaycastHit groundHit;
-
         /// <summary>
         /// The length of the Raycast used to check if the playerCollider is on top of another collider
         /// </summary>
@@ -36,11 +34,7 @@ namespace FramedWok.PlayerController
         /// <param name="_acceleration">The player's movement vector</param>
         public void AddGroundAcceleration(Vector3 _acceleration)
         {
-            if (groundHit.normal != null)
-            {
-
-            }
-            playerRigidbody.AddForce(_acceleration, ForceMode.VelocityChange);
+            playerRigidbody.MovePosition(playerRigidbody.position + _acceleration);
         }
 
         /// <summary>
@@ -104,7 +98,7 @@ namespace FramedWok.PlayerController
         /// </summary>
         public bool IsGrounded()
         {
-            return Physics.Raycast(transform.position, Vector3.down, out groundHit, groundCheckLength);
+            return Physics.Raycast(transform.position, Vector3.down, groundCheckLength);
         }
     }
 }

@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18270
+  m_Name: pb_Mesh16688
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3295,17 +3295,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fcc06fcd2f5004982757d9f6f7621d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkAcceleration: 10
-  maxVelocity: 1
+  walkAcceleration: 5
+  maxVelocity: 5
   rateOfRestriction: 0.5
   canJump: 1
   airControl: 0.5
-  jumpStrength: 5
+  jumpStrength: 6
   numberOfJumps: 1
   canDash: 1
   horizontalDashOnly: 0
-  dashStrength: 20
-  dashDuration: 0.1
+  dashStrength: 40
+  dashDuration: 0.05
   dashCooldown: 0.2
   dashTimer: 0
 --- !u!114 &248342864
@@ -3336,7 +3336,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &248342866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3373,7 +3373,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5250
+  m_Name: pb_Mesh16676
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4217,7 +4217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1071803426
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7548,7 +7548,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5386
+  m_Name: pb_Mesh16602
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

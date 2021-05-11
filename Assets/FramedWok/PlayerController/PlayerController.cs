@@ -84,11 +84,6 @@ namespace FramedWok.PlayerController
         // Update is called once per frame
         void Update()
         {
-            //Walking
-            physics.AddGroundAcceleration(input.GetGroundMovementVector() * walkAcceleration * Time.deltaTime * (isGrounded ? 1 : airControl));
-            //Restrict velocity while on the ground
-            if(isGrounded)
-                physics.RestrictVelocity(maxVelocity, rateOfRestriction * Time.deltaTime);
             //Set the camera angle
             physics.Rotate(input.GetCameraRotation());
 
@@ -103,6 +98,8 @@ namespace FramedWok.PlayerController
             if(groundCheckCounter > 0.1f)
             {
                 isGrounded = physics.IsGrounded();
+                if (isGrounded)
+                    jumpCounter = 0;
                 groundCheckCounter = 0;
             }
 
@@ -120,7 +117,11 @@ namespace FramedWok.PlayerController
 
         private void FixedUpdate()
         {
-            //Remove the walking physics from Update and put them in here
+            //Walking
+            physics.AddGroundAcceleration(input.GetGroundMovementVector(isGrounded) * walkAcceleration * Time.deltaTime * (isGrounded ? 1 : airControl));
+            //Restrict velocity while on the ground
+            if (isGrounded)
+                physics.RestrictVelocity(maxVelocity, rateOfRestriction * Time.deltaTime);
         }
 
         /// <summary>
@@ -128,7 +129,7 @@ namespace FramedWok.PlayerController
         /// </summary>
         private IEnumerator Dash()
         {
-            physics.Dash(physics.GetDashDirection(horizontalDashOnly, input.GetGroundMovementVector().normalized), dashStrength);
+            physics.Dash(physics.GetDashDirection(horizontalDashOnly, input.GetGroundMovementVector(isGrounded).normalized), dashStrength);
             isDashing = true;
             yield return new WaitForSeconds(dashDuration);
             physics.RestrictVelocity(maxVelocity, 1);
