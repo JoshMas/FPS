@@ -114,10 +114,10 @@ namespace FramedWok.PlayerController
         private void FixedUpdate()
         {
             //Walking
-            physics.AddGroundAcceleration(input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl));
+            physics.SetGroundMovement(input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl));
             //Restrict velocity while on the ground
             if (isGrounded)
-                physics.RestrictVelocity(walkSpeed, rateOfRestriction * Time.deltaTime);
+                physics.RestrictVelocity(0, rateOfRestriction * Time.deltaTime);
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace FramedWok.PlayerController
             physics.Dash(physics.GetDashDirection(horizontalDashOnly, input.GetGroundMovementVector(isGrounded).normalized), dashStrength);
             isDashing = true;
             yield return new WaitForSeconds(dashDuration);
-            physics.RestrictVelocity(walkSpeed * 0.5f, 1);
+            physics.RestrictVelocity(0, 1);
             isDashing = false;
         }
 

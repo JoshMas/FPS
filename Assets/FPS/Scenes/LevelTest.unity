@@ -391,15 +391,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 10
-  rateOfRestriction: 0.5
+  rateOfRestriction: 0.9
   canJump: 1
   airControl: 0.5
   jumpStrength: 10
   numberOfJumps: 1
   canDash: 1
   horizontalDashOnly: 0
-  dashStrength: 40
-  dashDuration: 0.05
+  dashStrength: 50
+  dashDuration: 0.1
   dashCooldown: 0.5
   dashTimer: 0
 --- !u!114 &1814951448
@@ -414,7 +414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95574bdd0f4933348a0722e1f5658c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheckLength: 2.1
 --- !u!54 &1814951449
 Rigidbody:
   m_ObjectHideFlags: 0
