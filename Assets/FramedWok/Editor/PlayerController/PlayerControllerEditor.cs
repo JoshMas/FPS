@@ -14,8 +14,7 @@ namespace FramedWok.PlayerController
     {
         private PlayerController controller;
 
-        private SerializedProperty walkAccelerationProperty;
-        private SerializedProperty maxVelocityProperty;
+        private SerializedProperty walkSpeedProperty;
         private SerializedProperty rateOfRestrictionProperty;
 
         private SerializedProperty canJumpProperty;
@@ -37,8 +36,7 @@ namespace FramedWok.PlayerController
         {
             controller = target as PlayerController;
 
-            walkAccelerationProperty = serializedObject.FindProperty("walkAcceleration");
-            maxVelocityProperty = serializedObject.FindProperty("maxVelocity");
+            walkSpeedProperty = serializedObject.FindProperty("walkSpeed");
             rateOfRestrictionProperty = serializedObject.FindProperty("rateOfRestriction");
 
             canJumpProperty = serializedObject.FindProperty("canJump");
@@ -65,8 +63,7 @@ namespace FramedWok.PlayerController
 
             EditorGUILayout.BeginVertical(GUI.skin.box);
             {
-                EditorGUILayout.PropertyField(walkAccelerationProperty);
-                EditorGUILayout.PropertyField(maxVelocityProperty);
+                EditorGUILayout.PropertyField(walkSpeedProperty);
                 EditorGUILayout.PropertyField(rateOfRestrictionProperty);
             }
             EditorGUILayout.EndVertical();

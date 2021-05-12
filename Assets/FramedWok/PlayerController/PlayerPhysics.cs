@@ -23,6 +23,7 @@ namespace FramedWok.PlayerController
         {
             playerRigidbody = GetComponent<Rigidbody>();
             playerRigidbody.freezeRotation = true;
+            playerRigidbody.useGravity = false;
             playerCollider = GetComponent<Collider>();
             if (playerCollider == null)
                 playerCollider = gameObject.AddComponent<CapsuleCollider>();
@@ -35,6 +36,7 @@ namespace FramedWok.PlayerController
         public void AddGroundAcceleration(Vector3 _acceleration)
         {
             playerRigidbody.MovePosition(playerRigidbody.position + _acceleration);
+            playerRigidbody.AddForce(Vector3.down * 19.6f, ForceMode.Acceleration);
         }
 
         /// <summary>

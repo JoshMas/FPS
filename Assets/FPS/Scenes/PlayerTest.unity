@@ -3295,8 +3295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fcc06fcd2f5004982757d9f6f7621d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkAcceleration: 5
-  maxVelocity: 5
+  walkSpeed: 5
   rateOfRestriction: 0.5
   canJump: 1
   airControl: 0.5

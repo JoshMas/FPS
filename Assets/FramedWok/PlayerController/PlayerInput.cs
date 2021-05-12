@@ -23,7 +23,8 @@ namespace FramedWok.PlayerController
         /// </summary>
         public Vector3 GetGroundMovementVector(bool _isGrounded)
         {
-            Vector3 vector = (transform.TransformPoint(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))) - transform.position).normalized;
+            Vector3 vector = (transform.TransformPoint(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))) - transform.position);
+            vector = Vector3.ClampMagnitude(vector, 1.0f);
             if (_isGrounded && vector != Vector3.zero)
                 vector += Vector3.down;
 

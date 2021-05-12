@@ -20,11 +20,7 @@ namespace FramedWok.PlayerController
         /// <summary>
         /// How quickly the player accelerates
         /// </summary>
-        [SerializeField, Min(0)] private float walkAcceleration = 100.0f;
-        /// <summary>
-        /// The player's theoretical max velocity
-        /// </summary>
-        [SerializeField, Min(0)] private float maxVelocity = 10.0f;
+        [SerializeField, Min(0)] private float walkSpeed = 100.0f;
         /// <summary>
         /// The rate at which the player's current velocity is brought down 
         /// </summary>
@@ -94,14 +90,14 @@ namespace FramedWok.PlayerController
                 jumpCounter++;
                 isGrounded = false;
             }
-            groundCheckCounter += Time.deltaTime;
-            if(groundCheckCounter > 0.1f)
-            {
-                isGrounded = physics.IsGrounded();
-                if (isGrounded)
-                    jumpCounter = 0;
-                groundCheckCounter = 0;
-            }
+            //groundCheckCounter += Time.deltaTime;
+            //if(groundCheckCounter > 0.1f)
+            //{
+            //    isGrounded = physics.IsGrounded();
+            //    if (isGrounded)
+            //        jumpCounter = 0;
+            //    groundCheckCounter = 0;
+            //}
 
             //Dashing
             if(Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0)
@@ -118,10 +114,10 @@ namespace FramedWok.PlayerController
         private void FixedUpdate()
         {
             //Walking
-            physics.AddGroundAcceleration(input.GetGroundMovementVector(isGrounded) * walkAcceleration * Time.deltaTime * (isGrounded ? 1 : airControl));
+            physics.AddGroundAcceleration(input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl));
             //Restrict velocity while on the ground
             if (isGrounded)
-                physics.RestrictVelocity(maxVelocity, rateOfRestriction * Time.deltaTime);
+                physics.RestrictVelocity(walkSpeed, rateOfRestriction * Time.deltaTime);
         }
 
         /// <summary>
@@ -129,10 +125,11 @@ namespace FramedWok.PlayerController
         /// </summary>
         private IEnumerator Dash()
         {
+            isGrounded = false;
             physics.Dash(physics.GetDashDirection(horizontalDashOnly, input.GetGroundMovementVector(isGrounded).normalized), dashStrength);
             isDashing = true;
             yield return new WaitForSeconds(dashDuration);
-            physics.RestrictVelocity(maxVelocity, 1);
+            physics.RestrictVelocity(walkSpeed * 0.5f, 1);
             isDashing = false;
         }
 
@@ -145,10 +142,10 @@ namespace FramedWok.PlayerController
         {
             StopCoroutine(nameof(Dash));
             isDashing = false;
-            physics.RestrictVelocity(maxVelocity, rateOfRestriction);
-            isGrounded = physics.IsGrounded();
-            if (isGrounded)
-                jumpCounter = 0;
+            //physics.RestrictVelocity(walkSpeed, rateOfRestriction);
+            isGrounded = true;
+            //if (isGrounded)
+            jumpCounter = 0;
         }
     }
 }
