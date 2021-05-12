@@ -227,6 +227,14 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8871836844728433589, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8800087513327901825, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -249,15 +257,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -271,9 +279,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3273512215000292709, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1553644824505079423, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
       propertyPath: m_Name
       value: 1v1_Map_v1
+      objectReference: {fileID: 0}
+    - target: {fileID: 991876850920851134, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946374111041634654, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649552555421375015, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
+      propertyPath: m_Convex
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
