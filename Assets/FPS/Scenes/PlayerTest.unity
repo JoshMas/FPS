@@ -3348,6 +3348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f20ea7853dbf341a2074c570c88491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minY: -60
+  maxY: 60
   jumpKey: 32
   dashKey: 304
   mouseSensitivity: {x: 5, y: 2}

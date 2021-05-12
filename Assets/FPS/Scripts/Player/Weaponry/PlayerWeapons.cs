@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,16 @@ using UnityEngine;
 public class PlayerWeapons : MonoBehaviour
 {
     [SerializeField]
-    private float rateOfPrimaryFire;
+    public float rateOfPrimaryFire;
+
+    private float rechamberTime;
     [SerializeField]
     private GameObject secondaryFire;
     [SerializeField]
     private float secondaryCooldown;
+
+    private Transform camTransform;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -17,22 +23,43 @@ public class PlayerWeapons : MonoBehaviour
         
     }
 
+    private void OnEnable()
+    {
+        camTransform = Camera.main.transform;
+        rechamberTime = 0;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            PrimaryFire();
+        if(rechamberTime > 0)
+        {
+            rechamberTime -= Time.deltaTime;
+        }
+        if(rechamberTime == 0)
+        {
+            
+            if (Input.GetMouseButtonDown(0))
+            {
+                PrimaryFire();
+               
+            }
+        }
+
+        
+            
     }
 
     public void PrimaryFire()
     {
-        Transform camTransform = Camera.main.transform;
+       
         Ray bullet = new Ray(camTransform.position, camTransform.TransformPoint(Vector3.forward) - camTransform.position);
+        rechamberTime = rateOfPrimaryFire;
         Debug.Log(Physics.Raycast(bullet));
     }
 
     public void SecondaryFire()
     {
-
+        
     }
 }
