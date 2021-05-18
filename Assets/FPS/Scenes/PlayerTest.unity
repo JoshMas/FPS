@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16688
+  m_Name: pb_Mesh16690
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3365,9 +3365,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691b1e3eb77b6a54584a4113a110122c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rateOfPrimaryFire: 0
+  rateOfPrimaryFire: 0.5
   secondaryFire: {fileID: 0}
   secondaryCooldown: 0
+  bloomInc: 0.2
+  bloomMin: 0
+  bloomMax: 0.5
+  bloomReduct: 0.003
+  range: 20
 --- !u!43 &400041872
 Mesh:
   m_ObjectHideFlags: 0
