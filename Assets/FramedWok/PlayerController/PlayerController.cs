@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Mirror;
+
 
 namespace FramedWok.PlayerController
 {
@@ -12,7 +14,7 @@ namespace FramedWok.PlayerController
     /// </summary>
     [RequireComponent(typeof(PlayerInput))]
     [RequireComponent(typeof(PlayerPhysics))]
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : NetworkBehaviour
     {
         private PlayerInput input;
         private PlayerPhysics physics;
@@ -72,52 +74,62 @@ namespace FramedWok.PlayerController
         // Start is called before the first frame update
         void Start()
         {
-            input = GetComponent<PlayerInput>();
-            physics = GetComponent<PlayerPhysics>();
-            Cursor.lockState = CursorLockMode.Locked;
+            if (isLocalPlayer)
+            {
+                input = GetComponent<PlayerInput>();
+                physics = GetComponent<PlayerPhysics>();
+                GetComponentInChildren<Camera>().tag = "MainCamera";
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
-            //Set the camera angle
-            physics.Rotate(input.GetCameraRotation());
+            if (isLocalPlayer)
+            {
+                //Set the camera angle
+                physics.Rotate(input.GetCameraRotation());
 
-            //Jumping
-            if (Input.GetKeyDown(input.jumpKey) && canJump && jumpCounter < numberOfJumps)
-            {
-                physics.Jump(jumpStrength);
-                jumpCounter++;
-                isGrounded = false;
-            }
-            //groundCheckCounter += Time.deltaTime;
-            //if(groundCheckCounter > 0.1f)
-            //{
-            //    isGrounded = physics.IsGrounded();
-            //    if (isGrounded)
-            //        jumpCounter = 0;
-            //    groundCheckCounter = 0;
-            //}
+                //Jumping
+                if (Input.GetKeyDown(input.jumpKey) && canJump && jumpCounter < numberOfJumps)
+                {
+                    physics.Jump(jumpStrength);
+                    jumpCounter++;
+                    isGrounded = false;
+                }
+                //groundCheckCounter += Time.deltaTime;
+                //if(groundCheckCounter > 0.1f)
+                //{
+                //    isGrounded = physics.IsGrounded();
+                //    if (isGrounded)
+                //        jumpCounter = 0;
+                //    groundCheckCounter = 0;
+                //}
 
-            //Dashing
-            if(Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0)
-            {
-                dashTimer = dashCooldown;
-                StartCoroutine(nameof(Dash));
-            }
-            if(dashTimer > 0)
-            {
-                dashTimer -= Time.deltaTime;
+                //Dashing
+                if (Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0)
+                {
+                    dashTimer = dashCooldown;
+                    StartCoroutine(nameof(Dash));
+                }
+                if (dashTimer > 0)
+                {
+                    dashTimer -= Time.deltaTime;
+                }
             }
         }
 
         private void FixedUpdate()
         {
-            //Walking
-            physics.AddGroundAcceleration(input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl));
-            //Restrict velocity while on the ground
-            if (isGrounded)
-                physics.RestrictVelocity(walkSpeed, rateOfRestriction * Time.deltaTime);
+            if (isLocalPlayer)
+            {
+                //Walking
+                physics.AddGroundAcceleration(input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl));
+                //Restrict velocity while on the ground
+                if (isGrounded)
+                    physics.RestrictVelocity(walkSpeed, rateOfRestriction * Time.deltaTime);
+            }
         }
 
         /// <summary>
