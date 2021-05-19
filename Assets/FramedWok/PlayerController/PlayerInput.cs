@@ -39,7 +39,6 @@ namespace FramedWok.PlayerController
         public Vector3 GetCameraRotation()
         {
             Vector3 rotation = Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivity.x - Vector3.right * Input.GetAxis("Mouse Y") * mouseSensitivity.y;
-            rotation += Camera.main.transform.eulerAngles;
             //rotation.Set(rotation.x, rotation.y, 0);
             return rotation;
         }

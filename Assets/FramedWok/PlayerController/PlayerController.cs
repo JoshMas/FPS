@@ -78,10 +78,10 @@ namespace FramedWok.PlayerController
         private bool isDashing = false;
         #endregion
 
-        private Vector3 rotation;
-        private bool jump;
-        private bool dash;
-        private Vector3 movement;
+        private Vector3 rotation = Vector3.zero;
+        private bool jump = false;
+        private bool dash = false;
+        private Vector3 movement = Vector3.zero;
 
 
         // Start is called before the first frame update
@@ -98,8 +98,6 @@ namespace FramedWok.PlayerController
                 cameraMain.position = cameraPoint.position;
                 cameraMain.rotation = cameraPoint.rotation;
             }
-            if(isServer)
-                physics.IsServer();
         }
 
         // Update is called once per frame
@@ -115,56 +113,111 @@ namespace FramedWok.PlayerController
                     Cursor.lockState = CursorLockMode.None;
             }
 
-            if (isServer)
+            ActionStuff();
+            if (hasAuthority)
+                ActionServer();
+        }
+
+        [Command]
+        private void ActionServer()
+        {
+            //Set the camera angle
+            physics.Rotate(rotation);
+
+            //Jumping
+            if (jump)
             {
-                //Set the camera angle
-                physics.Rotate(rotation);
+                jump = false;
+                physics.Jump(jumpStrength);
+                jumpCounter++;
+                isGrounded = false;
+            }
+            //groundCheckCounter += Time.deltaTime;
+            //if(groundCheckCounter > 0.1f)
+            //{
+            //    isGrounded = physics.IsGrounded();
+            //    if (isGrounded)
+            //        jumpCounter = 0;
+            //    groundCheckCounter = 0;
+            //}
 
-                //Jumping
-                if (jump)
-                {
-                    jump = false;
-                    physics.Jump(jumpStrength);
-                    jumpCounter++;
-                    isGrounded = false;
-                }
-                //groundCheckCounter += Time.deltaTime;
-                //if(groundCheckCounter > 0.1f)
-                //{
-                //    isGrounded = physics.IsGrounded();
-                //    if (isGrounded)
-                //        jumpCounter = 0;
-                //    groundCheckCounter = 0;
-                //}
+            //Dashing
+            if (dash)
+            {
+                dash = false;
+                dashTimer = dashCooldown;
+                StartCoroutine(nameof(Dash));
+            }
+            if (dashTimer > 0)
+            {
+                dashTimer -= Time.deltaTime;
+            }
+        }
 
-                //Dashing
-                if (dash)
-                {
-                    dash = false;
-                    dashTimer = dashCooldown;
-                    StartCoroutine(nameof(Dash));
-                }
-                if (dashTimer > 0)
-                {
-                    dashTimer -= Time.deltaTime;
-                }
+        private void ActionStuff()
+        {
+            //Set the camera angle
+            physics.Rotate(rotation);
+
+            //Jumping
+            if (jump)
+            {
+                jump = false;
+                physics.Jump(jumpStrength);
+                jumpCounter++;
+                isGrounded = false;
+            }
+            //groundCheckCounter += Time.deltaTime;
+            //if(groundCheckCounter > 0.1f)
+            //{
+            //    isGrounded = physics.IsGrounded();
+            //    if (isGrounded)
+            //        jumpCounter = 0;
+            //    groundCheckCounter = 0;
+            //}
+
+            //Dashing
+            if (dash)
+            {
+                dash = false;
+                dashTimer = dashCooldown;
+                StartCoroutine(nameof(Dash));
+            }
+            if (dashTimer > 0)
+            {
+                dashTimer -= Time.deltaTime;
             }
         }
 
         private void FixedUpdate()
         {
             if (isLocalPlayer)
-            {
                 movement = input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl);
-            }
-            if (isServer)
-            {
-                //Walking
-                physics.AddGroundAcceleration(movement);
-                //Restrict velocity while on the ground
-                if (isGrounded)
-                    physics.RestrictVelocity(walkSpeed, rateOfRestriction * Time.deltaTime);
-            }
+
+            MoveStuff();
+            if(hasAuthority)
+                MoveServer();
+        }
+
+        [Command]
+        private void MoveServer()
+        {
+            //Walking
+            physics.AddGroundAcceleration(movement);
+            //Restrict velocity while on the ground
+            if (isGrounded)
+                physics.RestrictVelocity(walkSpeed, rateOfRestriction * Time.deltaTime);
+
+        }
+
+        private void MoveStuff()
+        {
+            //Walking
+            physics.AddGroundAcceleration(movement);
+            //Restrict velocity while on the ground
+            if (isGrounded)
+                physics.RestrictVelocity(walkSpeed, rateOfRestriction * Time.deltaTime);
+
         }
 
         /// <summary>
