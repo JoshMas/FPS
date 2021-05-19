@@ -29,6 +29,11 @@ namespace FramedWok.PlayerController
                 playerCollider = gameObject.AddComponent<CapsuleCollider>();
         }
 
+        public void IsLocalPlayer()
+        {
+            playerRigidbody.isKinematic = false;
+        }
+
         /// <summary>
         /// Adds a force as a velocity change, for moving on the XZ plane
         /// </summary>

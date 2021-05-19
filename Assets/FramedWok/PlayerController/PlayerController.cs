@@ -18,6 +18,7 @@ namespace FramedWok.PlayerController
     {
         private PlayerInput input;
         private PlayerPhysics physics;
+        private Transform cameraPoint;
 
         /// <summary>
         /// How quickly the player accelerates
@@ -78,7 +79,12 @@ namespace FramedWok.PlayerController
             {
                 input = GetComponent<PlayerInput>();
                 physics = GetComponent<PlayerPhysics>();
-                GetComponentInChildren<Camera>().tag = "MainCamera";
+                physics.IsLocalPlayer();
+                cameraPoint = GetComponentsInChildren<Transform>()[1];
+                Transform cameraMain = Camera.main.transform;
+                cameraMain.parent = cameraPoint;
+                cameraMain.position = cameraPoint.position;
+                cameraMain.rotation = cameraPoint.rotation;
                 Cursor.lockState = CursorLockMode.Locked;
             }
         }

@@ -27,7 +27,7 @@ public class PlayerWeapons : MonoBehaviour
     public void PrimaryFire()
     {
         Transform camTransform = Camera.main.transform;
-        Ray bullet = new Ray(camTransform.position, camTransform.TransformPoint(Vector3.forward) - camTransform.position);
+        Ray bullet = new Ray(camTransform.position, camTransform.TransformDirection(Vector3.forward));
         Debug.Log(Physics.Raycast(bullet)); 
     }
 
