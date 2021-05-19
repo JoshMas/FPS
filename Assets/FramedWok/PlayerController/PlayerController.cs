@@ -20,6 +20,7 @@ namespace FramedWok.PlayerController
         private PlayerPhysics physics;
         private Transform cameraPoint;
 
+        #region movement
         /// <summary>
         /// How quickly the player accelerates
         /// </summary>
@@ -28,7 +29,9 @@ namespace FramedWok.PlayerController
         /// The rate at which the player's current velocity is brought down 
         /// </summary>
         [SerializeField, Range(0, 1), Tooltip("How quickly the player's velocity is restricted to maximum. 0 means it's never used, 1 means it's used immediately")] private float rateOfRestriction = 0.5f;
+        #endregion
 
+        #region jump
         /// <summary>
         /// Enables/disable the jump
         /// </summary>
@@ -47,8 +50,10 @@ namespace FramedWok.PlayerController
         [SerializeField, Tooltip("The number of times the player can jump before landing")] private int numberOfJumps = 1;
         private int jumpCounter = 0;
         private bool isGrounded = true;
-        private float groundCheckCounter = 0.0f;
+        //private float groundCheckCounter = 0.0f;
+        #endregion
 
+        #region dash
         /// <summary>
         /// Enables/disables the dash
         /// </summary>
@@ -71,22 +76,30 @@ namespace FramedWok.PlayerController
         [SerializeField, Min(0)] private float dashCooldown = 1.0f;
         public float dashTimer = 0.0f;
         private bool isDashing = false;
+        #endregion
+
+        private Vector3 rotation;
+        private bool jump;
+        private bool dash;
+        private Vector3 movement;
+
 
         // Start is called before the first frame update
         void Start()
         {
+            input = GetComponent<PlayerInput>();
+            physics = GetComponent<PlayerPhysics>();
+            Cursor.lockState = CursorLockMode.Locked;
             if (isLocalPlayer)
             {
-                input = GetComponent<PlayerInput>();
-                physics = GetComponent<PlayerPhysics>();
-                physics.IsLocalPlayer();
                 cameraPoint = GetComponentsInChildren<Transform>()[1];
                 Transform cameraMain = Camera.main.transform;
                 cameraMain.parent = cameraPoint;
                 cameraMain.position = cameraPoint.position;
                 cameraMain.rotation = cameraPoint.rotation;
-                Cursor.lockState = CursorLockMode.Locked;
             }
+            if(isServer)
+                physics.IsServer();
         }
 
         // Update is called once per frame
@@ -94,12 +107,23 @@ namespace FramedWok.PlayerController
         {
             if (isLocalPlayer)
             {
+                rotation = input.GetCameraRotation();
+                jump = Input.GetKeyDown(input.jumpKey) && canJump && jumpCounter < numberOfJumps;
+                dash = Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0;
+                //Pause
+                if (Input.GetKeyDown(KeyCode.Escape))
+                    Cursor.lockState = CursorLockMode.None;
+            }
+
+            if (isServer)
+            {
                 //Set the camera angle
-                physics.Rotate(input.GetCameraRotation());
+                physics.Rotate(rotation);
 
                 //Jumping
-                if (Input.GetKeyDown(input.jumpKey) && canJump && jumpCounter < numberOfJumps)
+                if (jump)
                 {
+                    jump = false;
                     physics.Jump(jumpStrength);
                     jumpCounter++;
                     isGrounded = false;
@@ -114,8 +138,9 @@ namespace FramedWok.PlayerController
                 //}
 
                 //Dashing
-                if (Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0)
+                if (dash)
                 {
+                    dash = false;
                     dashTimer = dashCooldown;
                     StartCoroutine(nameof(Dash));
                 }
@@ -130,8 +155,12 @@ namespace FramedWok.PlayerController
         {
             if (isLocalPlayer)
             {
+                movement = input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl);
+            }
+            if (isServer)
+            {
                 //Walking
-                physics.AddGroundAcceleration(input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl));
+                physics.AddGroundAcceleration(movement);
                 //Restrict velocity while on the ground
                 if (isGrounded)
                     physics.RestrictVelocity(walkSpeed, rateOfRestriction * Time.deltaTime);

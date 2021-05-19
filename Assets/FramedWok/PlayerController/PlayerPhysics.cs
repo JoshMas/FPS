@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+using Mirror;
 
 namespace FramedWok.PlayerController
 {
@@ -9,7 +9,7 @@ namespace FramedWok.PlayerController
     /// Does not use the mass of the attached RigidBody
     /// </summary>
     [RequireComponent(typeof(Rigidbody))]
-    public class PlayerPhysics : MonoBehaviour
+    public class PlayerPhysics : NetworkBehaviour
     {
         private Rigidbody playerRigidbody;
         private Collider playerCollider;
@@ -23,13 +23,14 @@ namespace FramedWok.PlayerController
         {
             playerRigidbody = GetComponent<Rigidbody>();
             playerRigidbody.freezeRotation = true;
+            playerRigidbody.isKinematic = false;
             playerRigidbody.useGravity = false;
             playerCollider = GetComponent<Collider>();
             if (playerCollider == null)
                 playerCollider = gameObject.AddComponent<CapsuleCollider>();
         }
 
-        public void IsLocalPlayer()
+        public void IsServer()
         {
             playerRigidbody.isKinematic = false;
         }

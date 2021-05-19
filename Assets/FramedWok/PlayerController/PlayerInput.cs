@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Mirror;
+
 namespace FramedWok.PlayerController
 {
     /// <summary>
@@ -9,7 +11,7 @@ namespace FramedWok.PlayerController
     /// Uses the horizontal and vertical input axes for ground movement
     /// Default jump and dash buttons are Space and LeftShift respectively
     /// </summary>
-    public class PlayerInput : MonoBehaviour
+    public class PlayerInput : NetworkBehaviour
     {
         public KeyCode jumpKey = KeyCode.Space;
         public KeyCode dashKey = KeyCode.LeftShift;

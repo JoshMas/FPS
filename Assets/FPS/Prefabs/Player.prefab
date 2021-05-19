@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7892159949194707753}
-  - component: {fileID: 7892159949194707755}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -31,14 +30,6 @@ Transform:
   m_Father: {fileID: 7892159949341188553}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &7892159949194707755
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7892159949194707756}
-  m_Enabled: 1
 --- !u!1 &7892159949341188557
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,6 +48,7 @@ GameObject:
   - component: {fileID: 7892159949341188552}
   - component: {fileID: 7892159949341188548}
   - component: {fileID: 7892159949341188547}
+  - component: {fileID: 6872020461136871959}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -154,6 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f20ea7853dbf341a2074c570c88491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   jumpKey: 32
   dashKey: 304
   mouseSensitivity: {x: 5, y: 2}
@@ -185,6 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95574bdd0f4933348a0722e1f5658c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   groundCheckLength: 2.1
 --- !u!114 &7892159949341188552
 MonoBehaviour:
@@ -200,7 +196,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  cameraPoint: {fileID: 0}
   walkSpeed: 10
   rateOfRestriction: 0.5
   canJump: 1
@@ -248,3 +243,25 @@ MonoBehaviour:
   localPositionSensitivity: 0.01
   localRotationSensitivity: 0.01
   localScaleSensitivity: 0.01
+--- !u!114 &6872020461136871959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7892159949341188557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83392ae5c1b731446909f252fd494ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  target: {fileID: 7892159949341188550}
+  clientAuthority: 0
+  syncVelocity: 1
+  clearVelocity: 0
+  velocitySensitivity: 0.1
+  syncAngularVelocity: 1
+  clearAngularVelocity: 0
+  angularVelocitySensitivity: 0.1
