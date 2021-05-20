@@ -13,9 +13,16 @@ namespace FramedWok.PlayerController
     /// </summary>
     public class PlayerInput : MonoBehaviour
     {
+      
+        [Header("Rotation Variables")]
+       
+       
+        public float minY = -60, maxY = 60;
+        private float _rotY;
+        private float _rotX;
         public KeyCode jumpKey = KeyCode.Space;
         public KeyCode dashKey = KeyCode.LeftShift;
-        /// <summary>
+     
         /// How much the mouse movement affects the rotation of the camera
         /// </summary>
         [SerializeField] private Vector2 mouseSensitivity = new Vector2(5.0f, 2.0f);
@@ -38,7 +45,13 @@ namespace FramedWok.PlayerController
         /// </summary>
         public Vector3 GetCameraRotation()
         {
-            Vector3 rotation = Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivity.x - Vector3.right * Input.GetAxis("Mouse Y") * mouseSensitivity.y;
+            //Maximum Y rotation
+            _rotY += Input.GetAxis("Mouse Y") * mouseSensitivity.y;
+            _rotY = Mathf.Clamp(_rotY, minY, maxY);
+            _rotX += Input.GetAxis("Mouse X") * mouseSensitivity.x;
+
+            Vector3 rotation = new Vector3(-_rotY, _rotX, 0);
+            Camera.main.transform.eulerAngles = rotation;
             //rotation.Set(rotation.x, rotation.y, 0);
             return rotation;
         }
