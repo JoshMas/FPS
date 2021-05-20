@@ -107,15 +107,15 @@ namespace FramedWok.PlayerController
         // Update is called once per frame
         void Update()
         {
-            if (!isSetup)
-                return;
-
-            rotation = input.GetCameraRotation();
-            jump = Input.GetKeyDown(input.jumpKey) && canJump && jumpCounter < numberOfJumps;
-            dash = Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0;
-            //Pause
-            if (Input.GetKeyDown(KeyCode.Escape))
-                Cursor.lockState = CursorLockMode.None;
+            if (isSetup)
+            {
+                rotation = input.GetCameraRotation();
+                jump = Input.GetKeyDown(input.jumpKey) && canJump && jumpCounter < numberOfJumps;
+                dash = Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0;
+                //Pause
+                if (Input.GetKeyDown(KeyCode.Escape))
+                    Cursor.lockState = CursorLockMode.None;
+            }
 
             ActionStuff();
         }
@@ -157,10 +157,10 @@ namespace FramedWok.PlayerController
 
         private void FixedUpdate()
         {
-            if (!isSetup)
-                return;
-
-            movement = input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl);
+            if (isSetup)
+            {
+                movement = input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl);
+            }
 
             MoveStuff();
         }
