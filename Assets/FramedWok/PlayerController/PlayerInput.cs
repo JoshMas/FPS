@@ -11,7 +11,7 @@ namespace FramedWok.PlayerController
     /// Uses the horizontal and vertical input axes for ground movement
     /// Default jump and dash buttons are Space and LeftShift respectively
     /// </summary>
-    public class PlayerInput : NetworkBehaviour
+    public class PlayerInput : MonoBehaviour
     {
         public KeyCode jumpKey = KeyCode.Space;
         public KeyCode dashKey = KeyCode.LeftShift;

@@ -9,7 +9,7 @@ namespace FramedWok.PlayerController
     /// Does not use the mass of the attached RigidBody
     /// </summary>
     [RequireComponent(typeof(Rigidbody))]
-    public class PlayerPhysics : NetworkBehaviour
+    public class PlayerPhysics : MonoBehaviour
     {
         private Rigidbody playerRigidbody;
         private Collider playerCollider;
