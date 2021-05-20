@@ -168,7 +168,7 @@ namespace FramedWok.PlayerController
         private void MoveStuff()
         {
             //Walking
-            physics.SetGroundMovement(input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl));
+            physics.SetGroundMovement(movement);
             //Restrict velocity while on the ground
             if (isGrounded)
                 physics.RestrictVelocity(0, rateOfRestriction * Time.deltaTime);

@@ -55,8 +55,8 @@ namespace FramedWok.PlayerController
         /// </summary>
         public void Rotate(Vector3 _rotation)
         {
-            transform.localEulerAngles += new Vector3(0, _rotation.y, 0);
-            Camera.main.transform.localEulerAngles += new Vector3(_rotation.x, 0, 0);
+            transform.localEulerAngles = new Vector3(0, _rotation.y, 0);
+            Camera.main.transform.localEulerAngles = new Vector3(_rotation.x, 0, 0);
         }
 
         /// <summary>

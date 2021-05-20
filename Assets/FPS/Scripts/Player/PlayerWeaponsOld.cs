@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerWeapons : MonoBehaviour
+public class PlayerWeaponsOld : MonoBehaviour
 {
     [SerializeField]
     private float rateOfPrimaryFire;
