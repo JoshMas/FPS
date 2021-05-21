@@ -1,105 +1,130 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
+using UnityEngine.UI;
+using Scoring;
 
 
-public class PlayerWeapons : MonoBehaviour
+namespace Player.Weapons
 {
-    [SerializeField] public float rateOfPrimaryFire;
-
-    private float rechamberTime;
-    [SerializeField] private GameObject secondaryFire;
-    [SerializeField] private float secondaryCooldown;
-    
-    [SerializeField] private float bloomInc;
-    [SerializeField] private float bloomMin;
-    [SerializeField] private float bloomMax;
-    [SerializeField] private float bloomReduct;
-
-    [SerializeField] private float range;
-    [SerializeField] private int damage;
-    
-    
-    private float bloom;
-
-    private Transform camTransform;
-    
-
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerWeapons : MonoBehaviour
     {
-        
-    }
+        [SerializeField] public float rateOfPrimaryFire;
 
-    private void OnEnable()
-    {
-        camTransform = Camera.main.transform;
-        rechamberTime = 0;
-        bloom = bloomMin;
-        
-    }
+        private float rechamberTime;
+        [SerializeField] private GameObject secondaryFire;
+        [SerializeField] private float secondaryCooldown;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(rechamberTime > 0)
+        [SerializeField] private float bloomInc;
+        [SerializeField] private float bloomMin;
+        [SerializeField] private float bloomMax;
+        [SerializeField] private float bloomReduct;
+
+        [SerializeField] private float range;
+        [SerializeField] private int damage;
+
+        [SerializeField] private Image crosshair;
+
+
+        GameManager GM;
+        PlayerStats thisPlayer;
+
+
+
+        private float bloom;
+
+        private Transform camTransform;
+
+
+        // Start is called before the first frame update
+        void Start()
         {
-            rechamberTime -= Time.deltaTime;
-            
+            thisPlayer = gameObject.GetComponent<PlayerStats>();
+            GM = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         }
-        else if(rechamberTime <= 0)
+
+        private void OnEnable()
         {
-            
-            if (Input.GetMouseButton(0))
+            camTransform = Camera.main.transform;
+            rechamberTime = 0;
+            bloom = bloomMin;
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (rechamberTime > 0)
             {
-                PrimaryFire();
-               
+                rechamberTime -= Time.deltaTime;
+
             }
+            else if (rechamberTime <= 0)
+            {
+
+                if (Input.GetMouseButton(0))
+                {
+                    PrimaryFire();
+
+                }
+            }
+
+
+            if (bloom >= bloomMax)
+            {
+                bloom = bloomMax;
+            }
+
+            if (bloom > bloomMin)
+            {
+                bloom -= bloomReduct * 60 * Time.deltaTime;
+            }
+
+
         }
 
-      
-        if(bloom >= bloomMax)
+        public void PrimaryFire()
         {
-            bloom = bloomMax;
+            Vector3 currentBloom = new Vector3(Random.Range(-bloom, bloom), Random.Range(-bloom, bloom), 0);
+
+            int layerMask = 1 << 8;
+            layerMask = ~layerMask;
+
+            if (bloom < bloomMax)
+            {
+                bloom += bloomInc * 60 * Time.deltaTime;
+                Debug.Log((bloom));
+            }
+
+            RaycastHit hit;
+            if (Physics.Raycast(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + gameObject.transform.TransformDirection(Vector3.forward) + currentBloom), out hit, range))
+            {
+                PlayerStats enemyStats = hit.collider.GetComponent<PlayerStats>();
+
+                if (enemyStats != null)
+                {
+                    enemyStats.currentHealth -= damage;
+                    enemyStats.UpdateHealth();
+                }
+
+                if(enemyStats.currentHealth <= 0)
+                {
+                    thisPlayer.kills++;
+                    GM.IncreaseScore(thisPlayer.teamNumber);
+                }
+
+            }
+            Debug.DrawLine(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + gameObject.transform.TransformDirection(Vector3.forward) + currentBloom) * 20f, Color.red, 2);
+
+
+            rechamberTime = rateOfPrimaryFire;
+            Debug.Log(hit);
         }
 
-        if (bloom > bloomMin)
+        public void SecondaryFire()
         {
-            bloom -= bloomReduct *  60 * Time.deltaTime;
+
         }
-       
-            
     }
 
-    public void PrimaryFire()
-    {
-        Vector3 currentBloom = new Vector3(Random.Range(-bloom, bloom), Random.Range(-bloom, bloom), 0);
-        
-        int layerMask = 1 << 8;
-        layerMask  = ~layerMask;
-        
-        if (bloom < bloomMax)
-        {
-            bloom += bloomInc * 60*  Time.deltaTime;
-            Debug.Log((bloom));
-        }
-       
-        RaycastHit hit;
-        if (Physics.Raycast(camTransform.position, camTransform.TransformDirection(Vector3.forward)+ gameObject.transform.TransformDirection(Vector3.forward), out hit, 20f, 3 ))
-        {
-            
-        }
-        Debug.DrawLine(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + gameObject.transform.TransformDirection(Vector3.forward) + currentBloom) * 20f, Color.red, 2);
-       
-        
-        rechamberTime = rateOfPrimaryFire;
-        Debug.Log(hit);
-    }
-
-    public void SecondaryFire()
-    {
-        
-    }
 }
