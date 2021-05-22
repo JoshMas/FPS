@@ -90,11 +90,14 @@ namespace FramedWok.PlayerController
             input = GetComponent<PlayerInput>();
             physics = GetComponent<PlayerPhysics>();
             Cursor.lockState = CursorLockMode.Locked;
-            cameraPoint = GetComponentsInChildren<Transform>()[1];
-            Transform cameraMain = Camera.main.transform;
-            cameraMain.parent = cameraPoint;
-            cameraMain.position = cameraPoint.position;
-            cameraMain.rotation = cameraPoint.rotation;
+            if (isLocalPlayer)
+            {
+                cameraPoint = GetComponentsInChildren<Transform>()[1];
+                Transform cameraMain = Camera.main.transform;
+                cameraMain.parent = cameraPoint;
+                cameraMain.position = cameraPoint.position;
+                cameraMain.rotation = cameraPoint.rotation;
+            }
         }
 
         // Update is called once per frame
@@ -221,6 +224,7 @@ namespace FramedWok.PlayerController
         }
         */
 
+        [Client]
         private void FixedUpdate()
         {
             if (!hasAuthority)
