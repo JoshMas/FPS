@@ -136,8 +136,8 @@ namespace FramedWok.PlayerController
 
             RpcActionStuff(_rotation, _jump, _dash);
 
-            //Set the camera angle
-            physics.Rotate(_rotation);
+            ////Set the camera angle
+            //physics.Rotate(_rotation);
 
             ////Jumping
             //if (_jump)
