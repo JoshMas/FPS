@@ -116,6 +116,32 @@ namespace FramedWok.PlayerController
                 dashTimer -= Time.deltaTime;
             }
 
+            //Set the camera angle
+            physics.Rotate(rotation);
+
+            //Jumping
+            if (jump)
+            {
+                physics.Jump(jumpStrength);
+                jumpCounter++;
+                isGrounded = false;
+            }
+            //groundCheckCounter += Time.deltaTime;
+            //if(groundCheckCounter > 0.1f)
+            //{
+            //    isGrounded = physics.IsGrounded();
+            //    if (isGrounded)
+            //        jumpCounter = 0;
+            //    groundCheckCounter = 0;
+            //}
+
+            //Dashing
+            if (dash)
+            {
+                dashTimer = dashCooldown;
+                StartCoroutine(nameof(Dash));
+            }
+
             //if (isServer)
             //{
             //    RpcActionStuff(rotation, jump, dash);
@@ -126,9 +152,10 @@ namespace FramedWok.PlayerController
             //    CmdActionStuff(rotation, jump, dash);
 
             //}
-            CmdActionStuff(rotation, jump, dash);
+            //CmdActionStuff(rotation, jump, dash);
         }
 
+        /*
         [Command]
         private void CmdActionStuff(Vector3 _rotation, bool _jump, bool _dash)
         {
@@ -192,6 +219,7 @@ namespace FramedWok.PlayerController
                 StartCoroutine(nameof(Dash));
             }
         }
+        */
 
         private void FixedUpdate()
         {
@@ -200,7 +228,11 @@ namespace FramedWok.PlayerController
 
             movement = input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl);
 
-
+            //Walking
+            physics.SetGroundMovement(movement);
+            //Restrict velocity while on the ground
+            if (isGrounded)
+                physics.RestrictVelocity(0, rateOfRestriction * Time.deltaTime);
             //if (isServer)
             //{
             //    RpcMoveStuff(movement);
@@ -209,9 +241,9 @@ namespace FramedWok.PlayerController
             //{
             //    CmdMoveStuff(movement);
             //}
-            CmdMoveStuff(movement);
+            //CmdMoveStuff(movement);
         }
-
+        /*
         [Command]
         private void CmdMoveStuff(Vector3 _movement)
         {
@@ -235,6 +267,7 @@ namespace FramedWok.PlayerController
             if (isGrounded)
                 physics.RestrictVelocity(0, rateOfRestriction * Time.deltaTime);
         }
+        */
 
         /// <summary>
         /// Use the dash, and after a timer, cancel all momentum
