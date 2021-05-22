@@ -12,11 +12,10 @@ public class SelectCharacter : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject playerPrefab = Instantiate(characterList[0]);
-        if (isLocalPlayer)
-        {
-            playerPrefab.GetComponent<PlayerController>().Setup();
-        }
+        //GameObject playerPrefab = Instantiate(characterList[0]);
+        
+        //playerPrefab.GetComponent<PlayerController>().Setup();
+
     }
 
     // Update is called once per frame

@@ -14,7 +14,7 @@ namespace FramedWok.PlayerController
     /// </summary>
     [RequireComponent(typeof(PlayerInput))]
     [RequireComponent(typeof(PlayerPhysics))]
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : NetworkBehaviour
     {
         private PlayerInput input;
         private PlayerPhysics physics;
@@ -83,8 +83,6 @@ namespace FramedWok.PlayerController
         private bool dash = false;
         private Vector3 movement = Vector3.zero;
 
-        private bool isSetup;
-
 
         // Start is called before the first frame update
         void Start()
@@ -92,43 +90,88 @@ namespace FramedWok.PlayerController
             input = GetComponent<PlayerInput>();
             physics = GetComponent<PlayerPhysics>();
             Cursor.lockState = CursorLockMode.Locked;
-        }
-
-        public void Setup()
-        {
             cameraPoint = GetComponentsInChildren<Transform>()[1];
             Transform cameraMain = Camera.main.transform;
             cameraMain.parent = cameraPoint;
             cameraMain.position = cameraPoint.position;
             cameraMain.rotation = cameraPoint.rotation;
-            isSetup = true;
         }
 
         // Update is called once per frame
+        [Client]
         void Update()
         {
-            if (isSetup)
+            if (!hasAuthority)
+                return;
+
+
+            rotation = input.GetCameraRotation();
+            jump = Input.GetKeyDown(input.jumpKey) && canJump && jumpCounter < numberOfJumps;
+            dash = Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0;
+            //Pause
+            if (Input.GetKeyDown(KeyCode.Escape))
+                Cursor.lockState = CursorLockMode.None;
+            if (dashTimer > 0)
             {
-                rotation = input.GetCameraRotation();
-                jump = Input.GetKeyDown(input.jumpKey) && canJump && jumpCounter < numberOfJumps;
-                dash = Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0;
-                //Pause
-                if (Input.GetKeyDown(KeyCode.Escape))
-                    Cursor.lockState = CursorLockMode.None;
+                dashTimer -= Time.deltaTime;
             }
 
-            ActionStuff();
+            //if (isServer)
+            //{
+            //    RpcActionStuff(rotation, jump, dash);
+
+            //}
+            //else
+            //{
+            //    CmdActionStuff(rotation, jump, dash);
+
+            //}
+            CmdActionStuff(rotation, jump, dash);
         }
 
-        private void ActionStuff()
+        [Command]
+        private void CmdActionStuff(Vector3 _rotation, bool _jump, bool _dash)
+        {
+            //Validation (probably not though)
+
+            RpcActionStuff(_rotation, _jump, _dash);
+
+            //Set the camera angle
+            physics.Rotate(_rotation);
+
+            ////Jumping
+            //if (_jump)
+            //{
+            //    physics.Jump(jumpStrength);
+            //    jumpCounter++;
+            //    isGrounded = false;
+            //}
+            ////groundCheckCounter += Time.deltaTime;
+            ////if(groundCheckCounter > 0.1f)
+            ////{
+            ////    isGrounded = physics.IsGrounded();
+            ////    if (isGrounded)
+            ////        jumpCounter = 0;
+            ////    groundCheckCounter = 0;
+            ////}
+
+            ////Dashing
+            //if (_dash)
+            //{
+            //    dashTimer = dashCooldown;
+            //    StartCoroutine(nameof(Dash));
+            //}
+        }
+
+        [ClientRpc]
+        private void RpcActionStuff(Vector3 _rotation, bool _jump, bool _dash)
         {
             //Set the camera angle
-            physics.Rotate(rotation);
+            physics.Rotate(_rotation);
 
             //Jumping
-            if (jump)
+            if (_jump)
             {
-                jump = false;
                 physics.Jump(jumpStrength);
                 jumpCounter++;
                 isGrounded = false;
@@ -143,32 +186,51 @@ namespace FramedWok.PlayerController
             //}
 
             //Dashing
-            if (dash)
+            if (_dash)
             {
-                dash = false;
                 dashTimer = dashCooldown;
                 StartCoroutine(nameof(Dash));
-            }
-            if (dashTimer > 0)
-            {
-                dashTimer -= Time.deltaTime;
             }
         }
 
         private void FixedUpdate()
         {
-            if (isSetup)
-            {
-                movement = input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl);
-            }
+            if (!hasAuthority)
+                return;
 
-            MoveStuff();
+            movement = input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl);
+
+
+            //if (isServer)
+            //{
+            //    RpcMoveStuff(movement);
+            //}
+            //else
+            //{
+            //    CmdMoveStuff(movement);
+            //}
+            CmdMoveStuff(movement);
         }
 
-        private void MoveStuff()
+        [Command]
+        private void CmdMoveStuff(Vector3 _movement)
+        {
+            //
+
+            RpcMoveStuff(_movement);
+
+            //Walking
+            //physics.SetGroundMovement(_movement);
+            ////Restrict velocity while on the ground
+            //if (isGrounded)
+            //    physics.RestrictVelocity(0, rateOfRestriction * Time.deltaTime);
+        }
+
+        [ClientRpc]
+        private void RpcMoveStuff(Vector3 _movement)
         {
             //Walking
-            physics.SetGroundMovement(movement);
+            physics.SetGroundMovement(_movement);
             //Restrict velocity while on the ground
             if (isGrounded)
                 physics.RestrictVelocity(0, rateOfRestriction * Time.deltaTime);
