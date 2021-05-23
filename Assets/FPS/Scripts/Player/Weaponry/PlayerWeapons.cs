@@ -40,7 +40,7 @@ namespace Player.Weapons
         void Start()
         {
             thisPlayer = gameObject.GetComponent<PlayerStats>();
-            GM = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+            GM = FindObjectOfType<GameManager>();
         }
 
         private void OnEnable()
@@ -99,19 +99,23 @@ namespace Player.Weapons
             RaycastHit hit;
             if (Physics.Raycast(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + gameObject.transform.TransformDirection(Vector3.forward) + currentBloom), out hit, range))
             {
-                PlayerStats enemyStats = hit.collider.GetComponent<PlayerStats>();
-
-                if (enemyStats != null)
+                if (gameObject.CompareTag("Player"))
                 {
-                    enemyStats.currentHealth -= damage;
-                    enemyStats.UpdateHealth();
-                }
+                    PlayerStats enemyStats = hit.collider.GetComponent<PlayerStats>();
 
-                if(enemyStats.currentHealth <= 0)
-                {
-                    thisPlayer.kills++;
-                    GM.IncreaseScore(thisPlayer.teamNumber);
+                    if (enemyStats != null)
+                    {
+                        enemyStats.currentHealth -= damage;
+                        enemyStats.UpdateHealth();
+                    }
+
+                    if (enemyStats.currentHealth <= 0)
+                    {
+                        thisPlayer.kills++;
+                        GM.IncreaseScore(thisPlayer.teamNumber);
+                    }
                 }
+              
 
             }
             Debug.DrawLine(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + gameObject.transform.TransformDirection(Vector3.forward) + currentBloom) * 20f, Color.red, 2);

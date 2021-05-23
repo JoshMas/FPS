@@ -20,19 +20,25 @@ namespace Scoring
         // Start is called before the first frame update
         void Start()
         {
-            for (int i = 0; i < teamScore.Count; i++)
+            for (int i = 0; i < scoreTexts.Count; i++)
             {
-                teamScore[i] = 0;
+                teamScore.Add(0);
+                UpdateScore(i);
             }
+            
+          
         }
 
         public void IncreaseScore(int team)
         {
-            teamScore[team]++; 
+            teamScore[team]++;
+            UpdateScore(team);
+
             if(teamScore[team] >= maxScore)
             {
                 TeamWon(team);
             }
+
         }
         
         private void TeamWon(int team)
