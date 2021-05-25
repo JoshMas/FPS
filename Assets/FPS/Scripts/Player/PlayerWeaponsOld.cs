@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerWeaponsOld : MonoBehaviour
+using Mirror;
+
+public class PlayerWeaponsOld : NetworkBehaviour
 {
     [SerializeField]
     private float rateOfPrimaryFire;
@@ -11,7 +13,8 @@ public class PlayerWeaponsOld : MonoBehaviour
     [SerializeField]
     private float secondaryCooldown;
 
-    private float health = 100.0f;
+    [SyncVar]
+    public float health = 100.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,9 @@ public class PlayerWeaponsOld : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isLocalPlayer)
+            return;
+
         if (Input.GetMouseButtonDown(0))
             PrimaryFire();
         if (Input.GetMouseButtonDown(1))
@@ -32,16 +38,29 @@ public class PlayerWeaponsOld : MonoBehaviour
     {
         Transform camTransform = Camera.main.transform;
         Ray bullet = new Ray(camTransform.position, camTransform.TransformDirection(Vector3.forward));
-        RaycastHit hit = new RaycastHit();
-        Debug.Log(Physics.Raycast(bullet, out hit));
-        if(hit.transform.CompareTag("Player"))
-            Debug.Log(hit.transform.GetComponent<PlayerWeaponsOld>().LoseHealth());
+        Debug.Log(Physics.Raycast(bullet, out RaycastHit hit));
+        if (hit.transform.CompareTag("Player"))
+        {
+            PlayerWeaponsOld script = hit.transform.GetComponent<PlayerWeaponsOld>();
+            if (hasAuthority)
+            {
+                DealDamage(script, 10.0f); ;
+            }
+            Debug.Log(script.health);
+        }
+            
+        //Put a collider
     }
 
-    public float LoseHealth()
+    [Command]
+    public void DealDamage(PlayerWeaponsOld _target, float _damage)
     {
-        health -= 10.0f;
-        return health;
+        _target.LoseHealth(_damage);
+    }
+
+    public void LoseHealth(float _damage)
+    {
+        health -= _damage;
     }
 
     public void SecondaryFire()
