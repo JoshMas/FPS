@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using Scoring;
 
 
-namespace Player.Weapons
+namespace Shooter.Player.Weapons
 {
     public class PlayerWeapons : MonoBehaviour
     {

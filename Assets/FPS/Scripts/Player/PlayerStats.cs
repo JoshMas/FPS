@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using FramedWok.PlayerController;
-using Player.Weapons;
+using Shooter.Player.Weapons;
 
 
-namespace Player
+namespace Shooter.Player
 {
     [RequireComponent(typeof(PlayerController))]
     [RequireComponent(typeof(PlayerPhysics))]
