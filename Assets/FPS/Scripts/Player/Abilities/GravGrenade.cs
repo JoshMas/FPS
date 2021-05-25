@@ -34,7 +34,7 @@ public class GravGrenade : MonoBehaviour
                 Vector3 forceDirection = gameObject.transform.position - rb.transform.position;
 
                 // apply force on target towards me
-                rb.GetComponent<Rigidbody>().AddForce(forceDirection.normalized * pullForce * Time.deltaTime);
+                rb.GetComponent<Rigidbody>().AddForce(forceDirection * pullForce/* * Time.deltaTime*/);
             }
            
 

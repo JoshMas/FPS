@@ -24,8 +24,8 @@ public class Defender : MonoBehaviour
     public float powerCD = 20f;
     #endregion
     #region Power
-    public float pushRadius = 5;
-    public float pushForce = 100;
+    public float pushRadius = 50;
+    public float pushForce = 1000;
     private GameObject[] moveableObj;
     private Rigidbody[] rbs;
     #endregion
@@ -96,7 +96,7 @@ public class Defender : MonoBehaviour
                 Vector3 forceDirection = gameObject.transform.position + rb.transform.position;
 
                 // apply force on target towards me
-                rb.GetComponent<Rigidbody>().AddForce(forceDirection.normalized * pushForce * Time.deltaTime);
+                rb.GetComponent<Rigidbody>().AddForce(forceDirection * pushForce/* * Time.deltaTime*/);
             }
             
             

@@ -63,7 +63,7 @@ public class Support : MonoBehaviour
 
         smoke.GetComponent<Rigidbody>().AddForce(smokeSpawn.forward * smokeSpeed, ForceMode.Impulse);
 
-        StartCoroutine(DestroyMissileAfterTime(smoke, lifeTime));
+        StartCoroutine(DestroyMissileAfterTime(smoke, 12));
     }
 
     private void Power()
