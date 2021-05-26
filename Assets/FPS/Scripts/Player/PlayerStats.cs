@@ -3,47 +3,56 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using FramedWok.PlayerController;
+using Mirror;
 using Shooter.Player.Weapons;
+using Shooter.Menus;
 
 
 namespace Shooter.Player
 {
     [RequireComponent(typeof(PlayerController))]
     [RequireComponent(typeof(PlayerPhysics))]
-    public class PlayerStats : MonoBehaviour
+    public class PlayerStats : NetworkBehaviour
     {
 
         [Header("Stats")]
         [SerializeField]
         public string playerName;
         [SerializeField]
-        private int maxHealth;
-        [SerializeField]
-        public int currentHealth;
+        public int kills;
+        private int deaths;
+        public bool dead;
+        
+        [Header("Spawning")]
         [SerializeField]
         public int teamNumber;
         [SerializeField]
         private List<Spawn> teamSpawns = new List<Spawn>();
         [SerializeField]
         private float respawnTimer;
+        
+        [Header("Health")]
+        [SerializeField]
+        public int maxHealth = 100;
+        [SyncVar]
+        public int currentHealth;
+        
+        [Header("UI")]
+        private GameObject healthTextObj;
+        private Text healthText;
+        
 
+        [Header("Utility")]
         private PlayerController controller;
         private PlayerWeapons weapons;
-
-        [Header("UI")]
-        [SerializeField]
-        private Text healthText;
-
-        public int kills;
-        public int deaths;
-
-
-        public bool dead;
+       
+     
 
         private void Start()
         {
-
-
+            gameObject.SetActive(false);
+            healthTextObj = GameObject.Find("Health Text");
+            healthText = healthTextObj.GetComponent<Text>();
 
             foreach (Spawn spawn in FindObjectsOfType<Spawn>()) 
             {
@@ -56,7 +65,7 @@ namespace Shooter.Player
             UpdateHealth();
             controller = GetComponent<PlayerController>();
             weapons = GetComponent<PlayerWeapons>();
-
+            
 
         }
 
@@ -90,6 +99,7 @@ namespace Shooter.Player
         {
             //Player is dead
             dead = true;
+            
             deaths++;
             gameObject.SetActive(false);
             controller.enabled = false;
@@ -108,7 +118,12 @@ namespace Shooter.Player
             controller.enabled = true;
             weapons.enabled = true;
             gameObject.SetActive(true);
+            
             dead = false;
+        }
+        public void LoseHealth(int _damage)
+        {
+            currentHealth -= _damage;
         }
     }
 }

@@ -1,31 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Shooter.Abilities;
 public class GravGrenade : MonoBehaviour
 {
+   
+
+
     public float pullRadius = 100;
     public float pullForce = 1000;
-    private GameObject[] moveableObj;
-    private Rigidbody[] rbs;
     
 
-    private void Start()
-    {
-        moveableObj = GameObject.FindGameObjectsWithTag("Player");
-        rbs = new Rigidbody[moveableObj.Length];
 
-        for(int i = 0; i < moveableObj.Length; i++)
-        {
-            GameObject player = moveableObj[i];
-            rbs[i] = player.GetComponent<Rigidbody>();
-        }
-    }
+    private Defender defender;
+
+  
 
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("hit " + other.name + "!");
-        foreach (Rigidbody rb in rbs)
+        foreach (Rigidbody rb in defender.rbs)
         {
             if(Vector2.Distance(gameObject.transform.position, rb.transform.position) < pullRadius)
             {

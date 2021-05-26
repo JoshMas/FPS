@@ -49,7 +49,9 @@ GameObject:
   - component: {fileID: 7892159949341188548}
   - component: {fileID: -2652462368547249532}
   - component: {fileID: -3077661831942211278}
-  - component: {fileID: -2049625834772650206}
+  - component: {fileID: -3918932284940672115}
+  - component: {fileID: -1393962487277762363}
+  - component: {fileID: -5200493415177938093}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -263,7 +265,7 @@ MonoBehaviour:
   syncAngularVelocity: 1
   clearAngularVelocity: 0
   angularVelocitySensitivity: 0.1
---- !u!114 &-2049625834772650206
+--- !u!114 &-3918932284940672115
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -272,9 +274,58 @@ MonoBehaviour:
   m_GameObject: {fileID: 7892159949341188557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee611d3e8a447ae4bb330a149a8f9a99, type: 3}
+  m_Script: {fileID: 11500000, guid: 691b1e3eb77b6a54584a4113a110122c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rateOfPrimaryFire: 0
+  syncMode: 0
+  syncInterval: 0.1
+  rateOfPrimaryFire: 0.5
   secondaryFire: {fileID: 0}
   secondaryCooldown: 0
+  bloomInc: 0.12
+  bloomMin: 0.1
+  bloomMax: 0.4
+  bloomReduct: 0.1
+  range: 50
+  damage: 15
+  crosshair: {fileID: 0}
+--- !u!114 &-1393962487277762363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7892159949341188557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79adb5d213d112746b15f97d300d42ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  playerName: 
+  kills: 0
+  dead: 0
+  teamNumber: 0
+  teamSpawns: []
+  respawnTimer: 0
+  maxHealth: 100
+  currentHealth: 0
+  healthText: {fileID: 0}
+--- !u!114 &-5200493415177938093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7892159949341188557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546949781bd53a643a60851df2cb2274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  scoreTexts:
+  - {fileID: 0}
+  - {fileID: 0}

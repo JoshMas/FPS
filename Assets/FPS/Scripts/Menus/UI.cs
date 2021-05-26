@@ -7,17 +7,14 @@ using UnityEngine.UI;
 
 namespace Shooter.Menus
 {
-    public class PauseMenu : MonoBehaviour
+    public class UI : MonoBehaviour
     {
         public static bool isPaused;
         public GameObject pausePanel;
         public GameObject optionsPanel;
         
-
-
         [SerializeField]
-        public GameObject player;
-
+        public GameObject gameplayUI;
 
 
         // Start is called before the first frame update
@@ -27,7 +24,7 @@ namespace Shooter.Menus
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             isPaused = false;
-
+            gameplayUI.SetActive(true);
 
         }
 
@@ -45,13 +42,21 @@ namespace Shooter.Menus
             Debug.Log(isPaused);
             if (isPaused)
             {
-
+                gameplayUI.SetActive(false);
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 pausePanel.SetActive(true);
             }
+            else
+            {
+                gameplayUI.SetActive(true);
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                pausePanel.SetActive(false);
+            }
         }
 
+      
 
 
     }
