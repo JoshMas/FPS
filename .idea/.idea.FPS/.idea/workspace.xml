@@ -15,6 +15,7 @@
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/PlayerWeapons.cs" />
       <option value="$PROJECT_DIR$/Assets/FramedWok/PlayerController/PlayerInput.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/PlayerStats.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sOXKlK0rlW7Dob9ivqY4tiI7fk" />
@@ -32,6 +33,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Builds/FPS\FPS.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\ryana\Documents\Builds\FPS" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -42,10 +51,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7056">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7056" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -65,6 +74,7 @@
       <workItem from="1620785724776" duration="995000" />
       <workItem from="1620787024411" duration="1937000" />
       <workItem from="1621321619904" duration="11010000" />
+      <workItem from="1621988763993" duration="2592000" />
     </task>
     <servers />
   </component>
@@ -83,6 +93,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

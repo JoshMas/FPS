@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using FramedWok.PlayerController;
+using Mirror;
 using Shooter.Player.Weapons;
 
 
@@ -10,35 +11,39 @@ namespace Shooter.Player
 {
     [RequireComponent(typeof(PlayerController))]
     [RequireComponent(typeof(PlayerPhysics))]
-    public class PlayerStats : MonoBehaviour
+    public class PlayerStats : NetworkBehaviour
     {
 
         [Header("Stats")]
         [SerializeField]
         public string playerName;
         [SerializeField]
-        private int maxHealth;
-        [SerializeField]
-        public int currentHealth;
+        public int kills;
+        private int deaths;
+        public bool dead;
+        
+        [Header("Spawning")]
         [SerializeField]
         public int teamNumber;
         [SerializeField]
         private List<Spawn> teamSpawns = new List<Spawn>();
         [SerializeField]
         private float respawnTimer;
-
-        private PlayerController controller;
-        private PlayerWeapons weapons;
-
+        
+        [Header("Health")]
+        [SerializeField]
+        private int maxHealth = 100;
+        [SyncVar]
+        public int currentHealth;
+        
         [Header("UI")]
         [SerializeField]
         private Text healthText;
 
-        public int kills;
-        public int deaths;
-
-
-        public bool dead;
+        [Header("Utility")]
+        private PlayerController controller;
+        private PlayerWeapons weapons;
+     
 
         private void Start()
         {
@@ -109,6 +114,10 @@ namespace Shooter.Player
             weapons.enabled = true;
             gameObject.SetActive(true);
             dead = false;
+        }
+        public void LoseHealth(int _damage)
+        {
+            currentHealth -= _damage;
         }
     }
 }

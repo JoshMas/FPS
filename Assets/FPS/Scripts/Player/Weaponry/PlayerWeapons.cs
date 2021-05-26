@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 using Scoring;
+
+
+using Mirror;
 
 
 namespace Shooter.Player.Weapons
 {
-    public class PlayerWeapons : MonoBehaviour
+    public class PlayerWeapons : NetworkBehaviour
     {
         [SerializeField] public float rateOfPrimaryFire;
 
@@ -102,12 +106,20 @@ namespace Shooter.Player.Weapons
                 if (gameObject.CompareTag("Player"))
                 {
                     PlayerStats enemyStats = hit.collider.GetComponent<PlayerStats>();
-
-                    if (enemyStats != null)
+                    
+                    
+                    if (hasAuthority)
                     {
-                        enemyStats.currentHealth -= damage;
-                        enemyStats.UpdateHealth();
+                        if (enemyStats != null)
+                        {
+                            DealDamage(enemyStats, damage); ;
+                            enemyStats.UpdateHealth();
+                        }
+                        
                     }
+                    Debug.Log(enemyStats.currentHealth);
+
+                   
 
                     if (enemyStats.currentHealth <= 0)
                     {
@@ -125,10 +137,13 @@ namespace Shooter.Player.Weapons
             Debug.Log(hit);
         }
 
-        public void SecondaryFire()
+        [Command]
+        public void DealDamage(PlayerStats _target, int _damage)
         {
-
+            _target.LoseHealth(_damage);
         }
+
+        
     }
 
 }
