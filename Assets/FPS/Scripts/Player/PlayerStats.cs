@@ -32,7 +32,7 @@ namespace Shooter.Player
         
         [Header("Health")]
         [SerializeField]
-        private int maxHealth = 100;
+        public int maxHealth = 100;
         [SyncVar]
         public int currentHealth;
         

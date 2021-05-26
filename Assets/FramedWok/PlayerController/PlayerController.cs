@@ -24,7 +24,7 @@ namespace FramedWok.PlayerController
         /// <summary>
         /// How quickly the player accelerates
         /// </summary>
-        [SerializeField, Min(0)] private float walkSpeed = 100.0f;
+        [SerializeField, Min(0)] public float walkSpeed = 100.0f;
         /// <summary>
         /// The rate at which the player's current velocity is brought down 
         /// </summary>
