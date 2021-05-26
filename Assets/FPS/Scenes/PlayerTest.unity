@@ -3320,6 +3320,7 @@ GameObject:
   - component: {fileID: 248342863}
   - component: {fileID: 248342867}
   - component: {fileID: 248342868}
+  - component: {fileID: 248342869}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3417,6 +3418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fcc06fcd2f5004982757d9f6f7621d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   walkSpeed: 5
   rateOfRestriction: 0.5
   canJump: 1
@@ -3441,7 +3444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95574bdd0f4933348a0722e1f5658c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheckLength: 1.05
 --- !u!54 &248342865
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3487,6 +3489,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691b1e3eb77b6a54584a4113a110122c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   rateOfPrimaryFire: 0.5
   secondaryFire: {fileID: 0}
   secondaryCooldown: 0
@@ -3509,16 +3513,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79adb5d213d112746b15f97d300d42ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   playerName: 
-  maxHealth: 100
-  currentHealth: 0
+  kills: 0
+  dead: 0
   teamNumber: 0
   teamSpawns: []
   respawnTimer: 5
+  maxHealth: 100
+  currentHealth: 100
   healthText: {fileID: 1427262282}
-  kills: 0
-  deaths: 0
-  dead: 0
+--- !u!114 &248342869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248342858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1607050364
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!43 &400041872
 Mesh:
   m_ObjectHideFlags: 0
