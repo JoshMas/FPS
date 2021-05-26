@@ -39,6 +39,8 @@ public class PlayerWeaponsOld : NetworkBehaviour
         Transform camTransform = Camera.main.transform;
         Ray bullet = new Ray(camTransform.position, camTransform.TransformDirection(Vector3.forward));
         Debug.Log(Physics.Raycast(bullet, out RaycastHit hit));
+        if (hit.transform == null)
+            return;
         if (hit.transform.CompareTag("Player"))
         {
             PlayerWeaponsOld script = hit.transform.GetComponent<PlayerWeaponsOld>();
@@ -48,8 +50,6 @@ public class PlayerWeaponsOld : NetworkBehaviour
             }
             Debug.Log(script.health);
         }
-            
-        //Put a collider
     }
 
     [Command]
