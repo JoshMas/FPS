@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+using Shooter.Abilities;
 using Mirror;
 using UnityEngine.SceneManagement;
 
