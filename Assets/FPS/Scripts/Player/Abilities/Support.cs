@@ -36,7 +36,10 @@ namespace Shooter.Abilities
 
         private void Start()
         {
-           
+            smokePrefab = Resources.Load<GameObject>("WeaponPrefabs/Smoke");
+            smokeSpawn = GetWeaponTransform();
+
+
             team = gameObject.GetComponent<PlayerStats>().teamNumber;
             if (team == 0)
             {
@@ -71,6 +74,17 @@ namespace Shooter.Abilities
             //Passive?
 
 
+        }
+
+        private Transform GetWeaponTransform()
+        {
+            Transform[] transforms = GetComponentsInChildren<Transform>();
+            foreach (Transform t in transforms)
+            {
+                if (t.CompareTag("WeaponTransform"))
+                    return t;
+            }
+            return transform;
         }
 
         private void AltFire()

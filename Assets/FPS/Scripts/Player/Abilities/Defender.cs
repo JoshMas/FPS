@@ -38,6 +38,10 @@ namespace Shooter.Abilities
 
         private void Start()
         {
+            grenadePrefab = Resources.Load<GameObject>("WeaponPrefabs/GravGrenade");
+            grenadeSpawn = GetWeaponTransform();
+
+
             if (player.teamNumber == 0)
             {
                 enemyObj = GameObject.FindGameObjectsWithTag("Team 1");
@@ -79,13 +83,25 @@ namespace Shooter.Abilities
                 }
             }
 
-            powerCDText.text = powerCD.ToString();
-            altCDText.text = altFireCD.ToString();
+            //These lines are temporarily disabled
+            //powerCDText.text = powerCD.ToString();
+            //altCDText.text = altFireCD.ToString();
 
 
             //Passive?
 
 
+        }
+
+        private Transform GetWeaponTransform()
+        {
+            Transform[] transforms = GetComponentsInChildren<Transform>();
+            foreach (Transform t in transforms)
+            {
+                if (t.CompareTag("WeaponTransform"))
+                    return t;
+            }
+            return transform;
         }
 
         private void AltFire()

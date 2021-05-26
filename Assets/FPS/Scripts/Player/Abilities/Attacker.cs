@@ -34,7 +34,10 @@ namespace Shooter.Abilities
         public bool kill = false;
         private void Start()
         {
-           
+            missilePrefab = Resources.Load<GameObject>("WeaponPrefabs/Missile");
+            missileSpawn = GetWeaponTransform();
+
+
             team = gameObject.GetComponent<PlayerStats>().teamNumber;
             if(team == 0)
             {
@@ -72,6 +75,17 @@ namespace Shooter.Abilities
             {
                 altFireCD -= 3f;
             }
+        }
+
+        private Transform GetWeaponTransform()
+        {
+            Transform[] transforms = GetComponentsInChildren<Transform>();
+            foreach (Transform t in transforms)
+            {
+                if (t.CompareTag("WeaponTransform"))
+                    return t;
+            }
+            return transform;
         }
 
         private void AltFire()

@@ -1,8 +1,10 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 using Mirror;
-using UnityEngine.SceneManagement;
+
+using Shooter.Abilities;
 
 namespace FramedWok.PlayerController
 {
@@ -90,7 +92,7 @@ namespace FramedWok.PlayerController
             Cursor.lockState = CursorLockMode.Locked;
             if (isLocalPlayer)
             {
-                cameraPoint = GetComponentsInChildren<Transform>()[1];
+                cameraPoint = GetCameraTransform();
                 Transform cameraMain = Camera.main.transform;
                 cameraMain.parent = cameraPoint;
                 cameraMain.position = cameraPoint.position;
@@ -98,6 +100,17 @@ namespace FramedWok.PlayerController
 
                 SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
             }
+        }
+
+        private Transform GetCameraTransform()
+        {
+            Transform[] transforms = GetComponentsInChildren<Transform>();
+            foreach(Transform t in transforms)
+            {
+                if (t.CompareTag("PlayerCamera"))
+                    return t;
+            }
+            return transform;
         }
 
         public void CharacterSelect(int _charType)

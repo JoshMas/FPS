@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Team 0
   - Team 1
+  - PlayerCamera
   layers:
   - Default
   - TransparentFX
