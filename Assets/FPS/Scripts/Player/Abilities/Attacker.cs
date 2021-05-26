@@ -74,6 +74,7 @@ namespace Shooter.Abilities
             if (kill == true)
             {
                 altFireCD -= 3f;
+                kill = false;
             }
         }
 
