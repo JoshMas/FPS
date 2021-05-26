@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Defender : MonoBehaviour
 {
     #region Stats
@@ -22,22 +22,32 @@ public class Defender : MonoBehaviour
     private float nextAltFireTime = 0;
     private float nextPowerTime = 0;
     public float powerCD = 20f;
+    public TMP_Text powerCDText;
     #endregion
     #region Power
     public float pushRadius = 50;
     public float pushForce = 1000;
-    private GameObject[] moveableObj;
+    private GameObject[] enemyObj;
     private Rigidbody[] rbs;
     #endregion
 
     private void Start()
     {
-        moveableObj = GameObject.FindGameObjectsWithTag("Player");
-        rbs = new Rigidbody[moveableObj.Length];
-
-        for (int i = 0; i < moveableObj.Length; i++)
+        if(gameObject.tag == "Red Player")
         {
-            GameObject player = moveableObj[i];
+            enemyObj = GameObject.FindGameObjectsWithTag("Blue Player");
+            rbs = new Rigidbody[enemyObj.Length];
+        }
+        if (gameObject.tag == "Blue Player")
+        {
+            enemyObj = GameObject.FindGameObjectsWithTag("Red Player");
+            rbs = new Rigidbody[enemyObj.Length];
+        }
+
+
+        for (int i = 0; i < enemyObj.Length; i++)
+        {
+            GameObject player = enemyObj[i];
             rbs[i] = player.GetComponent<Rigidbody>();
         }
     }
@@ -59,8 +69,12 @@ public class Defender : MonoBehaviour
             {
                 Power();
                 nextPowerTime = Time.time + powerCD;
+                
             }
         }
+
+        powerCDText.text = powerCD.ToString();
+
 
         //Passive?
 

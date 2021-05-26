@@ -6,19 +6,33 @@ public class GravGrenade : MonoBehaviour
 {
     public float pullRadius = 100;
     public float pullForce = 1000;
-    private GameObject[] moveableObj;
+    private GameObject[] blueObj;
+    private GameObject[] redObj;
+    private GameObject[] allObj;
+   
     private Rigidbody[] rbs;
+    
     
 
     private void Start()
     {
-        moveableObj = GameObject.FindGameObjectsWithTag("Player");
-        rbs = new Rigidbody[moveableObj.Length];
+       
+        
+            blueObj = GameObject.FindGameObjectsWithTag("Blue Player");
+            redObj = GameObject.FindGameObjectsWithTag("Red Player");
+            //allObj = GameObject.FindGameObjectsWithTag(tag);
+        
+       
+       
+        
+        rbs = new Rigidbody[blueObj.Length + redObj.Length];
+      
 
-        for(int i = 0; i < moveableObj.Length; i++)
+        for (int i = 0; i < blueObj.Length + redObj.Length; i++)
         {
-            GameObject player = moveableObj[i];
-            rbs[i] = player.GetComponent<Rigidbody>();
+            GameObject bluePlayer = blueObj[i];
+            GameObject redPlayer = redObj[i];
+            //rbs[i] = bluePlayer.GetComponent<Rigidbody>() + redPlayer.GetComponent<Rigidbody>();
         }
     }
 
