@@ -22,9 +22,4 @@ public class FPSNetManager : NetworkManager
 
         NetworkServer.AddPlayerForConnection(conn, player);
     }
-
-    public override void OnServerDisconnect(NetworkConnection conn)
-    {
-        base.OnServerDisconnect(conn);
-    }
 }
