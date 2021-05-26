@@ -33,7 +33,7 @@ public class Defender : MonoBehaviour
 
     private void Start()
     {
-<<<<<<< HEAD
+
         if(gameObject.tag == "Red Player")
         {
             enemyObj = GameObject.FindGameObjectsWithTag("Blue Player");
@@ -45,13 +45,12 @@ public class Defender : MonoBehaviour
             rbs = new Rigidbody[enemyObj.Length];
         }
 
-=======
+
         grenadePrefab = Resources.Load<GameObject>("WeaponPrefabs/GravGrenade");
 
 
-        moveableObj = GameObject.FindGameObjectsWithTag("Player");
-        rbs = new Rigidbody[moveableObj.Length];
->>>>>>> origin/Networking
+       
+
 
         for (int i = 0; i < enemyObj.Length; i++)
         {
