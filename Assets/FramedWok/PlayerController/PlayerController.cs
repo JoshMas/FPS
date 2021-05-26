@@ -100,6 +100,24 @@ namespace FramedWok.PlayerController
             }
         }
 
+        public void CharacterSelect(int _charType)
+        {
+            //Will need to add somehting here later for character models
+            //Probably load from the Resources folder
+            switch (_charType)
+            {
+                case 0:
+                    gameObject.AddComponent<Attacker>();
+                    break;
+                case 1:
+                    gameObject.AddComponent<Defender>();
+                    break;
+                case 2:
+                    gameObject.AddComponent<Support>();
+                    break;
+            }
+        }
+
         // Update is called once per frame
         [Client]
         void Update()

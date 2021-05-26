@@ -32,6 +32,9 @@ public class Defender : MonoBehaviour
 
     private void Start()
     {
+        grenadePrefab = Resources.Load<GameObject>("WeaponPrefabs/GravGrenade");
+
+
         moveableObj = GameObject.FindGameObjectsWithTag("Player");
         rbs = new Rigidbody[moveableObj.Length];
 
