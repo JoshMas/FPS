@@ -3314,6 +3314,10 @@ GameObject:
   - component: {fileID: 248342868}
   - component: {fileID: 248342869}
   - component: {fileID: 248342870}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 248342871}
+>>>>>>> origin/Networking
   m_Layer: 0
   m_Name: Player
   m_TagString: Blue Player
@@ -3412,6 +3416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fcc06fcd2f5004982757d9f6f7621d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   walkSpeed: 5
   rateOfRestriction: 0.5
   canJump: 1
@@ -3436,7 +3442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95574bdd0f4933348a0722e1f5658c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheckLength: 1.05
 --- !u!54 &248342865
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3485,6 +3490,16 @@ MonoBehaviour:
   rateOfPrimaryFire: 0
   secondaryFire: {fileID: 0}
   secondaryCooldown: 0
+<<<<<<< HEAD
+=======
+  bloomInc: 0
+  bloomMin: 0
+  bloomMax: 0
+  bloomReduct: 0
+  range: 0
+  damage: 0
+  crosshair: {fileID: 0}
+>>>>>>> origin/Networking
 --- !u!114 &248342868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3552,6 +3567,26 @@ MonoBehaviour:
   lifeTime: 3
   altFireCD: 10
   powerCD: 30
+<<<<<<< HEAD
+=======
+--- !u!114 &248342871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248342858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 61711583
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
+>>>>>>> origin/Networking
 --- !u!43 &400041872
 Mesh:
   m_ObjectHideFlags: 0
@@ -4500,6 +4535,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &840569237
 GameObject:
   m_ObjectHideFlags: 0
@@ -4576,6 +4612,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840569237}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> origin/Networking
 --- !u!1 &842493375
 GameObject:
   m_ObjectHideFlags: 0
@@ -4673,6 +4711,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842493375}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!1 &872704362
 GameObject:
   m_ObjectHideFlags: 0
@@ -4749,6 +4788,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872704362}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> origin/Networking
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -7771,7 +7812,11 @@ GameObject:
   - component: {fileID: 1349247509}
   m_Layer: 0
   m_Name: Capsule (2)
+<<<<<<< HEAD
   m_TagString: Red Player
+=======
+  m_TagString: Player
+>>>>>>> origin/Networking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

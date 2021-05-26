@@ -343,6 +343,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &1066473829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -508,6 +509,8 @@ MonoBehaviour:
   showGUI: 1
   offsetX: 0
   offsetY: 0
+=======
+>>>>>>> origin/Networking
 --- !u!1001 &1477770280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -597,6 +600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4597eaaf1dbad0748b32a74ec852ac31, type: 3}
+<<<<<<< HEAD
 --- !u!1001 &1721429817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1077,3 +1081,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f461d0dca3d6cd34185023f156cbf778, type: 3}
+=======
+>>>>>>> origin/Networking

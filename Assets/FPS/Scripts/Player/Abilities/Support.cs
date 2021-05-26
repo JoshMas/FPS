@@ -23,6 +23,11 @@ public class Support : MonoBehaviour
     public float powerCD = 30f;
     #endregion
 
+    private void Start()
+    {
+        smokePrefab = Resources.Load<GameObject>("WeaponPrefabs/Smoke");
+    }
+
     private void Update()
     {
         if (Time.time > nextAltFireTime)

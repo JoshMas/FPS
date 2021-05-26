@@ -25,6 +25,11 @@ public class Attacker : MonoBehaviour
 
     public bool kill = false;
 
+    private void Start()
+    {
+        missilePrefab = Resources.Load<GameObject>("WeaponPrefabs/Missile");
+    }
+
     private void Update()
     {
         if (Time.time > nextAltFireTime)

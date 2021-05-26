@@ -1,9 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 using Mirror;
-
+using UnityEngine.SceneManagement;
 
 namespace FramedWok.PlayerController
 {
@@ -83,7 +82,6 @@ namespace FramedWok.PlayerController
         private bool dash = false;
         private Vector3 movement = Vector3.zero;
 
-
         // Start is called before the first frame update
         void Start()
         {
@@ -97,6 +95,26 @@ namespace FramedWok.PlayerController
                 cameraMain.parent = cameraPoint;
                 cameraMain.position = cameraPoint.position;
                 cameraMain.rotation = cameraPoint.rotation;
+
+                SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
+            }
+        }
+
+        public void CharacterSelect(int _charType)
+        {
+            //Will need to add somehting here later for character models
+            //Probably load from the Resources folder
+            switch (_charType)
+            {
+                case 0:
+                    gameObject.AddComponent<Attacker>();
+                    break;
+                case 1:
+                    gameObject.AddComponent<Defender>();
+                    break;
+                case 2:
+                    gameObject.AddComponent<Support>();
+                    break;
             }
         }
 
