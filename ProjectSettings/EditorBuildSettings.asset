@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/FPS/Scenes/Offline.unity
+    guid: 91c5a17fcd8ce734b883090798170b92
+  - enabled: 1
     path: Assets/FPS/Scenes/LevelTest.unity
     guid: b163372de585f0245bddeb1f342e3e1c
+  - enabled: 1
+    path: Assets/FPS/Scenes/Online.unity
+    guid: 295a252e10ddef84db52c7ad990c9847
   m_configObjects: {}

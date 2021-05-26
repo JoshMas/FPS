@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace Scoring
+namespace Score
 {
-    public class GameManager : MonoBehaviour
+    public class Scoring : NetworkBehaviour
     {
 
        
         private int maxScore;
+        
+        [SyncVar]
         private List<int> teamScore = new List<int>();
 
         [SerializeField]
@@ -29,6 +32,7 @@ namespace Scoring
           
         }
 
+        [Command]
         public void IncreaseScore(int team)
         {
             teamScore[team]++;

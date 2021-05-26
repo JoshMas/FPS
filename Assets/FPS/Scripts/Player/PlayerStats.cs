@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using FramedWok.PlayerController;
 using Mirror;
 using Shooter.Player.Weapons;
+using Shooter.Menus;
 
 
 namespace Shooter.Player
@@ -37,18 +38,21 @@ namespace Shooter.Player
         public int currentHealth;
         
         [Header("UI")]
-        [SerializeField]
+        private GameObject healthTextObj;
         private Text healthText;
+        
 
         [Header("Utility")]
         private PlayerController controller;
         private PlayerWeapons weapons;
+       
      
 
         private void Start()
         {
-
-
+            gameObject.SetActive(false);
+            healthTextObj = GameObject.Find("Health Text");
+            healthText = healthTextObj.GetComponent<Text>();
 
             foreach (Spawn spawn in FindObjectsOfType<Spawn>()) 
             {
@@ -61,7 +65,7 @@ namespace Shooter.Player
             UpdateHealth();
             controller = GetComponent<PlayerController>();
             weapons = GetComponent<PlayerWeapons>();
-
+            
 
         }
 
@@ -95,6 +99,7 @@ namespace Shooter.Player
         {
             //Player is dead
             dead = true;
+            
             deaths++;
             gameObject.SetActive(false);
             controller.enabled = false;
@@ -113,6 +118,7 @@ namespace Shooter.Player
             controller.enabled = true;
             weapons.enabled = true;
             gameObject.SetActive(true);
+            
             dead = false;
         }
         public void LoseHealth(int _damage)

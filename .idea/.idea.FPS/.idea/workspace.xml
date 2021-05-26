@@ -10,12 +10,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/FPS/Scripts/Player/Scoring.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/PlayerWeapons.cs" />
       <option value="$PROJECT_DIR$/Assets/FramedWok/PlayerController/PlayerInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Scoring.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/PauseMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/PlayerStats.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Abilities/Defender.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sOXKlK0rlW7Dob9ivqY4tiI7fk" />
@@ -75,6 +82,8 @@
       <workItem from="1620787024411" duration="1937000" />
       <workItem from="1621321619904" duration="11010000" />
       <workItem from="1621988763993" duration="2592000" />
+      <workItem from="1621991941068" duration="4939000" />
+      <workItem from="1621997447274" duration="402000" />
     </task>
     <servers />
   </component>

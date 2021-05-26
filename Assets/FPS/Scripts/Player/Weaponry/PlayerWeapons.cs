@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-using Scoring;
+using Score;
 
 
 using Mirror;
@@ -30,7 +30,7 @@ namespace Shooter.Player.Weapons
         [SerializeField] private Image crosshair;
 
 
-        GameManager GM;
+        Scoring GM;
         PlayerStats thisPlayer;
 
 
@@ -44,7 +44,7 @@ namespace Shooter.Player.Weapons
         void Start()
         {
             thisPlayer = gameObject.GetComponent<PlayerStats>();
-            GM = FindObjectOfType<GameManager>();
+            GM = FindObjectOfType<Scoring>();
         }
 
         private void OnEnable()
@@ -107,16 +107,17 @@ namespace Shooter.Player.Weapons
                 {
                     PlayerStats enemyStats = hit.collider.GetComponent<PlayerStats>();
                     
-                    
-                    if (hasAuthority)
+                    if (enemyStats != null)
                     {
-                        if (enemyStats != null)
+                        if (hasAuthority)
                         {
                             DealDamage(enemyStats, damage); ;
                             enemyStats.UpdateHealth();
+                        
                         }
                         
                     }
+                   
                     Debug.Log(enemyStats.currentHealth);
 
                    
