@@ -1864,3 +1864,68 @@ System memory in use after: 90.3 MB.
 Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2456.
 Total: 3.250600 ms (FindLiveObjects: 0.353700 ms CreateObjectMapping: 0.086200 ms MarkObjects: 2.418600 ms  DeleteObjects: 0.390500 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 2140.635879 seconds.
+  path: Assets/FPS/Scripts/Player/Abilities/Attacker.cs
+  artifactKey: Guid(02821a36640f6944aae621c2cfa67ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Scripts/Player/Abilities/Attacker.cs using Guid(02821a36640f6944aae621c2cfa67ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '499175f5b277eff164713e0369e0a16e') in 0.011512 seconds
+  Import took 0.015105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 60.242574 seconds.
+  path: Assets/FPS/Scripts/Player/Abilities/Missile.cs
+  artifactKey: Guid(d4a8935b8f1d62e4cac8e8400e0e0cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Scripts/Player/Abilities/Missile.cs using Guid(d4a8935b8f1d62e4cac8e8400e0e0cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21695b79986bb308e3ee2752bf2faccf') in 0.002994 seconds
+  Import took 0.005768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.921172 seconds.
+  path: Assets/FPS/Scripts/Player/Abilities/Smoke.cs
+  artifactKey: Guid(07730b2dd38c5484ca770a836c3c3c2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Scripts/Player/Abilities/Smoke.cs using Guid(07730b2dd38c5484ca770a836c3c3c2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a5ccb106031a6a89910b1bf14e8cd05') in 0.009302 seconds
+  Import took 0.012587 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.955274 seconds.
+  path: Assets/FPS/Scripts/Player/Abilities/Support.cs
+  artifactKey: Guid(46cf263dcd920a744ba9109ad34922a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Scripts/Player/Abilities/Support.cs using Guid(46cf263dcd920a744ba9109ad34922a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f8a3cfef3cd625015b7ab41979774ee') in 0.008521 seconds
+  Import took 0.012495 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004609 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.752 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 90.5 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2458.
+Total: 3.237900 ms (FindLiveObjects: 0.648500 ms CreateObjectMapping: 0.131500 ms MarkObjects: 2.044300 ms  DeleteObjects: 0.410900 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

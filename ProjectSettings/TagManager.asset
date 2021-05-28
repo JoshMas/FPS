@@ -7,6 +7,7 @@ TagManager:
   - Team 0
   - Team 1
   - PlayerCamera
+  - WeaponTransform
   layers:
   - Default
   - TransparentFX
