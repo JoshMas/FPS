@@ -11,7 +11,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 5596602742055460913}
-    m_Position: {x: 20, y: 220, z: 0}
+    m_Position: {x: -30, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7600091588471939200}
     m_Position: {x: 0, y: 390, z: 0}
@@ -225,7 +225,7 @@ BlendTree:
   m_Name: Walking
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 1827226128182048838, guid: c5796e9d50a3dbc4eb8e369e913dacdd, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -233,34 +233,34 @@ BlendTree:
     m_DirectBlendParameter: Speed
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 1827226128182048838, guid: c5796e9d50a3dbc4eb8e369e913dacdd, type: 3}
     m_Threshold: 1
     m_Position: {x: 1, y: 0}
-    m_TimeScale: 1
+    m_TimeScale: 2
     m_CycleOffset: 0
     m_DirectBlendParameter: xAxis
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 1827226128182048838, guid: c5796e9d50a3dbc4eb8e369e913dacdd, type: 3}
     m_Threshold: 1
     m_Position: {x: -1, y: 0}
-    m_TimeScale: 1
+    m_TimeScale: 2
     m_CycleOffset: 0
     m_DirectBlendParameter: xAxis
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 1827226128182048838, guid: c5796e9d50a3dbc4eb8e369e913dacdd, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 1}
-    m_TimeScale: 1
+    m_TimeScale: 2
     m_CycleOffset: 0
     m_DirectBlendParameter: xAxis
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 1827226128182048838, guid: c5796e9d50a3dbc4eb8e369e913dacdd, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: -1}
-    m_TimeScale: 1
+    m_TimeScale: 2
     m_CycleOffset: 0
     m_DirectBlendParameter: xAxis
     m_Mirror: 0
@@ -270,7 +270,7 @@ BlendTree:
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
-  m_BlendType: 3
+  m_BlendType: 1
 --- !u!1101 &-4004921916965507047
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -360,7 +360,7 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: yAxis
     m_Type: 1
-    m_DefaultFloat: 0
+    m_DefaultFloat: 1
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
@@ -404,7 +404,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: Shoot Layer
     m_StateMachine: {fileID: 5628963657228366755}
-    m_Mask: {fileID: 0}
+    m_Mask: {fileID: 31900000, guid: 650d498d6782a8d479d667e1f43c3be2, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
