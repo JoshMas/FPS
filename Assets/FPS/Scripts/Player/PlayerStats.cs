@@ -50,8 +50,7 @@ namespace Shooter.Player
 
         private void Start()
         {
-            gameObject.SetActive(false);
-            healthTextObj = GameObject.Find("Health Text");
+           
             healthText = healthTextObj.GetComponent<Text>();
 
             foreach (Spawn spawn in FindObjectsOfType<Spawn>()) 

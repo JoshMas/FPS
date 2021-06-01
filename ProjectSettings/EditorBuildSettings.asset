@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/FPS/Scenes/LevelTest.unity
     guid: b163372de585f0245bddeb1f342e3e1c
   - enabled: 1
+    path: Assets/FPS/Scenes/GameUI.unity
+    guid: 3aecc95fa52c3c9408e3ee3784d9ad7c
+  - enabled: 1
     path: Assets/FPS/Scenes/Online.unity
     guid: 295a252e10ddef84db52c7ad990c9847
   m_configObjects: {}

@@ -21,8 +21,10 @@
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Scoring.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/PauseMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/PlayerStats.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Abilities/Defender.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/PlayerStats.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/UI.cs" />
+      <option value="$PROJECT_DIR$/Assets/FramedWok/PlayerController/PlayerController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sOXKlK0rlW7Dob9ivqY4tiI7fk" />
@@ -84,6 +86,7 @@
       <workItem from="1621988763993" duration="2592000" />
       <workItem from="1621991941068" duration="4939000" />
       <workItem from="1621997447274" duration="402000" />
+      <workItem from="1622000661357" duration="5099000" />
     </task>
     <servers />
   </component>
