@@ -18,7 +18,7 @@ public class FPSNetManager : NetworkManager
             : Instantiate(playerPrefab);
 
         //Replace the zero with a value between 0 and 2, based on whatever method is used to select the character
-        player.GetComponent<PlayerController>().CharacterSelect(0);
+        //player.GetComponent<PlayerController>().CharacterSelect(0);
 
         NetworkServer.AddPlayerForConnection(conn, player);
     }
