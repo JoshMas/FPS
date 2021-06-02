@@ -35,7 +35,7 @@ namespace Shooter.Player
         [SerializeField]
         private int maxHealth = 100;
         [SyncVar]
-        public int currentHealth;
+        public int currentHealth = 100;
         
         [Header("UI")]
         private GameObject healthTextObj;
@@ -48,10 +48,12 @@ namespace Shooter.Player
        
      
 
-        private void Start()
+        void Start()
         {
+
+            StartCoroutine(GetHUD());
+            Debug.Log("");
            
-            healthText = healthTextObj.GetComponent<Text>();
 
             foreach (Spawn spawn in FindObjectsOfType<Spawn>()) 
             {
@@ -61,7 +63,7 @@ namespace Shooter.Player
                 }
                 
             }
-            UpdateHealth();
+            
             controller = GetComponent<PlayerController>();
             weapons = GetComponent<PlayerWeapons>();
             
@@ -79,6 +81,7 @@ namespace Shooter.Player
         // Update is called once per frame
         void Update()
         {
+           
             
 
             if(currentHealth <= 0)
@@ -124,6 +127,27 @@ namespace Shooter.Player
         {
             currentHealth -= _damage;
         }
+
+        IEnumerator GetHUD()
+        {
+            while (healthTextObj == null)
+            {
+                healthTextObj = GameObject.FindGameObjectWithTag("Health Text");
+                
+
+                
+                yield return null;
+               
+            }
+            healthText = healthTextObj.GetComponent<Text>();
+            Debug.Log(healthTextObj);
+            UpdateHealth();
+            
+            
+           
+        }
+
+        
     }
 }
 

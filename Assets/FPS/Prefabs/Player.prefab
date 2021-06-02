@@ -310,8 +310,7 @@ MonoBehaviour:
   teamSpawns: []
   respawnTimer: 0
   maxHealth: 100
-  currentHealth: 0
-  healthText: {fileID: 0}
+  currentHealth: 100
 --- !u!114 &-5200493415177938093
 MonoBehaviour:
   m_ObjectHideFlags: 0

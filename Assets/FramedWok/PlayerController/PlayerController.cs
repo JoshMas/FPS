@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -83,6 +84,15 @@ namespace FramedWok.PlayerController
         private Vector3 movement = Vector3.zero;
 
         // Start is called before the first frame update
+        private void Awake()
+        {
+            
+            
+                SceneManager.LoadSceneAsync("InGameMenus", LoadSceneMode.Additive);
+                SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
+            
+        }
+
         void Start()
         {
             input = GetComponent<PlayerInput>();
@@ -96,10 +106,11 @@ namespace FramedWok.PlayerController
                 cameraMain.position = cameraPoint.position;
                 cameraMain.rotation = cameraPoint.rotation;
 
-                SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
-                SceneManager.LoadSceneAsync("GameUI", LoadSceneMode.Additive);
+               
+                
             }
         }
+        
 
         public void CharacterSelect(int _charType)
         {
