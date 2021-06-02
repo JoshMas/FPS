@@ -113,6 +113,7 @@ namespace FramedWok.PlayerController
             return transform;
         }
 
+        /*
         public void CharacterSelect(int _charType)
         {
             //Will need to add somehting here later for character models
@@ -130,6 +131,7 @@ namespace FramedWok.PlayerController
                     break;
             }
         }
+        */
 
         // Update is called once per frame
         [Client]

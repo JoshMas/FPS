@@ -7,6 +7,9 @@ using FramedWok.PlayerController;
 [AddComponentMenu("")]
 public class FPSNetManager : NetworkManager
 {
+    [SerializeField]
+    private List<GameObject> playerPrefabs;
+
 
     public static FPSNetManager Instance => singleton as FPSNetManager;
 
@@ -14,11 +17,10 @@ public class FPSNetManager : NetworkManager
     {
         Transform startPos = GetStartPosition();
         GameObject player = startPos != null
-            ? Instantiate(playerPrefab, startPos.position, startPos.rotation)
-            : Instantiate(playerPrefab);
+            ? Instantiate(playerPrefabs[0], startPos.position, startPos.rotation)
+            : Instantiate(playerPrefabs[0]);
 
-        //Replace the zero with a value between 0 and 2, based on whatever method is used to select the character
-        player.GetComponent<PlayerController>().CharacterSelect(1);
+        
 
         NetworkServer.AddPlayerForConnection(conn, player);
     }
