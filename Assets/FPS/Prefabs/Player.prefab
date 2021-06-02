@@ -204,9 +204,9 @@ MonoBehaviour:
   numberOfJumps: 1
   canDash: 1
   horizontalDashOnly: 0
-  dashStrength: 40
+  dashStrength: 80
   dashDuration: 0.1
-  dashCooldown: 0.5
+  dashCooldown: 0.25
   dashTimer: 0
 --- !u!114 &7892159949341188548
 MonoBehaviour:
