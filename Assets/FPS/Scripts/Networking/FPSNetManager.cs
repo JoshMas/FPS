@@ -20,8 +20,6 @@ public class FPSNetManager : NetworkManager
             ? Instantiate(playerPrefabs[0], startPos.position, startPos.rotation)
             : Instantiate(playerPrefabs[0]);
 
-        
-
         NetworkServer.AddPlayerForConnection(conn, player);
     }
 }
