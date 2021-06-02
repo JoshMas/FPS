@@ -3,6 +3,7 @@ using UnityEngine;
 
 using Mirror;
 using UnityEngine.SceneManagement;
+using Shooter.Abilities;
 
 namespace FramedWok.PlayerController
 {
