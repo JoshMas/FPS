@@ -2580,3 +2580,291 @@ Received Import Request.
 Start importing Assets/FPS/Models/Levels/Xollas_Exterior Walls/Xollas_Basement_Main_Normal.png using Guid(02d68c0d12f38024f886f8665c104555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '353c05509037599449b8851f92ea15fb') in 0.031178 seconds
   Import took 0.034250 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 232.800555 seconds.
+  path: Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts/Mirror.Examples.Cloud.Pong.asmdef
+  artifactKey: Guid(f254fa29fb722934c9ecbe22427014cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts/Mirror.Examples.Cloud.Pong.asmdef using Guid(f254fa29fb722934c9ecbe22427014cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9a1241f420b85dd2504e2c33bdbfea8') in 0.009332 seconds
+  Import took 0.013107 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.590683 seconds.
+  path: Assets/Mirror/Runtime/Transport/SimpleWebTransport/SimpleWebTransport.asmdef
+  artifactKey: Guid(3b5390adca4e2bb4791cb930316d6f3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Runtime/Transport/SimpleWebTransport/SimpleWebTransport.asmdef using Guid(3b5390adca4e2bb4791cb930316d6f3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '218587add28b5490e4fc31718207f754') in 0.007839 seconds
+  Import took 0.010792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.393937 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Exterior Walls/Xollas_Portcullis_Exit_Normal.png
+  artifactKey: Guid(addb5b6b6a1b39f48a480fc495d43e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Exterior Walls/Xollas_Portcullis_Exit_Normal.png using Guid(addb5b6b6a1b39f48a480fc495d43e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '053b86d214288b6723b7bdbbd71f837e') in 0.027311 seconds
+  Import took 0.030385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.061595 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Arch_Window16.mat
+  artifactKey: Guid(5b1f6fac30b3e09478d2509c77be81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Arch_Window16.mat using Guid(5b1f6fac30b3e09478d2509c77be81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de8dbb6c606c00a4f0de24671664667f') in 0.037815 seconds
+  Import took 0.040803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Box_Crate.mat
+  artifactKey: Guid(73bfb7c0707127146999b218392dfefc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Box_Crate.mat using Guid(73bfb7c0707127146999b218392dfefc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9a142a2091ed7ddb29255340cfc31d7') in 0.007932 seconds
+  Import took 0.010981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Balcony_Straight.mat
+  artifactKey: Guid(70c7d91229181be4faab78dcbedd3c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Balcony_Straight.mat using Guid(70c7d91229181be4faab78dcbedd3c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60c107a9d1ec18f42d4b7c1bbfe55db9') in 0.018940 seconds
+  Import took 0.021809 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Window_Arch.mat
+  artifactKey: Guid(1c51275c14adc554fa54dfcfbae7491b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Window_Arch.mat using Guid(1c51275c14adc554fa54dfcfbae7491b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70c076a4b9143efe5653f6f38c7fc87c') in 0.011036 seconds
+  Import took 0.014556 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Arch1.mat
+  artifactKey: Guid(33062cb77e2616f44a828c6f4210bdaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Arch1.mat using Guid(33062cb77e2616f44a828c6f4210bdaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1084b31d0915b1165751d0250b6715f') in 0.012682 seconds
+  Import took 0.015721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Balcony_Corner.mat
+  artifactKey: Guid(36ee0d4ff2d1ce647b48f55041ca123b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Balcony_Corner.mat using Guid(36ee0d4ff2d1ce647b48f55041ca123b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f87c3b0205b9906b8aeddf25086a31d4') in 0.017945 seconds
+  Import took 0.021105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Basement_Entrance1.mat
+  artifactKey: Guid(ad62e03cfb3365741a47097a92cf0c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Basement_Entrance1.mat using Guid(ad62e03cfb3365741a47097a92cf0c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '329fd7eb8db3df1dca84cefe4d771acc') in 0.019191 seconds
+  Import took 0.022036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Railing_Inner_Corner.mat
+  artifactKey: Guid(65cfa7b98824cfe45ba5d71e45b84f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Railing_Inner_Corner.mat using Guid(65cfa7b98824cfe45ba5d71e45b84f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfc44beb8b75fd845bc3d6f920de9dc9') in 0.008237 seconds
+  Import took 0.011183 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Floor_Corner.mat
+  artifactKey: Guid(e468c526d593e5f44b9e7678df3da92c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Floor_Corner.mat using Guid(e468c526d593e5f44b9e7678df3da92c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2587552c734a8ef5f510f28eff96dad') in 0.012135 seconds
+  Import took 0.015052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Railing_Outer_Corner.mat
+  artifactKey: Guid(f00765d309ff02b4e87b6ec2f23bab1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Railing_Outer_Corner.mat using Guid(f00765d309ff02b4e87b6ec2f23bab1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50b9e823f1243c987ee554459e8ae060') in 0.012374 seconds
+  Import took 0.015247 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Balcony_Turn.mat
+  artifactKey: Guid(d26587f84c4508e41be02929c5272ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Balcony_Turn.mat using Guid(d26587f84c4508e41be02929c5272ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '058a7efa1e0635c8766be77d1d78de6b') in 0.017753 seconds
+  Import took 0.020787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Basement_Main.mat
+  artifactKey: Guid(e73b610af3cce02438df5481cf0cfda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Basement_Main.mat using Guid(e73b610af3cce02438df5481cf0cfda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'feca4d71bd7706df45b8344f2dc79ed3') in 0.020826 seconds
+  Import took 0.024361 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Escape_Bridge.mat
+  artifactKey: Guid(bdcd0d586d167df4da0aafdd4f796800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Escape_Bridge.mat using Guid(bdcd0d586d167df4da0aafdd4f796800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '577b9f41eac5d48b5fbfe72f793c4935') in 0.028410 seconds
+  Import took 0.032064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Bridge_Exit.mat
+  artifactKey: Guid(6e0399bf897a74247b735c63385c92f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Bridge_Exit.mat using Guid(6e0399bf897a74247b735c63385c92f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e8286b434d9a67155d5b433dd7bee3a') in 0.022055 seconds
+  Import took 0.026144 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Windowless_Arch.mat
+  artifactKey: Guid(fff05afd7f3b3d549a1596b5aa779cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Windowless_Arch.mat using Guid(fff05afd7f3b3d549a1596b5aa779cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e3b7c0756ff8f515a8d874e13d8c961') in 0.012441 seconds
+  Import took 0.015684 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.587850 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Tower/Glass/Xollas_Tower_Window_Dome_Normal.png
+  artifactKey: Guid(8a505298b6f70434f8b7f7a54225e368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Tower/Glass/Xollas_Tower_Window_Dome_Normal.png using Guid(8a505298b6f70434f8b7f7a54225e368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4a8e23510aee63301e29874039fe825') in 0.027433 seconds
+  Import took 0.030494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 250.228524 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Tower/Glass/Xollas_Tower_Window_Dome_BaseColor.png
+  artifactKey: Guid(7e0efe7d4b3cc0d4999edb329fc1d1a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Tower/Glass/Xollas_Tower_Window_Dome_BaseColor.png using Guid(7e0efe7d4b3cc0d4999edb329fc1d1a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e195545dd1dbc4aa96c11f317c6a91d') in 0.035264 seconds
+  Import took 0.038342 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 76.344640 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Tower/Xollas_Tower_Dome_Normal.png
+  artifactKey: Guid(c4093e0b5a8335a47a8fc917e787d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Tower/Xollas_Tower_Dome_Normal.png using Guid(c4093e0b5a8335a47a8fc917e787d0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1b408cfa1077bb2926b7b342033ec74') in 0.033711 seconds
+  Import took 0.036720 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.668095 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Tower/Elevator/Xollas_Tower_Elevator_Gear_Normal.png
+  artifactKey: Guid(d7f7e5f03b42abb41bdc52a9627f4da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Tower/Elevator/Xollas_Tower_Elevator_Gear_Normal.png using Guid(d7f7e5f03b42abb41bdc52a9627f4da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9160a42d6bcc1b7d85a1fbf19ee8f14d') in 0.030825 seconds
+  Import took 0.033811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.079911 seconds.
+  path: Assets/Mirror/Examples/Cloud/GUI/Scripts/Mirror.Examples.Cloud.GUI.asmdef
+  artifactKey: Guid(3a6616cce1637584a82fc72820ffd75c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Cloud/GUI/Scripts/Mirror.Examples.Cloud.GUI.asmdef using Guid(3a6616cce1637584a82fc72820ffd75c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdc534897ef4adc41f4e415acec3c336') in 0.006974 seconds
+  Import took 0.010513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.100565 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Tower/Elevator/Xollas_Tower_Elevator_Track_Normal.png
+  artifactKey: Guid(0ce570b58c2b2324686e399a80cbadca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Tower/Elevator/Xollas_Tower_Elevator_Track_Normal.png using Guid(0ce570b58c2b2324686e399a80cbadca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e1b1fc0990da0b4a450ccaa8361d570') in 0.012897 seconds
+  Import took 0.016298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.972675 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Tower/Elevator/Xollas_Tower_Elevator_Platform_Normal.png
+  artifactKey: Guid(b553bcece233f5e45bd52230994ab74d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Tower/Elevator/Xollas_Tower_Elevator_Platform_Normal.png using Guid(b553bcece233f5e45bd52230994ab74d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a64ff554a911c7812026a25105260b6f') in 0.033790 seconds
+  Import took 0.037171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 190.645236 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Railing_Straight.mat
+  artifactKey: Guid(7c0828a8554586c43a8a94b95bd068cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Railing_Straight.mat using Guid(7c0828a8554586c43a8a94b95bd068cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf5bac1bcf30add1790da45a2901f87d') in 0.013412 seconds
+  Import took 0.016553 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Stone_Floor_Short.mat
+  artifactKey: Guid(e7f0b5014f959f14bb87e77a8ffe808f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Stone_Floor_Short.mat using Guid(e7f0b5014f959f14bb87e77a8ffe808f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f8173e009f76b3c09a939517b6d30e5') in 0.008815 seconds
+  Import took 0.012352 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Wall_Outer_Corner.mat
+  artifactKey: Guid(0d173be6119d2ff4490eec99ec7b5ac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Wall_Outer_Corner.mat using Guid(0d173be6119d2ff4490eec99ec7b5ac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff4ba414e3a8d806105664302e8c3d34') in 0.010539 seconds
+  Import took 0.013505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Ramp_Stairs.mat
+  artifactKey: Guid(b9b6823194bbbdd448b0dc33a6c2b939) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Ramp_Stairs.mat using Guid(b9b6823194bbbdd448b0dc33a6c2b939) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f4263497a38cd4d6a6e63612e3fa2a9') in 0.014837 seconds
+  Import took 0.017915 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Wall_Corner.mat
+  artifactKey: Guid(bc68275b43a2b364b8b641134a41d8bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Xollas_Alley_v1_Wall_Corner.mat using Guid(bc68275b43a2b364b8b641134a41d8bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86bf529307245ea2b9a95760b663c86c') in 0.013982 seconds
+  Import took 0.017081 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 207.163649 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Exterior Walls/Xollas_Balcony_Tunnel_Normal.png
+  artifactKey: Guid(a156ef2f684577047a2eb5e3ceb5841d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Exterior Walls/Xollas_Balcony_Tunnel_Normal.png using Guid(a156ef2f684577047a2eb5e3ceb5841d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '817292114a24f1c199ee5a6f8917c198') in 0.019223 seconds
+  Import took 0.022830 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 117.729836 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Floors/Xollas_Floor_Main_Area_Normal.png
+  artifactKey: Guid(437fbc29390af7f4caeb55f4b845d4e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Floors/Xollas_Floor_Main_Area_Normal.png using Guid(437fbc29390af7f4caeb55f4b845d4e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '592c1a0a0e21554f831f4a7b0c5f1b2d') in 0.030235 seconds
+  Import took 0.033705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.507818 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Floors/Xollas_Floor_Spawn_Normal.png
+  artifactKey: Guid(8550685fe6ff08a478b2ccc1f7d1b6b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Floors/Xollas_Floor_Spawn_Normal.png using Guid(8550685fe6ff08a478b2ccc1f7d1b6b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '901ac5cd5153ef9d8158de97e10424ad') in 0.029535 seconds
+  Import took 0.032957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 151.449653 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Tower/Xollas_Tower_GroundFloor_Normal.png
+  artifactKey: Guid(ef72d94a82ea91f40a3fe7ba01a9ea54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Tower/Xollas_Tower_GroundFloor_Normal.png using Guid(ef72d94a82ea91f40a3fe7ba01a9ea54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ece26244cceb2ad1ba883d85dd4d241') in 0.020522 seconds
+  Import took 0.023586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 69.457664 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Tower/Glass/Xollas_Tower_Window_Main_Normal.png
+  artifactKey: Guid(2d53076e24982ec4399d44c7b0f17192) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Tower/Glass/Xollas_Tower_Window_Main_Normal.png using Guid(2d53076e24982ec4399d44c7b0f17192) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cff026817b5d417c919b8ef3656b34c8') in 0.039211 seconds
+  Import took 0.042479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 133.465404 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Tower/Xollas_Tower_MainBody_Normal.png
+  artifactKey: Guid(598ded0dd64688247b99dbb82aa614de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Tower/Xollas_Tower_MainBody_Normal.png using Guid(598ded0dd64688247b99dbb82aa614de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c8882f048ed4004ffdcfdbd6c8438a8') in 0.035010 seconds
+  Import took 0.039352 seconds .
+
