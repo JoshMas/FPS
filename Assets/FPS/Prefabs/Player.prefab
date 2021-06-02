@@ -205,7 +205,7 @@ MonoBehaviour:
   canDash: 1
   horizontalDashOnly: 0
   dashStrength: 40
-  dashDuration: 0.05
+  dashDuration: 0.1
   dashCooldown: 0.5
   dashTimer: 0
 --- !u!114 &7892159949341188548
