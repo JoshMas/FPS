@@ -34,8 +34,6 @@ namespace FramedWok.PlayerController
         {
             Vector3 vector = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")));
             vector = Vector3.ClampMagnitude(vector, 1.0f);
-            if (_isGrounded && vector != Vector3.zero)
-                vector += Vector3.down;
             return vector;
         }
 
