@@ -101,7 +101,6 @@ namespace FramedWok.PlayerController
                 cameraMain.parent = cameraPoint;
                 cameraMain.position = cameraPoint.position;
                 cameraMain.rotation = cameraPoint.rotation;
-
                 SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
             }
         }
