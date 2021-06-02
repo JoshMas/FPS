@@ -1,0 +1,267 @@
+fileFormatVersion: 2
+guid: 817ac168ff253b94087c9f93ab4cdb13
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arch_Window16
+    second: {fileID: 2100000, guid: 5b1f6fac30b3e09478d2509c77be81ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Balcony_Corner
+    second: {fileID: 2100000, guid: 36ee0d4ff2d1ce647b48f55041ca123b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Balcony_Straight
+    second: {fileID: 2100000, guid: 70c7d91229181be4faab78dcbedd3c34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Balcony_Turn
+    second: {fileID: 2100000, guid: d26587f84c4508e41be02929c5272ed0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Basement_Entrance1
+    second: {fileID: 2100000, guid: ad62e03cfb3365741a47097a92cf0c73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Basement_Main
+    second: {fileID: 2100000, guid: e73b610af3cce02438df5481cf0cfda9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box_Crate
+    second: {fileID: 2100000, guid: 73bfb7c0707127146999b218392dfefc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bridge_Exit
+    second: {fileID: 2100000, guid: 6e0399bf897a74247b735c63385c92f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dome_Window
+    second: {fileID: 2100000, guid: 3b6766fee66a7104a986c2a3b1695fd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elevator_Gear
+    second: {fileID: 2100000, guid: 1f290cd7ed0ae0a44874d1e4d04d69da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elevator_Guide
+    second: {fileID: 2100000, guid: 993b943c90fc86a4aa94dcfdad180377, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elevator_Platform2
+    second: {fileID: 2100000, guid: 468840ef37528c04aa99765f563c0769, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Escape_Bridge
+    second: {fileID: 2100000, guid: bdcd0d586d167df4da0aafdd4f796800, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hallway
+    second: {fileID: 2100000, guid: 8d96403069c11df4d98e52949b50a38d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main_Ground
+    second: {fileID: 2100000, guid: ccd3d4f8be447af41863297e25fe6fa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Dome
+    second: {fileID: 2100000, guid: eaf13ac84b0f0434ba49b87d03c367dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spawn_Ground
+    second: {fileID: 2100000, guid: 836ec5562723ac94f9d4d14575eca559, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tower_Frame
+    second: {fileID: 2100000, guid: fa6a2883f8125df43ad8c2cd8c7de32e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tower_Glass1
+    second: {fileID: 2100000, guid: f6a4672e4517c8a40bee2d6c1417082a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tower_Ground_Floor
+    second: {fileID: 2100000, guid: 48add71867e3cd942b3a9abc9c94bcde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall_Pipe_Short
+    second: {fileID: 2100000, guid: 9fb3e3c48e9af424fab459bea3e3cbbd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window_Arch
+    second: {fileID: 2100000, guid: 1c51275c14adc554fa54dfcfbae7491b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windowless_Arch
+    second: {fileID: 2100000, guid: fff05afd7f3b3d549a1596b5aa779cfd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Xollas_Alley_v1_Arch1
+    second: {fileID: 2100000, guid: 33062cb77e2616f44a828c6f4210bdaf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Xollas_Alley_v1_Floor_Corner
+    second: {fileID: 2100000, guid: e468c526d593e5f44b9e7678df3da92c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Xollas_Alley_v1_Railing_Inner_Corner
+    second: {fileID: 2100000, guid: 65cfa7b98824cfe45ba5d71e45b84f63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Xollas_Alley_v1_Railing_Outer_Corner
+    second: {fileID: 2100000, guid: f00765d309ff02b4e87b6ec2f23bab1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Xollas_Alley_v1_Railing_Straight
+    second: {fileID: 2100000, guid: 7c0828a8554586c43a8a94b95bd068cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Xollas_Alley_v1_Ramp_Stairs
+    second: {fileID: 2100000, guid: b9b6823194bbbdd448b0dc33a6c2b939, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Xollas_Alley_v1_Stone_Floor_Short
+    second: {fileID: 2100000, guid: e7f0b5014f959f14bb87e77a8ffe808f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Xollas_Alley_v1_Wall_Corner
+    second: {fileID: 2100000, guid: bc68275b43a2b364b8b641134a41d8bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Xollas_Alley_v1_Wall_Outer_Corner
+    second: {fileID: 2100000, guid: 0d173be6119d2ff4490eec99ec7b5ac8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 686ad275327ba85488d681434e53fd4c, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
