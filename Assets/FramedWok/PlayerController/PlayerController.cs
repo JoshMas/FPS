@@ -20,6 +20,9 @@ namespace FramedWok.PlayerController
         private PlayerPhysics physics;
         private Transform cameraPoint;
 
+        private Animator animator;
+        private NetworkAnimator netAnimator;
+
         #region movement
         /// <summary>
         /// How quickly the player accelerates
@@ -88,6 +91,8 @@ namespace FramedWok.PlayerController
         {
             input = GetComponent<PlayerInput>();
             physics = GetComponent<PlayerPhysics>();
+            animator = GetComponentInChildren<Animator>();
+            netAnimator = GetComponent<NetworkAnimator>();
             Cursor.lockState = CursorLockMode.Locked;
             if (isLocalPlayer)
             {
@@ -96,7 +101,6 @@ namespace FramedWok.PlayerController
                 cameraMain.parent = cameraPoint;
                 cameraMain.position = cameraPoint.position;
                 cameraMain.rotation = cameraPoint.rotation;
-
                 SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
             }
         }
@@ -108,7 +112,7 @@ namespace FramedWok.PlayerController
             switch (_charType)
             {
                 case 0:
-                    gameObject.AddComponent<Attacker>();
+                    //gameObject.AddComponent<Attacker>();
                     break;
                 case 1:
                     gameObject.AddComponent<Defender>();
@@ -126,6 +130,7 @@ namespace FramedWok.PlayerController
             if (!hasAuthority)
                 return;
 
+            SetMoveAnimValues();
 
             rotation = input.GetCameraRotation();
             jump = Input.GetKeyDown(input.jumpKey) && canJump && jumpCounter < numberOfJumps;
@@ -249,7 +254,8 @@ namespace FramedWok.PlayerController
             if (!hasAuthority)
                 return;
 
-            movement = input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl);
+            movement = input.GetGroundMovementVector(isGrounded);
+            movement *= walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl);
 
             //Walking
             physics.SetGroundMovement(movement);
@@ -265,6 +271,12 @@ namespace FramedWok.PlayerController
             //    CmdMoveStuff(movement);
             //}
             //CmdMoveStuff(movement);
+        }
+
+        private void SetMoveAnimValues()
+        {
+            animator.SetFloat("xAxis", Input.GetAxis("Horizontal"));
+            animator.SetFloat("yAxis", Input.GetAxis("Vertical"));
         }
         /*
         [Command]
@@ -298,7 +310,7 @@ namespace FramedWok.PlayerController
         private IEnumerator Dash()
         {
             isGrounded = false;
-            physics.Dash(physics.GetDashDirection(horizontalDashOnly, input.GetGroundMovementVector(isGrounded).normalized), dashStrength);
+            physics.Dash(physics.GetDashDirection(horizontalDashOnly, input.GetGroundMovementVector(false).normalized), dashStrength);
             isDashing = true;
             yield return new WaitForSeconds(dashDuration);
             physics.RestrictVelocity(0, 1);
