@@ -1508,3 +1508,35 @@ Received Import Request.
 Start importing Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Normal.png using Guid(334d1e18dc210504cb60601acd813f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '308924ccbfc5789ca1ee7a4d6eafbba2') in 0.013189 seconds
   Import took 0.017081 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 412.469793 seconds.
+  path: Assets/FPS/Models/AnimationControllers/Basic.mask
+  artifactKey: Guid(9f2e4135af548a44283f651ebcc370dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/AnimationControllers/Basic.mask using Guid(9f2e4135af548a44283f651ebcc370dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0fdfed2219be9a2f202169dc169b753') in 0.003482 seconds
+  Import took 0.006933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.734383 seconds.
+  path: Assets/FPS/Models/AnimationControllers/MahkAnimController.controller
+  artifactKey: Guid(29b7eace487f8174cb66479cd9d8bdf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/AnimationControllers/MahkAnimController.controller using Guid(29b7eace487f8174cb66479cd9d8bdf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f139672a33431524c29b18c41601dbe') in 0.010949 seconds
+  Import took 0.015096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 672.032616 seconds.
+  path: Assets/FPS/Models/AnimationControllers/SarielAnimController.overrideController
+  artifactKey: Guid(23a427eb27fc15f4d8d8414a50b5665d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/AnimationControllers/SarielAnimController.overrideController using Guid(23a427eb27fc15f4d8d8414a50b5665d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68928ae7089df2ee1994f210bc227647') in 0.021024 seconds
+  Import took 0.025945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2271.829951 seconds.
+  path: Assets/FPS/Prefabs/Character Selection.prefab
+  artifactKey: Guid(b32556687a451364eac45f5b407ead8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Character Selection.prefab using Guid(b32556687a451364eac45f5b407ead8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a31fcbb522c84d99c86c74b72c5efd43') in 0.017625 seconds
+  Import took 0.021823 seconds .
+
