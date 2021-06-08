@@ -59,9 +59,241 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hip
+        weight: 0
+      - path: Hip/Left_Hip
+        weight: 0
+      - path: Hip/Left_Hip/Left_Knee
+        weight: 0
+      - path: Hip/Left_Hip/Left_Knee/Left_Ball
+        weight: 0
+      - path: Hip/Left_Hip/Left_Knee/Left_Ball/Left_Foot
+        weight: 0
+      - path: Hip/Left_Hip/Left_Knee/Left_Ball/Left_Foot/Left_Toe
+        weight: 0
+      - path: Hip/Right_Hip
+        weight: 0
+      - path: Hip/Right_Hip/Right_Knee
+        weight: 0
+      - path: Hip/Right_Hip/Right_Knee/Right_Ball
+        weight: 0
+      - path: Hip/Right_Hip/Right_Knee/Right_Ball/Right_Foot
+        weight: 0
+      - path: Hip/Right_Hip/Right_Knee/Right_Ball/Right_Foot/Right_Toe
+        weight: 0
+      - path: Hip/Spine_01
+        weight: 0
+      - path: Hip/Spine_01/Spine_02
+        weight: 0
+      - path: Hip/Spine_01/Spine_02/Spine_03
+        weight: 0
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04
+        weight: 0
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_index_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_index_01/Left_index_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_index_01/Left_index_02/Left_index_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_index_01/Left_index_02/Left_index_03/Left_index_04
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_MiddleF_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_MiddleF_01/Left_MiddleF_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_MiddleF_01/Left_MiddleF_02/Left_MiddleF_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_MiddleF_01/Left_MiddleF_02/Left_MiddleF_03/Left_MiddleF_04
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_Pinky_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_Pinky_01/Left_Pinky_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_Pinky_01/Left_Pinky_02/Left_Pinky_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_Pinky_01/Left_Pinky_02/Left_Pinky_03/Left_Pinky_04
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_Ring_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_Ring_01/Left_Ring_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_Ring_01/Left_Ring_02/Left_Ring_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_Ring_01/Left_Ring_02/Left_Ring_03/Left_Ring_04
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_Thumb_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_Thumb_01/Left_Thumb_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Left_Clavical/Left_Shoulder/Left_Elbow/Left_Wrist/Left_Thumb_01/Left_Thumb_02/Left_Thumb_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Head
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Head/Gums_bottom
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Head/Gums_Top
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Head/Head_Top
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Head/Head_Top/EYE_L
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Head/Head_Top/Eyes_R
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_index_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_index_01/Right_index_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_index_01/Right_index_02/Right_index_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_index_01/Right_index_02/Right_index_03/Right_index_04
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_MiddleF_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_MiddleF_01/Right_MiddleF_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_MiddleF_01/Right_MiddleF_02/Right_MiddleF_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_MiddleF_01/Right_MiddleF_02/Right_MiddleF_03/Right_MiddleF_04
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_Pinky_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_Pinky_01/Right_Pinky_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_Pinky_01/Right_Pinky_02/Right_Pinky_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_Pinky_01/Right_Pinky_02/Right_Pinky_03/Right_Pinky_04
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_Ring_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_Ring_01/Right_Ring_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_Ring_01/Right_Ring_02/Right_Ring_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_Ring_01/Right_Ring_02/Right_Ring_03/Right_Ring_04
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_Thumb_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_Thumb_01/Right_Thumb_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Right_Thumb_01/Right_Thumb_02/Right_Thumb_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Right_Clavical/Right_Shoulder/Right_Elbow/Right_Wrist/Staff_OBJ_02:Staff_Cap3
+        weight: 1
+      - path: Makh_4
+        weight: 1
+      - path: Master_Contorl
+        weight: 0
+      - path: Master_Contorl/Hip_Controler
+        weight: 0
+      - path: Master_Contorl/Hip_Controler/Chest_Controller
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Head_Controller
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Head_Controller/Eye_Ctrl_master
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Head_Controller/Eye_Ctrl_master/Left_Eye_Ctrl
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Head_Controller/Eye_Ctrl_master/Right_Eye_Ctrl
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Head_Controller/Teeth_Control_Master
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Head_Controller/Teeth_Control_Master/Teeth_Bottom_Ctrl
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Head_Controller/Teeth_Control_Master/Teeth_Top_Ctrl
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_Index_Ctrl_01
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_Index_Ctrl_01/Left_INdex_Ctrl_02
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_Index_Ctrl_01/Left_INdex_Ctrl_02/Left_Index_Ctrl_03
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_Middle_Ctrl_01
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_Middle_Ctrl_01/Left_Middle_Ctrl_02
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_Middle_Ctrl_01/Left_Middle_Ctrl_02/Left_Middle_Ctrl_03
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_PInky_Ctrl_01
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_PInky_Ctrl_01/Left_PInky_Ctrl_02
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_PInky_Ctrl_01/Left_PInky_Ctrl_02/Left_PInky_Ctrl_03
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_Ring_Ctrl_01
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_Ring_Ctrl_01/Left_Ring_Ctrl_02
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_Ring_Ctrl_01/Left_Ring_Ctrl_02/Left_Ring_Ctrl_03
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_Thumb_Ctrl_01
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Left_Wrist_Control/Left_Thumb_Ctrl_01/Left_Thumb_Ctrl_02
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_Index_Ctrl_04
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_Index_Ctrl_04/Right_INdex_Ctrl_02
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_Index_Ctrl_04/Right_INdex_Ctrl_02/Right_Index_Ctrl_03
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_Middle_Ctrl_04
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_Middle_Ctrl_04/Right_Middle_Ctrl_02
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_Middle_Ctrl_04/Right_Middle_Ctrl_02/Right_Middle_Ctrl_03
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_PInky_Ctrl_04
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_PInky_Ctrl_04/Right_PInky_Ctrl_02
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_PInky_Ctrl_04/Right_PInky_Ctrl_02/Right_PInky_Ctrl_03
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_Ring_Ctrl_04
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_Ring_Ctrl_04/Right_Ring_Ctrl_02
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_Ring_Ctrl_04/Right_Ring_Ctrl_02/Right_Ring_Ctrl_03
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_Thumb_Ctrl_03
+        weight: 1
+      - path: Master_Contorl/Hip_Controler/Chest_Controller/Right_Wriist_Control/Right_Thumb_Ctrl_03/Right_Thumb_Ctrl_02
+        weight: 1
+      - path: Master_Contorl/Left_Control
+        weight: 0
+      - path: Master_Contorl/Left_Control/Left_Foot_ctrl
+        weight: 0
+      - path: Master_Contorl/Left_Control/Left_Knee_Ctrl
+        weight: 0
+      - path: Master_Contorl/Right_Control
+        weight: 0
+      - path: Master_Contorl/Right_Control/Right_Foot_ctrl
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: ffd5f43964e0b054684101b6c49b681e, type: 2}
       additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:

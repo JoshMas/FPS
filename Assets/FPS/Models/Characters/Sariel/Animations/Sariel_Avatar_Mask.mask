@@ -16,21 +16,21 @@ AvatarMask:
   - m_Path: QuickRigCharacter_Reference/QuickRigCharacter_Hips
     m_Weight: 1
   - m_Path: QuickRigCharacter_Reference/QuickRigCharacter_Hips/QuickRigCharacter_LeftUpLeg
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: QuickRigCharacter_Reference/QuickRigCharacter_Hips/QuickRigCharacter_LeftUpLeg/QuickRigCharacter_LeftLeg
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: QuickRigCharacter_Reference/QuickRigCharacter_Hips/QuickRigCharacter_LeftUpLeg/QuickRigCharacter_LeftLeg/QuickRigCharacter_LeftFoot
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: QuickRigCharacter_Reference/QuickRigCharacter_Hips/QuickRigCharacter_LeftUpLeg/QuickRigCharacter_LeftLeg/QuickRigCharacter_LeftFoot/QuickRigCharacter_LeftToeBase
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: QuickRigCharacter_Reference/QuickRigCharacter_Hips/QuickRigCharacter_RightUpLeg
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: QuickRigCharacter_Reference/QuickRigCharacter_Hips/QuickRigCharacter_RightUpLeg/QuickRigCharacter_RightLeg
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: QuickRigCharacter_Reference/QuickRigCharacter_Hips/QuickRigCharacter_RightUpLeg/QuickRigCharacter_RightLeg/QuickRigCharacter_RightFoot
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: QuickRigCharacter_Reference/QuickRigCharacter_Hips/QuickRigCharacter_RightUpLeg/QuickRigCharacter_RightLeg/QuickRigCharacter_RightFoot/QuickRigCharacter_RightToeBase
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: QuickRigCharacter_Reference/QuickRigCharacter_Hips/QuickRigCharacter_Spine
     m_Weight: 1
   - m_Path: QuickRigCharacter_Reference/QuickRigCharacter_Hips/QuickRigCharacter_Spine/QuickRigCharacter_Spine1

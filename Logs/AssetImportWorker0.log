@@ -1340,3 +1340,171 @@ System memory in use after: 107.4 MB.
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2407.
 Total: 3.740300 ms (FindLiveObjects: 0.534400 ms CreateObjectMapping: 0.192600 ms MarkObjects: 2.883500 ms  DeleteObjects: 0.128300 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004407 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.782 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107.4 MB.
+System memory in use after: 107.4 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2409.
+Total: 2.540600 ms (FindLiveObjects: 0.362800 ms CreateObjectMapping: 0.117400 ms MarkObjects: 1.950900 ms  DeleteObjects: 0.106800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 393.252466 seconds.
+  path: Assets/FPS/Models/Characters/Sariel/Animations/Sariel_AltFire_ThirdPerson.fbx
+  artifactKey: Guid(b31fdb1e955c6ae4f820633a30f43708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Characters/Sariel/Animations/Sariel_AltFire_ThirdPerson.fbx using Guid(b31fdb1e955c6ae4f820633a30f43708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e51a75ffe1a400b53fce452299ef9888') in 0.099774 seconds
+  Import took 0.103920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.374862 seconds.
+  path: Assets/FPS/Models/Zandora Anim/Makh_Shoot.fbx
+  artifactKey: Guid(312b8f6ea8679f347b2a38d859c871ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/Makh_Shoot.fbx using Guid(312b8f6ea8679f347b2a38d859c871ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '740ce15e53238d21e8c7f3b9721c52e4') in 0.091756 seconds
+  Import took 0.095899 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.712089 seconds.
+  path: Assets/FPS/Models/Zandora Anim/staff textures
+  artifactKey: Guid(b3c03c6c8c0bc0049b9fbabbfd266a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/staff textures using Guid(b3c03c6c8c0bc0049b9fbabbfd266a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43097fea3e7f94370cf7c9696251e84d') in 0.008247 seconds
+  Import took 0.012422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.283807 seconds.
+  path: Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_BaseColor.png
+  artifactKey: Guid(ac68ab47d516f1840aaf2ad83b1eb63b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_BaseColor.png using Guid(ac68ab47d516f1840aaf2ad83b1eb63b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1a2ed4f06e9a14dc5bc1f660de66f45') in 0.019260 seconds
+  Import took 0.023438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Height.png
+  artifactKey: Guid(6fba8d825af1ba2409853bbb25dd291b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Height.png using Guid(6fba8d825af1ba2409853bbb25dd291b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20814f9c55511275a862bb8bfb24bc9a') in 0.014008 seconds
+  Import took 0.016687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Roughness.png
+  artifactKey: Guid(7d2cc7911bf202c45ad8a8c6b9d317da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Roughness.png using Guid(7d2cc7911bf202c45ad8a8c6b9d317da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0aded24ff712779a36ea609ce8509da') in 0.018862 seconds
+  Import took 0.021582 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Transparency_map2.png
+  artifactKey: Guid(48b57c46249530c439ecdca023fcd7db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Transparency_map2.png using Guid(48b57c46249530c439ecdca023fcd7db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd64bb30ca37bd9ad7e746298a36af0') in 0.013662 seconds
+  Import took 0.016429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Metallic.png
+  artifactKey: Guid(6ec58241b52ea124ea60dec262ed6b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Metallic.png using Guid(6ec58241b52ea124ea60dec262ed6b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70bfd3313f82c4ce90d0cbda411548fe') in 0.013579 seconds
+  Import took 0.016898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Transparency_map.png
+  artifactKey: Guid(27e473c7752d48c40a8ccd47f19be207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Transparency_map.png using Guid(27e473c7752d48c40a8ccd47f19be207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40330cf54735e4ceb0a6ef4454077d53') in 0.015164 seconds
+  Import took 0.018128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Normal.png
+  artifactKey: Guid(334d1e18dc210504cb60601acd813f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Normal.png using Guid(334d1e18dc210504cb60601acd813f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82c86d6fd1994905fe354bca04b6c1a1') in 0.014051 seconds
+  Import took 0.017084 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 121.585988 seconds.
+  path: Assets/FPS/Models/Zandora Anim/Makh2.mat
+  artifactKey: Guid(935caaf0f8f4faf47aebfaf3a156ec36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/Makh2.mat using Guid(935caaf0f8f4faf47aebfaf3a156ec36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42859b08a85696db79b4cc159825217f') in 0.018768 seconds
+  Import took 0.021844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/FPS/Models/Zandora Anim/Makh_Idle_Hover.fbx
+  artifactKey: Guid(5c73863a53efc1a40a647e9b387516d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/Makh_Idle_Hover.fbx using Guid(5c73863a53efc1a40a647e9b387516d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29742f9e85f7f0402cc3b65b9a794196') in 0.073845 seconds
+  Import took 0.077052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/FPS/Models/Zandora Anim/Staff_Gem1.mat
+  artifactKey: Guid(af1e4cd8685372f46a5f30617539be86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/Staff_Gem1.mat using Guid(af1e4cd8685372f46a5f30617539be86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '845565aebcd18c462ecee60a44d449a8') in 0.019100 seconds
+  Import took 0.022060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/FPS/Models/Zandora Anim/Staff_BOdy.mat
+  artifactKey: Guid(2f2582c5029ac3b4d910c33060833f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/Staff_BOdy.mat using Guid(2f2582c5029ac3b4d910c33060833f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b652ffe6a5fc25cd80abea49ea1ee29f') in 0.016439 seconds
+  Import took 0.019526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.506390 seconds.
+  path: Assets/FPS/Prefabs/Mahk.prefab
+  artifactKey: Guid(a45835eb16659ae49a723801be8a28dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Mahk.prefab using Guid(a45835eb16659ae49a723801be8a28dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5070c1ad1a18d46bfd61cdd890ef427d') in 0.043568 seconds
+  Import took 0.048129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.976695 seconds.
+  path: Assets/FPS/Prefabs/Mahk.prefab
+  artifactKey: Guid(a45835eb16659ae49a723801be8a28dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Mahk.prefab using Guid(a45835eb16659ae49a723801be8a28dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11b3c9fd8e6aa0f0b7a27bd9990643d7') in 0.035936 seconds
+  Import took 0.040837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.819040 seconds.
+  path: Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Normal.png
+  artifactKey: Guid(334d1e18dc210504cb60601acd813f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Zandora Anim/staff textures/Staff_new_Staff_OBJ_02_lambert2SG1_Normal.png using Guid(334d1e18dc210504cb60601acd813f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '308924ccbfc5789ca1ee7a4d6eafbba2') in 0.013189 seconds
+  Import took 0.017081 seconds .
+

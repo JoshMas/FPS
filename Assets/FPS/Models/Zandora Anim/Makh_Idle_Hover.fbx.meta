@@ -6,7 +6,22 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Mahk_Idle
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Makh2
+    second: {fileID: 2100000, guid: 935caaf0f8f4faf47aebfaf3a156ec36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Staff_BOdy
+    second: {fileID: 2100000, guid: 2f2582c5029ac3b4d910c33060833f1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Staff_Gem1
+    second: {fileID: 2100000, guid: af1e4cd8685372f46a5f30617539be86, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

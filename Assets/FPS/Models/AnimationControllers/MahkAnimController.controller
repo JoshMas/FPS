@@ -404,7 +404,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: Shoot Layer
     m_StateMachine: {fileID: 5628963657228366755}
-    m_Mask: {fileID: 31900000, guid: 9f2e4135af548a44283f651ebcc370dc, type: 2}
+    m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
@@ -525,7 +525,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: 5c73863a53efc1a40a647e9b387516d5, type: 3}
+  m_Motion: {fileID: 0}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
