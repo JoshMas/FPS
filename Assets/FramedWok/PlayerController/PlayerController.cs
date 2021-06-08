@@ -152,6 +152,8 @@ namespace FramedWok.PlayerController
                 physics.Jump(jumpStrength);
                 jumpCounter++;
                 isGrounded = false;
+
+                netAnimator.SetTrigger("jump");
             }
             //groundCheckCounter += Time.deltaTime;
             //if(groundCheckCounter > 0.1f)
@@ -167,6 +169,8 @@ namespace FramedWok.PlayerController
             {
                 dashTimer = dashCooldown;
                 StartCoroutine(nameof(Dash));
+
+                netAnimator.SetTrigger("dash");
             }
 
             //if (isServer)

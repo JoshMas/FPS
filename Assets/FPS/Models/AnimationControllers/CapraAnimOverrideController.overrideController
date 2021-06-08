@@ -7,5 +7,5 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: CapraAnimOverrideController
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29b7eace487f8174cb66479cd9d8bdf9, type: 2}
   m_Clips: []
