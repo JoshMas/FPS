@@ -1332,3 +1332,203 @@ System memory in use after: 106.9 MB.
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2433.
 Total: 4.358900 ms (FindLiveObjects: 0.368100 ms CreateObjectMapping: 0.111300 ms MarkObjects: 3.710800 ms  DeleteObjects: 0.166600 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 1284.650952 seconds.
+  path: Assets/FPS/Resources/WeaponPrefabs/GravGrenade.prefab
+  artifactKey: Guid(3b3ae39f14d25af4cb6b9269a7f2b5cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Resources/WeaponPrefabs/GravGrenade.prefab using Guid(3b3ae39f14d25af4cb6b9269a7f2b5cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a23f3decd3ddfe35da8af64a6b3400b2') in 0.056432 seconds
+  Import took 0.059746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/FPS/Resources/WeaponPrefabs/Smoke.prefab
+  artifactKey: Guid(033a905e1ff59654e9688cff581781be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Resources/WeaponPrefabs/Smoke.prefab using Guid(033a905e1ff59654e9688cff581781be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03d949c7a07d766373d62e2f33519259') in 0.018881 seconds
+  Import took 0.021981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/FPS/Resources/WeaponPrefabs/Missile.prefab
+  artifactKey: Guid(08e55c121843b87498fc004a200da926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Resources/WeaponPrefabs/Missile.prefab using Guid(08e55c121843b87498fc004a200da926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccf952deabb4e12fce294848da6b9ae7') in 0.020462 seconds
+  Import took 0.023699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.586826 seconds.
+  path: Assets/FPS/Scenes/InGameMenus.unity
+  artifactKey: Guid(a304b7f83e7369249800cb98a1323ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Scenes/InGameMenus.unity using Guid(a304b7f83e7369249800cb98a1323ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5473e166b27089fe2a9fd84a8dcc65d7') in 0.008503 seconds
+  Import took 0.012264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002411 seconds.
+  path: Assets/FPS/Scenes/InGameMenus.unity
+  artifactKey: Guid(a304b7f83e7369249800cb98a1323ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Scenes/InGameMenus.unity using Guid(a304b7f83e7369249800cb98a1323ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5473e166b27089fe2a9fd84a8dcc65d7') in 0.003835 seconds
+  Import took 0.006779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.739462 seconds.
+  path: Assets/FPS/Scenes/LevelTest.unity
+  artifactKey: Guid(b163372de585f0245bddeb1f342e3e1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Scenes/LevelTest.unity using Guid(b163372de585f0245bddeb1f342e3e1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '427ba6c70472f93af6f706f11bec45fb') in 0.008960 seconds
+  Import took 0.012197 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005306 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.829 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 106.8 MB.
+System memory in use after: 106.9 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2436.
+Total: 2.379600 ms (FindLiveObjects: 0.291900 ms CreateObjectMapping: 0.084700 ms MarkObjects: 1.876700 ms  DeleteObjects: 0.125000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 384.270507 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Arch_Window16.mat
+  artifactKey: Guid(5b1f6fac30b3e09478d2509c77be81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Arch_Window16.mat using Guid(5b1f6fac30b3e09478d2509c77be81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afda34f16192d652507cb0594f2ea4d2') in 0.059922 seconds
+  Import took 0.063195 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Box_Crate.mat
+  artifactKey: Guid(73bfb7c0707127146999b218392dfefc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Box_Crate.mat using Guid(73bfb7c0707127146999b218392dfefc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a25c4d81f893e6ca67f8d8dd3b899a3') in 0.021889 seconds
+  Import took 0.024861 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Arch_Window16.mat
+  artifactKey: Guid(5b1f6fac30b3e09478d2509c77be81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Arch_Window16.mat using Guid(5b1f6fac30b3e09478d2509c77be81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afda34f16192d652507cb0594f2ea4d2') in 0.017109 seconds
+  Import took 0.020435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Balcony_Straight.mat
+  artifactKey: Guid(70c7d91229181be4faab78dcbedd3c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Balcony_Straight.mat using Guid(70c7d91229181be4faab78dcbedd3c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdaed086982b790785d2681237b1a63b') in 0.024882 seconds
+  Import took 0.029046 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Balcony_Corner.mat
+  artifactKey: Guid(36ee0d4ff2d1ce647b48f55041ca123b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Balcony_Corner.mat using Guid(36ee0d4ff2d1ce647b48f55041ca123b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0efd74bf417cf50da96b35e0660e37fc') in 0.028371 seconds
+  Import took 0.031614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Basement_Entrance1.mat
+  artifactKey: Guid(ad62e03cfb3365741a47097a92cf0c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Basement_Entrance1.mat using Guid(ad62e03cfb3365741a47097a92cf0c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9134d671f9b0681c85037697a395c995') in 0.033700 seconds
+  Import took 0.036779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Balcony_Turn.mat
+  artifactKey: Guid(d26587f84c4508e41be02929c5272ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Balcony_Turn.mat using Guid(d26587f84c4508e41be02929c5272ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef062b6794d8ee93ef5293bfe3da8793') in 0.024491 seconds
+  Import took 0.027479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Basement_Main.mat
+  artifactKey: Guid(e73b610af3cce02438df5481cf0cfda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Basement_Main.mat using Guid(e73b610af3cce02438df5481cf0cfda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d67fa13e5dda8e4d80f2bd9c1054306') in 0.030280 seconds
+  Import took 0.033313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 115.624329 seconds.
+  path: Assets/FPS/Models/Levels/Xollas_Materials/Elevator_Platform2.mat
+  artifactKey: Guid(468840ef37528c04aa99765f563c0769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Xollas_Materials/Elevator_Platform2.mat using Guid(468840ef37528c04aa99765f563c0769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '224d9947ce027078e02e3fc094406948') in 0.017513 seconds
+  Import took 0.020946 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+  artifactKey: Guid(79459efec17a4d00a321bdcc27bbc385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat using Guid(79459efec17a4d00a321bdcc27bbc385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd30091e6593e2142232039c466f5747a') in 0.036340 seconds
+  Import took 0.039322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/FPS/Models/Levels/Azamar_Materials/Sand_Floor.mat
+  artifactKey: Guid(0722eadec45811649b928315de088955) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Models/Levels/Azamar_Materials/Sand_Floor.mat using Guid(0722eadec45811649b928315de088955) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30a1322f04ba3ea7ceb786d2eaee3572') in 0.030516 seconds
+  Import took 0.033601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e477d24955eb4c0eac9819415375fc35') in 0.051666 seconds
+  Import took 0.056009 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87c7745845c6a2465ec7d1f4b2d646ef') in 0.022280 seconds
+  Import took 0.025378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+  artifactKey: Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat using Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '824a3e5a2e8cdb38d751ee743ea374a3') in 0.031185 seconds
+  Import took 0.035171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+  artifactKey: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4238d63573cec5b4bf1f4761c8ca942') in 0.040940 seconds
+  Import took 0.044037 seconds .
+
