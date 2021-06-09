@@ -32,8 +32,8 @@ namespace Shooter.Player
         private float respawnTimer;
         
         [Header("Health")]
-        [SerializeField]
-        private int maxHealth = 100;
+        //[SerializeField]
+        public int maxHealth = 100;
         [SyncVar]
         public int currentHealth = 100;
         
