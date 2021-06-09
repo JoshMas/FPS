@@ -10,8 +10,6 @@ public class SelectCharacter : NetworkBehaviour
 {
     [SerializeField] private GameObject[] characterList = default;
 
-    private bool hasSelected = false;
-
     public override void OnStartClient()
     {
         if (isLocalPlayer)
@@ -21,7 +19,7 @@ public class SelectCharacter : NetworkBehaviour
         CmdSelect();
     }
 
-    [Command(requiresAuthority = true)]
+    [Command(requiresAuthority = false)]
     public void CmdSelect(NetworkConnectionToClient sender = null)
     {
         GameObject characterInstance = Instantiate(characterList[Random.Range(0, characterList.Length)], transform);
@@ -34,7 +32,11 @@ public class SelectCharacter : NetworkBehaviour
     [ClientRpc]
     private void RpcSetCamera(GameObject _characterInstance)
     {
-        if (isLocalPlayer)
+        if (!isLocalPlayer)
+        {
+            _characterInstance.SetActive(false);
+        }
+        else
         {
             _characterInstance.GetComponent<PlayerController>().SetCamera();
         }
