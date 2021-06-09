@@ -22,7 +22,7 @@ public class SelectCharacter : NetworkBehaviour
     [Command(requiresAuthority = false)]
     public void CmdSelect(NetworkConnectionToClient sender = null)
     {
-        GameObject characterInstance = Instantiate(characterList[Random.Range(0, characterList.Length)], transform);
+        GameObject characterInstance = Instantiate(characterList[Random.Range(0, characterList.Length)], transform.position, Quaternion.identity);
         
         NetworkServer.Spawn(characterInstance, sender);
 

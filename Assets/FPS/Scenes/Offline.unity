@@ -206,15 +206,13 @@ MonoBehaviour:
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 6638913017146413053, guid: b32556687a451364eac45f5b407ead8e, type: 3}
+  playerPrefab: {fileID: 7892159949341188557, guid: a45835eb16659ae49a723801be8a28dc, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs:
   - {fileID: 8038560784799283516, guid: 08e55c121843b87498fc004a200da926, type: 3}
   - {fileID: 4353162382499158497, guid: 3b3ae39f14d25af4cb6b9269a7f2b5cc, type: 3}
   - {fileID: 9118558025784333495, guid: 033a905e1ff59654e9688cff581781be, type: 3}
-  - {fileID: 7892159949341188557, guid: a45835eb16659ae49a723801be8a28dc, type: 3}
-  - {fileID: 2975219006752696575, guid: a48fe87901d2c304caf564c9541aa102, type: 3}
 --- !u!4 &727151871
 Transform:
   m_ObjectHideFlags: 0

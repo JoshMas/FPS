@@ -94,15 +94,25 @@ namespace FramedWok.PlayerController
             animator = GetComponentInChildren<Animator>();
             netAnimator = GetComponent<NetworkAnimator>();
             Cursor.lockState = CursorLockMode.Locked;
+            if (isLocalPlayer)
+            {
+                cameraPoint = GetComponentsInChildren<Transform>()[1];
+                Transform cameraMain = Camera.main.transform;
+                cameraMain.parent = cameraPoint;
+                cameraMain.position = cameraPoint.position;
+                cameraMain.rotation = cameraPoint.rotation;
+
+                SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
+            }
         }
 
         public void SetCamera()
         {
-            cameraPoint = GetComponentsInChildren<Transform>()[1];
-            Transform cameraMain = Camera.main.transform;
-            cameraMain.parent = cameraPoint;
-            cameraMain.position = cameraPoint.position;
-            cameraMain.rotation = cameraPoint.rotation;
+        //    cameraPoint = GetComponentsInChildren<Transform>()[1];
+        //    Transform cameraMain = Camera.main.transform;
+        //    cameraMain.parent = cameraPoint;
+        //    cameraMain.position = cameraPoint.position;
+        //    cameraMain.rotation = cameraPoint.rotation;
         }
 
         // Update is called once per frame
