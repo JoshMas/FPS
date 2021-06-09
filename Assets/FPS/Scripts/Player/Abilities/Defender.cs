@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using FramedWok.PlayerController;
 public class Defender : MonoBehaviour
 {
     #region Stats
@@ -29,6 +30,10 @@ public class Defender : MonoBehaviour
     public float pushForce = 1000;
     private GameObject[] enemyObj;
     private Rigidbody[] rbs;
+    #endregion
+    #region Passive
+    [SerializeField] private float passiveDistance = 10;
+    private PlayerController playerController;
     #endregion
 
     private void Start()
@@ -76,14 +81,25 @@ public class Defender : MonoBehaviour
         powerCDText.text = powerCD.ToString();
 
 
-        //Passive?
-
+        //passive
+        foreach(GameObject enemy in enemyObj)
+        {
+            if(Vector3.Distance(enemy.transform.position, gameObject.transform.position) < passiveDistance)
+            {
+               if(enemy.GetComponent<PlayerController>() != null)
+                {
+                    enemy.GetComponent<PlayerController>().walkSpeed -= 25;
+                }
+            }
+        }
 
     }
 
     private void AltFire()
     {
         GameObject grenade = Instantiate(grenadePrefab);
+
+        grenade.tag = gameObject.tag;
 
         Physics.IgnoreCollision(grenade.GetComponent<Collider>(),
             grenadeSpawn.parent.GetComponent<Collider>());

@@ -6,9 +6,9 @@ public class GravGrenade : MonoBehaviour
 {
     public float pullRadius = 100;
     public float pullForce = 1000;
-    private GameObject[] blueObj;
-    private GameObject[] redObj;
-    private GameObject[] allObj;
+    private GameObject[] otherTeam;
+    
+    
    
     private Rigidbody[] rbs;
     
@@ -16,23 +16,30 @@ public class GravGrenade : MonoBehaviour
 
     private void Start()
     {
-       
-        
-            blueObj = GameObject.FindGameObjectsWithTag("Blue Player");
-            redObj = GameObject.FindGameObjectsWithTag("Red Player");
+       if(gameObject.tag == "Red Player")
+        {
+            otherTeam = GameObject.FindGameObjectsWithTag("Blue Player");
+        }
+        if (gameObject.tag == "Blue Player")
+        {
+            otherTeam = GameObject.FindGameObjectsWithTag("Red Player");
+        }
+
+        //blueObj = GameObject.FindGameObjectsWithTag("Blue Player");
+            //redObj = GameObject.FindGameObjectsWithTag("Red Player");
             //allObj = GameObject.FindGameObjectsWithTag(tag);
         
        
        
         
-        rbs = new Rigidbody[blueObj.Length + redObj.Length];
+        rbs = new Rigidbody[otherTeam.Length];
       
 
-        for (int i = 0; i < blueObj.Length + redObj.Length; i++)
+        for (int i = 0; i < otherTeam.Length; i++)
         {
-            GameObject bluePlayer = blueObj[i];
-            GameObject redPlayer = redObj[i];
-            //rbs[i] = bluePlayer.GetComponent<Rigidbody>() + redPlayer.GetComponent<Rigidbody>();
+            GameObject otherPlayer = otherTeam[i];
+            //GameObject redPlayer = redObj[i];
+            rbs[i] = otherPlayer.GetComponent<Rigidbody>();
         }
     }
 

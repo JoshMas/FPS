@@ -22,6 +22,21 @@ public class Support : MonoBehaviour
     private float nextPowerTime = 0;
     public float powerCD = 30f;
     #endregion
+    private GameObject[] sameTeam;
+
+    private void Start()
+    {
+        if (gameObject.tag == "Red Player")
+        {
+            sameTeam = GameObject.FindGameObjectsWithTag("Red Player");
+            
+        }
+        if (gameObject.tag == "Blue Player")
+        {
+            sameTeam = GameObject.FindGameObjectsWithTag("Blue Player");
+            
+        }
+    }
 
     private void Update()
     {
@@ -43,7 +58,7 @@ public class Support : MonoBehaviour
             }
         }
 
-        //Passive?
+        //Passive? regen health faster
 
 
     }
@@ -68,7 +83,10 @@ public class Support : MonoBehaviour
 
     private void Power()
     {
-        //Heal all team members to full
+        foreach(GameObject obj in sameTeam)
+        {
+            //heal 
+        }
     }
 
     private IEnumerator DestroyMissileAfterTime(GameObject smoke, float delay)

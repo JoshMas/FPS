@@ -22,6 +22,7 @@ public class Attacker : MonoBehaviour
     private float nextPowerTime = 0;
     public float powerCD = 20f;
     #endregion
+    private PlayerWeapons playerWeapons;
 
     public bool kill = false;
 
@@ -41,7 +42,7 @@ public class Attacker : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 Power();
-                curHealth -= 50 * Time.deltaTime;
+                gameObject.GetComponent<PlayerWeapons>().rateOfPrimaryFire -= 5 * Time.deltaTime;
                 movement -= 25 * Time.deltaTime;
                 nextPowerTime = Time.time + powerCD;
             }
@@ -57,7 +58,7 @@ public class Attacker : MonoBehaviour
     private void AltFire()
     {
         GameObject missile = Instantiate(missilePrefab);
-
+        missile.tag = gameObject.tag;
         Physics.IgnoreCollision(missile.GetComponent<Collider>(),
             missileSpawn.parent.GetComponent<Collider>());
 
@@ -74,7 +75,7 @@ public class Attacker : MonoBehaviour
 
     private void Power()
     {
-        curHealth += 50;
+        gameObject.GetComponent<PlayerWeapons>().rateOfPrimaryFire += 5;
         movement += 25;
         
     }
