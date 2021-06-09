@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Mirror;
+using Shooter.Networking;
 using TMPro;
 
-using Battlecars.Networking;
+using Shooter.Networking;
 
-namespace Shooter.UI
+namespace Shooter.Networking
 {
     public class Lobby : MonoBehaviour
     {
@@ -24,9 +25,10 @@ namespace Shooter.UI
         // Flipping bool that determines which column the connected player will be added to
         private bool assigningToLeft = true;
 
-        private BattlecarsPlayerNet localPlayer;
+        private FPSPlayerNet localPlayer;
+        
 
-        public void AssignPlayerToSlot(BattlecarsPlayerNet _player, bool _left, int _slotId)
+        public void AssignPlayerToSlot(FPSPlayerNet _player, bool _left, int _slotId)
         {
             // Get the correct slot list depending on the left param
             List<LobbyPlayerSlot> slots = _left ? leftTeamSlots : rightTeamSlots;
@@ -34,7 +36,7 @@ namespace Shooter.UI
             slots[_slotId].AssignPlayer(_player);
         }
 
-        public void OnPlayerConnected(BattlecarsPlayerNet _player)
+        public void OnPlayerConnected(FPSPlayerNet _player)
         {
             bool assigned = false;
 
@@ -42,7 +44,7 @@ namespace Shooter.UI
             if(_player.isLocalPlayer && localPlayer == null) 
             {
                 localPlayer = _player;
-                localPlayer.onMatchStarted.AddListener(OnMatchStarted);
+                
             }
 
             List<LobbyPlayerSlot> slots = assigningToLeft ? leftTeamSlots : rightTeamSlots;
@@ -91,13 +93,7 @@ namespace Shooter.UI
             leftTeamSlots.AddRange(leftTeamHolder.GetComponentsInChildren<LobbyPlayerSlot>());
             rightTeamSlots.AddRange(rightTeamHolder.GetComponentsInChildren<LobbyPlayerSlot>());
 
-            readyUpButton.onClick.AddListener(() =>
-            {
-                BattlecarsPlayerNet player = BattlecarsNetworkManager.Instance.LocalPlayer; 
-                player.SetReady(!player.ready);
-            });
-
-            startGameButton.onClick.AddListener(() => localPlayer.StartMatch());
+          
         }
 
         public void OnMatchStarted()
@@ -138,7 +134,7 @@ namespace Shooter.UI
                     return false;
             }
 
-            return playerCount >= requiredPlayerCount && BattlecarsNetworkManager.Instance.IsHost;
+            return playerCount >= requiredPlayerCount && FPSNetManager.Instance.IsHost;
         }
     }
 }

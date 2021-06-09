@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Shooter.Menus
+namespace Shooter.UI
 {
     public class UI : MonoBehaviour
     {

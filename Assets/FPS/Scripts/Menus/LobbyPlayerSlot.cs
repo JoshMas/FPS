@@ -5,23 +5,25 @@ using TMPro;
 
 using Shooter.Networking;
 
-namespace Shooter.UI
+namespace Shooter.Networking
 {
     public class LobbyPlayerSlot : MonoBehaviour
     {
+        
         public bool IsTaken => player != null;
-        public BattlecarsPlayerNet Player => player;
+        public FPSPlayerNet Player => player;
         public bool IsLeft { get; private set; } = false;
 
         [SerializeField] private TextMeshProUGUI nameDisplay;
         [SerializeField] private Button playerButton;
         [SerializeField] private ColorBlock stateColors = ColorBlock.defaultColorBlock;
 
-        private BattlecarsPlayerNet player = null;
+        private FPSPlayerNet player = null;
+        
 
         // Set the player in this slot to the passed player
-        public void AssignPlayer(BattlecarsPlayerNet _player) => player = _player;
-
+        public void AssignPlayer(FPSPlayerNet _player) => player = _player;
+       
         public void SetSide(bool _left) => IsLeft = _left;
 
         // Update is called once per frame

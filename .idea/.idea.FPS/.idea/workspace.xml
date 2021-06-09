@@ -11,14 +11,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/FPS/Scripts/Networking/LobbyManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FPS/Scripts/Player/Scoring.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82EC470C-9131-4935-8AD0-C83AD628910C/6d/866433e6/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FPS/Scripts/Networking/Lobby/PlayerNameCreate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FPS/Scripts/Menus/Lobby.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FPS/Scripts/Networking/FPSPlayerNet.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -27,13 +26,17 @@
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/PauseMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Abilities/Defender.cs" />
-      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/UI.cs" />
       <option value="$PROJECT_DIR$/Assets/FramedWok/PlayerController/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/PlayerStats.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Scoring.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs" />
-      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/Lobby.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/UI.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/BattlecarsPlayerNet.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/PlayerStats.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/LobbyPlayerSlot.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/Lobby.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/FPSPlayerNet.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/FPSNetManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/Lobby/PlayerNameCreate.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sOXKlK0rlW7Dob9ivqY4tiI7fk" />
@@ -59,10 +62,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3884">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="3884" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -97,6 +100,10 @@
       <workItem from="1621997447274" duration="402000" />
       <workItem from="1622000661357" duration="5099000" />
       <workItem from="1622592258086" duration="15024000" />
+      <workItem from="1622983587345" duration="533000" />
+      <workItem from="1622987191616" duration="608000" />
+      <workItem from="1623135609281" duration="961000" />
+      <workItem from="1623136615183" duration="11279000" />
     </task>
     <servers />
   </component>
