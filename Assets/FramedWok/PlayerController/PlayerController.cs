@@ -94,33 +94,15 @@ namespace FramedWok.PlayerController
             animator = GetComponentInChildren<Animator>();
             netAnimator = GetComponent<NetworkAnimator>();
             Cursor.lockState = CursorLockMode.Locked;
-            if (isLocalPlayer)
-            {
-                cameraPoint = GetComponentsInChildren<Transform>()[1];
-                Transform cameraMain = Camera.main.transform;
-                cameraMain.parent = cameraPoint;
-                cameraMain.position = cameraPoint.position;
-                cameraMain.rotation = cameraPoint.rotation;
-                SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
-            }
         }
 
-        public void CharacterSelect(int _charType)
+        public void SetCamera()
         {
-            //Will need to add somehting here later for character models
-            //Probably load from the Resources folder
-            switch (_charType)
-            {
-                case 0:
-                    //gameObject.AddComponent<Attacker>();
-                    break;
-                case 1:
-                    gameObject.AddComponent<Defender>();
-                    break;
-                case 2:
-                    gameObject.AddComponent<Support>();
-                    break;
-            }
+            cameraPoint = GetComponentsInChildren<Transform>()[1];
+            Transform cameraMain = Camera.main.transform;
+            cameraMain.parent = cameraPoint;
+            cameraMain.position = cameraPoint.position;
+            cameraMain.rotation = cameraPoint.rotation;
         }
 
         // Update is called once per frame

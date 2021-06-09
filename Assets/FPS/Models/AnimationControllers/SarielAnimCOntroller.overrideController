@@ -6,7 +6,7 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SarielAnimController
+  m_Name: SarielAnimCOntroller
   m_Controller: {fileID: 9100000, guid: 29b7eace487f8174cb66479cd9d8bdf9, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 1827226128182048838, guid: 5c73863a53efc1a40a647e9b387516d5, type: 3}
