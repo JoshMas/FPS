@@ -310,7 +310,7 @@ MonoBehaviour:
   dead: 0
   teamNumber: 0
   teamSpawns: []
-  respawnTimer: 0
+  respawnTimer: 1
   maxHealth: 100
   currentHealth: 0
 --- !u!114 &-5200493415177938093

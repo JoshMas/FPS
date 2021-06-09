@@ -89,10 +89,10 @@ namespace FramedWok.PlayerController
         // Start is called before the first frame update
         private void Awake()
         {
-            
-            
-                SceneManager.LoadSceneAsync("InGameMenus", LoadSceneMode.Additive);
-                SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
+
+            if (isLocalPlayer)
+            {
+            }
             
         }
 
@@ -111,6 +111,8 @@ namespace FramedWok.PlayerController
                 cameraMain.position = cameraPoint.position;
                 cameraMain.rotation = cameraPoint.rotation;
 
+                SceneManager.LoadSceneAsync("InGameMenus", LoadSceneMode.Additive);
+                SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
                
                 
             }

@@ -100,20 +100,19 @@ namespace Shooter.Player.Weapons
                 Debug.Log((bloom));
             }
 
-            RaycastHit hit;
-            if (Physics.Raycast(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + gameObject.transform.TransformDirection(Vector3.forward) + currentBloom), out hit, range))
+            if (Physics.Raycast(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + gameObject.transform.TransformDirection(Vector3.forward) + currentBloom), out RaycastHit hit, range))
             {
                 if (gameObject.CompareTag("Player"))
                 {
                     PlayerStats enemyStats = hit.collider.GetComponent<PlayerStats>();
-                    
+
                     if (enemyStats != null)
                     {
                         if (hasAuthority)
                         {
                             DealDamage(enemyStats, damage); ;
                             enemyStats.UpdateHealth();
-                        
+
                         }
                         Debug.Log(enemyStats.currentHealth);
                         if (enemyStats.currentHealth <= 0)
@@ -122,14 +121,14 @@ namespace Shooter.Player.Weapons
                             GM.IncreaseScore(thisPlayer.teamNumber);
                         }
                     }
-                   
-                    
 
-                   
 
-                    
+
+
+
+
                 }
-              
+
 
             }
             Debug.DrawLine(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + gameObject.transform.TransformDirection(Vector3.forward) + currentBloom) * 20f, Color.red, 2);
