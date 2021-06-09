@@ -213,6 +213,10 @@ MonoBehaviour:
   - {fileID: 8038560784799283516, guid: 08e55c121843b87498fc004a200da926, type: 3}
   - {fileID: 4353162382499158497, guid: 3b3ae39f14d25af4cb6b9269a7f2b5cc, type: 3}
   - {fileID: 9118558025784333495, guid: 033a905e1ff59654e9688cff581781be, type: 3}
+  playerPrefabs:
+  - {fileID: 7892159949341188557, guid: a45835eb16659ae49a723801be8a28dc, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &727151871
 Transform:
   m_ObjectHideFlags: 0

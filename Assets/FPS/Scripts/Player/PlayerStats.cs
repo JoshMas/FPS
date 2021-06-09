@@ -50,9 +50,12 @@ namespace Shooter.Player
 
         private void Start()
         {
-            gameObject.SetActive(false);
+            //This line is temporarily disabled
+            //gameObject.SetActive(false);
+            
             healthTextObj = GameObject.Find("Health Text");
-            healthText = healthTextObj.GetComponent<Text>();
+            //This line is temporarily disabled
+            //healthText = healthTextObj.GetComponent<Text>();
 
             foreach (Spawn spawn in FindObjectsOfType<Spawn>()) 
             {
@@ -93,7 +96,8 @@ namespace Shooter.Player
         /// </summary>
         public void UpdateHealth()
         {
-            healthText.text = "+ " + currentHealth;
+            //This line is temporarily disabled
+            //healthText.text = "+ " + currentHealth;
         }
         IEnumerator Death()
         {

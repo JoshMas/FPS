@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+using Mirror;
+
+public class Projectile : NetworkBehaviour
 {
     [SerializeField] private float explosionForce = 10.0f;
     [SerializeField] private float explosionRadius = 2.0f;
@@ -39,7 +41,8 @@ public class Projectile : MonoBehaviour
     {
         foreach(Rigidbody target in targets)
         {
-            Explode(target);
+            if(target != null)
+                Explode(target);
         }
     }
 }
