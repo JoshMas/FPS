@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 8455189013080696256}
   m_Layer: 5
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Score Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -736,8 +736,8 @@ GameObject:
   - component: {fileID: 8455189013323791412}
   - component: {fileID: 8455189013323791413}
   m_Layer: 5
-  m_Name: Health
-  m_TagString: Untagged
+  m_Name: HealthText
+  m_TagString: Health Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2552,7 +2552,7 @@ GameObject:
   - component: {fileID: 8455189014602882070}
   m_Layer: 5
   m_Name: Friendly
-  m_TagString: Untagged
+  m_TagString: Score Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-using Score;
+using Shooter.Score;
 
 
 using Mirror;
@@ -115,18 +115,19 @@ namespace Shooter.Player.Weapons
                             enemyStats.UpdateHealth();
                         
                         }
-                        
+                        Debug.Log(enemyStats.currentHealth);
+                        if (enemyStats.currentHealth <= 0)
+                        {
+                            thisPlayer.kills++;
+                            GM.IncreaseScore(thisPlayer.teamNumber);
+                        }
                     }
                    
-                    Debug.Log(enemyStats.currentHealth);
+                    
 
                    
 
-                    if (enemyStats.currentHealth <= 0)
-                    {
-                        thisPlayer.kills++;
-                        GM.IncreaseScore(thisPlayer.teamNumber);
-                    }
+                    
                 }
               
 
