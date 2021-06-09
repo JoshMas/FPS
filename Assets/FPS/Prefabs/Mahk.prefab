@@ -327,9 +327,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  scoreTexts:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &5629206784430384704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,11 +350,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7892159949341188557}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b66bd7d1e7bf2fa46bc92fb71ece0328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curHealth: 175
+  maxHealth: 175
+  movement: 40
   grenadePrefab: {fileID: 4353162382499158497, guid: 3b3ae39f14d25af4cb6b9269a7f2b5cc, type: 3}
   grenadeSpawn: {fileID: 4676945339043576337}
   grenadeSpeed: 30
@@ -365,10 +365,9 @@ MonoBehaviour:
   altFireCD: 5
   powerCD: 20
   powerCDText: {fileID: 0}
-  altCDText: {fileID: 0}
   pushRadius: 50
   pushForce: 1000
-  rbs: []
+  passiveDistance: 10
 --- !u!1001 &212235080430935424
 PrefabInstance:
   m_ObjectHideFlags: 0
