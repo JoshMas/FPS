@@ -20,7 +20,7 @@ namespace Shooter.Menus
         // Start is called before the first frame update
         void Start()
         {
-
+        
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             isPaused = false;
