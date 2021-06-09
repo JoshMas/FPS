@@ -1,21 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+using Shooter.Networking;
+
 
 namespace Shooter.UI
 {
     public class UI : MonoBehaviour
     {
+        [SerializeField] private NetworkManagerLobby networkManager = null;
+        [SerializeField] public GameObject gameplayUI;
+        [SerializeField] private GameObject landingPagePanel = null;
         public static bool isPaused;
         public GameObject pausePanel;
         public GameObject optionsPanel;
         
-        [SerializeField]
-        public GameObject gameplayUI;
-
+       
 
         // Start is called before the first frame update
         void Start()
@@ -54,6 +52,10 @@ namespace Shooter.UI
                 Cursor.visible = false;
                 pausePanel.SetActive(false);
             }
+        }
+        public void HostLobby()
+        {
+
         }
 
       

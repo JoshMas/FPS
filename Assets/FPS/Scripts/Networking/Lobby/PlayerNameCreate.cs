@@ -4,26 +4,44 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-namespace Shooter.Network
+namespace Shooter.Networking
 {
     public class PlayerNameCreate : MonoBehaviour
     {
+        #region Variables
         [Header("UI")]
         [SerializeField] private TMP_InputField nameInputField = null;
         [SerializeField] private Button continueButton = null;
 
         public static string DisplayName { get; private set; }
 
-        private const string PlayerNameKey = "PlayerName";
+        private const string PlayerPrefsNameKey = "PlayerName";
 
+        #endregion
 
-        private void Start()
-       
+        private void Start() => SetUpInputField();
 
-        // Update is called once per frame
-        void Update()
+        private void SetUpInputField()
         {
-        
+            if (!PlayerPrefs.HasKey(PlayerPrefsNameKey)) { return; }
+
+            string defaultName = PlayerPrefs.GetString(PlayerPrefsNameKey);
+
+            nameInputField.text = defaultName;
+
+            SetPlayerName(defaultName);
         }
+
+        public void SetPlayerName(string name)
+        {
+            continueButton.interactable = !string.IsNullOrEmpty(name);
+        }
+        public void SavePlayerName()
+        {
+            DisplayName = nameInputField.text;
+
+            PlayerPrefs.SetString(PlayerPrefsNameKey, DisplayName);
+        }
+
     }
 }
