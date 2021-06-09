@@ -13,6 +13,7 @@ namespace FramedWok.PlayerController
     {
         private Rigidbody playerRigidbody;
         private Collider playerCollider;
+        private Camera playerCamera;
 
         /// <summary>
         /// The length of the Raycast used to check if the playerCollider is on top of another collider
@@ -28,6 +29,7 @@ namespace FramedWok.PlayerController
             playerCollider = GetComponent<Collider>();
             if (playerCollider == null)
                 playerCollider = gameObject.AddComponent<CapsuleCollider>();
+            playerCamera = GetComponentInChildren<Camera>();
         }
 
         /// <summary>
@@ -56,7 +58,7 @@ namespace FramedWok.PlayerController
         public void Rotate(Vector3 _rotation)
         {
             transform.localEulerAngles = new Vector3(0, _rotation.y, 0);
-            Camera.main.transform.localEulerAngles = new Vector3(_rotation.x, 0, 0);
+            playerCamera.transform.localEulerAngles = new Vector3(_rotation.x, 0, 0);
         }
 
         /// <summary>
@@ -86,7 +88,7 @@ namespace FramedWok.PlayerController
         /// <param name="_restrictYAxis">If true, the dash can only travel on the XZ plane</param>
         public Vector3 GetDashDirection(bool _restrictYAxis, Vector3 _moveDir)
         {
-            Vector3 initialDir = Camera.main.transform.TransformPoint(Vector3.forward) - Camera.main.transform.position;
+            Vector3 initialDir = playerCamera.transform.TransformDirection(Vector3.forward);
             Vector3 direction = _moveDir == Vector3.zero ? initialDir : new Vector3(_moveDir.x, initialDir.y, _moveDir.z);
             if (_restrictYAxis)
             {

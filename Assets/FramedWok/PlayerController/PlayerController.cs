@@ -90,9 +90,7 @@ namespace FramedWok.PlayerController
         private void Awake()
         {
 
-            if (isLocalPlayer)
-            {
-            }
+            
             
         }
 
@@ -105,27 +103,22 @@ namespace FramedWok.PlayerController
             Cursor.lockState = CursorLockMode.Locked;
             if (isLocalPlayer)
             {
-                cameraPoint = GetComponentsInChildren<Transform>()[1];
-                Transform cameraMain = Camera.main.transform;
-                cameraMain.parent = cameraPoint;
-                cameraMain.position = cameraPoint.position;
-                cameraMain.rotation = cameraPoint.rotation;
-
-                SceneManager.LoadSceneAsync("InGameMenus", LoadSceneMode.Additive);
-                SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
-               
-                
+                //GetComponentInChildren<Camera>(true).enabled = true;
             }
         }
         
-
-        public void SetCamera()
+        public void Setup()
         {
-        //    cameraPoint = GetComponentsInChildren<Transform>()[1];
-        //    Transform cameraMain = Camera.main.transform;
-        //    cameraMain.parent = cameraPoint;
-        //    cameraMain.position = cameraPoint.position;
-        //    cameraMain.rotation = cameraPoint.rotation;
+            if (hasAuthority)
+            {
+                //cameraPoint = GetComponentsInChildren<Transform>()[1];
+                //Transform cameraMain = Camera.main.transform;
+                //cameraMain.parent = cameraPoint;
+                //cameraMain.position = cameraPoint.position;
+                //cameraMain.rotation = cameraPoint.rotation;
+
+                
+            }
         }
 
         // Update is called once per frame

@@ -12,33 +12,20 @@ public class SelectCharacter : NetworkBehaviour
 
     public override void OnStartClient()
     {
-        if (isLocalPlayer)
-        {
-            SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
-        }
         CmdSelect();
+
+        SceneManager.LoadSceneAsync("InGameMenus", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
     }
 
     [Command(requiresAuthority = false)]
     public void CmdSelect(NetworkConnectionToClient sender = null)
     {
         GameObject characterInstance = Instantiate(characterList[Random.Range(0, characterList.Length)], transform.position, Quaternion.identity);
-        
+
         NetworkServer.Spawn(characterInstance, sender);
 
-        RpcSetCamera(characterInstance);
+        //characterInstance.GetComponent<PlayerController>().Setup();
     }
-
-    [ClientRpc]
-    private void RpcSetCamera(GameObject _characterInstance)
-    {
-        if (!isLocalPlayer)
-        {
-            _characterInstance.SetActive(false);
-        }
-        else
-        {
-            _characterInstance.GetComponent<PlayerController>().SetCamera();
-        }
-    }
+    
 }
