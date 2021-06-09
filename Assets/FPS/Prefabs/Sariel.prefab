@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 2912468606717592055}
   - component: {fileID: 8293570640237580897}
   - component: {fileID: 779819801886781298}
+  - component: {fileID: 1455312685432101384}
   m_Layer: 0
   m_Name: Sariel
   m_TagString: Player
@@ -295,6 +296,28 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 1
   animator: {fileID: 4796348236890900894}
+--- !u!114 &1455312685432101384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2975219006752696575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02821a36640f6944aae621c2cfa67ffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missilePrefab: {fileID: 0}
+  missileSpawn: {fileID: 0}
+  missileSpeed: 30
+  lifeTime: 3
+  target: {fileID: 0}
+  altFireCD: 5
+  powerCD: 20
+  powerCDText: {fileID: 0}
+  altCDText: {fileID: 0}
+  kill: 0
 --- !u!95 &4796348236890900894
 Animator:
   serializedVersion: 3

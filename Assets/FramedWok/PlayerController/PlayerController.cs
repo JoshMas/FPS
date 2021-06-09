@@ -172,7 +172,7 @@ namespace FramedWok.PlayerController
 
                 netAnimator.SetTrigger("dash");
             }
-
+            
             //if (isServer)
             //{
             //    RpcActionStuff(rotation, jump, dash);
@@ -281,6 +281,8 @@ namespace FramedWok.PlayerController
         {
             animator.SetFloat("xAxis", Input.GetAxis("Horizontal"));
             animator.SetFloat("yAxis", Input.GetAxis("Vertical"));
+
+            animator.SetBool("shoot1", Input.GetMouseButton(0));
         }
         /*
         [Command]

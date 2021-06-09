@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: -1393962487277762363}
   - component: {fileID: -5200493415177938093}
   - component: {fileID: 5629206784430384704}
+  - component: {fileID: 6412163836266422540}
   m_Layer: 0
   m_Name: Mahk
   m_TagString: Player
@@ -314,6 +315,29 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 1
   animator: {fileID: 4822173836326401831}
+--- !u!114 &6412163836266422540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7892159949341188557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66bd7d1e7bf2fa46bc92fb71ece0328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: 0}
+  grenadeSpawn: {fileID: 0}
+  grenadeSpeed: 30
+  lifeTime: 3
+  altFireCD: 5
+  powerCD: 20
+  powerCDText: {fileID: 0}
+  altCDText: {fileID: 0}
+  pushRadius: 50
+  pushForce: 1000
+  rbs: []
 --- !u!1001 &212235080430935424
 PrefabInstance:
   m_ObjectHideFlags: 0

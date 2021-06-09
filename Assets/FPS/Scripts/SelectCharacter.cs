@@ -7,20 +7,10 @@ using FramedWok.PlayerController;
 
 public class SelectCharacter : NetworkBehaviour
 {
-    [SerializeField] private List<GameObject> characterList;
+    [SerializeField] private GameObject[] characterList = default;
 
-    // Start is called before the first frame update
-    void Start()
+    public override void OnStartClient()
     {
-        //GameObject playerPrefab = Instantiate(characterList[0]);
-        
-        //playerPrefab.GetComponent<PlayerController>().Setup();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.OnStartClient();
     }
 }
