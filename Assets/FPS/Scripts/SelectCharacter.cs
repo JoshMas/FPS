@@ -24,7 +24,8 @@ public class SelectCharacter : NetworkBehaviour
         GameObject characterInstance = Instantiate(characterList[Random.Range(0, characterList.Length)], transform.position, Quaternion.identity);
 
         NetworkServer.Spawn(characterInstance, sender);
-
+        characterInstance.GetComponent<NetworkIdentity>().AssignClientAuthority(sender);
+        //characterInstance.GetComponent<PlayerController>().Setup();
         //characterInstance.GetComponent<PlayerController>().Setup();
     }
     

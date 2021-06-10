@@ -29,7 +29,7 @@ namespace FramedWok.PlayerController
             playerCollider = GetComponent<Collider>();
             if (playerCollider == null)
                 playerCollider = gameObject.AddComponent<CapsuleCollider>();
-            playerCamera = GetComponentInChildren<Camera>();
+            playerCamera = Camera.main;
         }
 
         /// <summary>

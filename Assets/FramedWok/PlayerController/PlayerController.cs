@@ -101,23 +101,19 @@ namespace FramedWok.PlayerController
             animator = GetComponentInChildren<Animator>();
             netAnimator = GetComponent<NetworkAnimator>();
             Cursor.lockState = CursorLockMode.Locked;
-            if (isLocalPlayer)
-            {
-                //GetComponentInChildren<Camera>(true).enabled = true;
-            }
+            Setup();
         }
         
+        [Client]
         public void Setup()
         {
             if (hasAuthority)
             {
-                //cameraPoint = GetComponentsInChildren<Transform>()[1];
-                //Transform cameraMain = Camera.main.transform;
-                //cameraMain.parent = cameraPoint;
-                //cameraMain.position = cameraPoint.position;
-                //cameraMain.rotation = cameraPoint.rotation;
-
-                
+                cameraPoint = GetComponentsInChildren<Transform>()[1];
+                Transform cameraMain = Camera.main.transform;
+                cameraMain.parent = cameraPoint;
+                cameraMain.position = cameraPoint.position;
+                cameraMain.rotation = cameraPoint.rotation;
             }
         }
 
