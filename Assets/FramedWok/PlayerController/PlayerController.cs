@@ -86,14 +86,6 @@ namespace FramedWok.PlayerController
         private bool dash = false;
         private Vector3 movement = Vector3.zero;
 
-        // Start is called before the first frame update
-        private void Awake()
-        {
-
-            
-            
-        }
-
         void Start()
         {
             input = GetComponent<PlayerInput>();
@@ -143,6 +135,7 @@ namespace FramedWok.PlayerController
             //Jumping
             if (jump)
             {
+                StopCoroutine(nameof(StopDashOnCollision));
                 physics.Jump(jumpStrength);
                 jumpCounter++;
                 isGrounded = false;
@@ -317,6 +310,13 @@ namespace FramedWok.PlayerController
             isDashing = false;
         }
 
+        private IEnumerator StopDashOnCollision()
+        {
+            StopCoroutine(nameof(Dash));
+            yield return new WaitForSeconds(0.1f);
+            physics.RestrictVelocity(0, 1);
+        }
+
         /// <summary>
         /// On collision, check if it's hit the ground - if so, reset the jump counter
         /// Also, end any dash if the player is in teh middle of one
@@ -324,7 +324,7 @@ namespace FramedWok.PlayerController
         /// <param name="_collision"></param>
         private void OnCollisionEnter(Collision _collision)
         {
-            StopCoroutine(nameof(Dash));
+            StartCoroutine(nameof(StopDashOnCollision));
             isDashing = false;
             //physics.RestrictVelocity(walkSpeed, rateOfRestriction);
             isGrounded = true;
