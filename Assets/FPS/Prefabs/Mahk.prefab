@@ -335,6 +335,7 @@ MonoBehaviour:
   range: 50
   damage: 15
   crosshair: {fileID: 0}
+  gunEffect: {fileID: 2886731880282078912, guid: 09c78f0c22526af409b0d5ef9dfda4d9, type: 3}
 --- !u!114 &-1393962487277762363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,7 +355,7 @@ MonoBehaviour:
   dead: 0
   teamNumber: 0
   teamSpawns: []
-  respawnTimer: 1
+  respawnTimer: 3
   maxHealth: 100
   currentHealth: 0
 --- !u!114 &-5200493415177938093

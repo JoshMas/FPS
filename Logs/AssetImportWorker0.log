@@ -15,11 +15,11 @@ C:/Users/joshm/Documents/TAFE/Assignment 3 - FPS/FPS
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56783
+54543
 Successfully changed project path to: C:/Users/joshm/Documents/TAFE/Assignment 3 - FPS/FPS
 C:/Users/joshm/Documents/TAFE/Assignment 3 - FPS/FPS
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 40.43 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 63.89 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
@@ -27,50 +27,50 @@ Initialize engine version: 2020.2.2f1 (068178b99f32)
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1660 Ti (ID=0x2191)
+    Renderer: AMD Radeon(TM) Graphics (ID=0x1636)
     Vendor:   
-    VRAM:     5991 MB
-    Driver:   27.21.14.5763
+    VRAM:     16086 MB
+    Driver:   27.20.11032.6002
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56576
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56448
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002224 seconds.
+Registered in 0.003497 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 35.32 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 57.78 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.839 seconds
+- Completed reload, in  2.955 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005381 seconds.
+Registered in 0.007925 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
-Find all reader and writers took 86 milliseconds
+Find all reader and writers took 134 milliseconds
 Script Module: UnityEngine.UI.dll
-Weave behaviours and messages took69 milliseconds
-Find all reader and writers took 66 milliseconds
+Weave behaviours and messages took99 milliseconds
+Find all reader and writers took 106 milliseconds
 Script Module: UnityEngine.TestRunner.dll
-Weave behaviours and messages took17 milliseconds
-Find all reader and writers took 63 milliseconds
+Weave behaviours and messages took39 milliseconds
+Find all reader and writers took 107 milliseconds
 Script Module: SimpleWebTransport.dll
-Weave behaviours and messages took6 milliseconds
-Find all reader and writers took 65 milliseconds
+Weave behaviours and messages took7 milliseconds
+Find all reader and writers took 110 milliseconds
 Script Module: Unity.Timeline.dll
-Weave behaviours and messages took24 milliseconds
-Find all reader and writers took 67 milliseconds
+Weave behaviours and messages took38 milliseconds
+Find all reader and writers took 106 milliseconds
 Script Module: Mirror.Examples.dll
 [Projectile] NetworkBehaviourProcessor
 [Tank] NetworkBehaviourProcessor
@@ -96,12 +96,12 @@ Script Module: Mirror.Examples.dll
 [PlayerController] NetworkBehaviourProcessor
 [RandomColor] NetworkBehaviourProcessor
 [ShootingTankBehaviour] NetworkBehaviourProcessor
-Weave behaviours and messages took19 milliseconds
-  ProcessSitesModule Mirror.Examples.dll elapsed time:00:00:00.0090015
-Find all reader and writers took 64 milliseconds
+Weave behaviours and messages took42 milliseconds
+  ProcessSitesModule Mirror.Examples.dll elapsed time:00:00:00.0120678
+Find all reader and writers took 108 milliseconds
 Script Module: Unity.ProBuilder.dll
-Weave behaviours and messages took55 milliseconds
-Find all reader and writers took 68 milliseconds
+Weave behaviours and messages took80 milliseconds
+Find all reader and writers took 97 milliseconds
 Script Module: Mirror.Components.dll
 [NetworkAnimator] NetworkBehaviourProcessor
 [NetworkRoomPlayer] NetworkBehaviourProcessor
@@ -133,12 +133,12 @@ Script Module: Mirror.Components.dll
 [NetworkTransformBase] NetworkBehaviourProcessor
 [NetworkTransformBase] NetworkBehaviourProcessor
 [NetworkTransformChild] NetworkBehaviourProcessor
-Weave behaviours and messages took23 milliseconds
-  ProcessSitesModule Mirror.Components.dll elapsed time:00:00:00.0009998
-Find all reader and writers took 71 milliseconds
+Weave behaviours and messages took27 milliseconds
+  ProcessSitesModule Mirror.Components.dll elapsed time:00:00:00.0020104
+Find all reader and writers took 84 milliseconds
 Script Module: Mirror.Tests.Common.dll
 Weave behaviours and messages took1 milliseconds
-Find all reader and writers took 66 milliseconds
+Find all reader and writers took 95 milliseconds
 Script Module: Assembly-CSharp.dll
 [PlayerWeaponsOld] NetworkBehaviourProcessor
 [SelectCharacter] NetworkBehaviourProcessor
@@ -146,59 +146,59 @@ Script Module: Assembly-CSharp.dll
 [Scoring] NetworkBehaviourProcessor
 [PlayerStats] NetworkBehaviourProcessor
 [PlayerWeapons] NetworkBehaviourProcessor
-Weave behaviours and messages took12 milliseconds
-  ProcessSitesModule Assembly-CSharp.dll elapsed time:00:00:00
-Find all reader and writers took 80 milliseconds
+Weave behaviours and messages took18 milliseconds
+  ProcessSitesModule Assembly-CSharp.dll elapsed time:00:00:00.0010000
+Find all reader and writers took 119 milliseconds
 Script Module: Unity.TextMeshPro.dll
-Weave behaviours and messages took63 milliseconds
-Find all reader and writers took 56 milliseconds
+Weave behaviours and messages took85 milliseconds
+Find all reader and writers took 72 milliseconds
 Script Module: Unity.ProBuilder.Poly2Tri.dll
-Weave behaviours and messages took5 milliseconds
-Find all reader and writers took 66 milliseconds
+Weave behaviours and messages took9 milliseconds
+Find all reader and writers took 82 milliseconds
 Script Module: Mirror.Tests.Runtime.dll
 Weave behaviours and messages took5 milliseconds
-Find all reader and writers took 58 milliseconds
+Find all reader and writers took 75 milliseconds
 Script Module: Telepathy.dll
 Weave behaviours and messages took2 milliseconds
-Find all reader and writers took 63 milliseconds
+Find all reader and writers took 84 milliseconds
 Script Module: Mirror.Authenticators.dll
-Weave behaviours and messages took4 milliseconds
-  ProcessSitesModule Mirror.Authenticators.dll elapsed time:00:00:00
-Find all reader and writers took 66 milliseconds
+Weave behaviours and messages took7 milliseconds
+  ProcessSitesModule Mirror.Authenticators.dll elapsed time:00:00:00.0010095
+Find all reader and writers took 99 milliseconds
 Script Module: Unity.ProBuilder.Csg.dll
 Weave behaviours and messages took3 milliseconds
-Find all reader and writers took 65 milliseconds
+Find all reader and writers took 83 milliseconds
 Script Module: kcp2k.dll
-Weave behaviours and messages took5 milliseconds
-Find all reader and writers took 74 milliseconds
+Weave behaviours and messages took4 milliseconds
+Find all reader and writers took 90 milliseconds
 Script Module: Mirror.Examples.Cloud.GUI.dll
-Weave behaviours and messages took3 milliseconds
-Find all reader and writers took 62 milliseconds
+Weave behaviours and messages took4 milliseconds
+Find all reader and writers took 83 milliseconds
 Script Module: Mirror.Cloud.dll
 Weave behaviours and messages took2 milliseconds
-Find all reader and writers took 65 milliseconds
+Find all reader and writers took 79 milliseconds
 Script Module: Unity.ProBuilder.KdTree.dll
-Weave behaviours and messages took2 milliseconds
-Find all reader and writers took 59 milliseconds
+Weave behaviours and messages took3 milliseconds
+Find all reader and writers took 110 milliseconds
 Script Module: Unity.ProBuilder.Stl.dll
 Weave behaviours and messages took1 milliseconds
-Find all reader and writers took 66 milliseconds
+Find all reader and writers took 108 milliseconds
 Script Module: Mirror.Examples.Cloud.Pong.dll
 [Ball] NetworkBehaviourProcessor
 [BallManager] NetworkBehaviourProcessor
 [Player] NetworkBehaviourProcessor
-Weave behaviours and messages took2 milliseconds
-  ProcessSitesModule Mirror.Examples.Cloud.Pong.dll elapsed time:00:00:00
-Find all reader and writers took 71 milliseconds
+Weave behaviours and messages took8 milliseconds
+  ProcessSitesModule Mirror.Examples.Cloud.Pong.dll elapsed time:00:00:00.0010017
+Find all reader and writers took 79 milliseconds
 Script Module: Mirror.Tests.Performance.Runtime.dll
 Weave behaviours and messages took0 milliseconds
-Find all reader and writers took 90 milliseconds
+Find all reader and writers took 119 milliseconds
 Script Module: UnityEditor.TestRunner.dll
-Weave behaviours and messages took33 milliseconds
-Find all reader and writers took 82 milliseconds
+Weave behaviours and messages took45 milliseconds
+Find all reader and writers took 234 milliseconds
 Script Module: UnityEditor.UI.dll
-Weave behaviours and messages took9 milliseconds
-Find all reader and writers took 79 milliseconds
+Weave behaviours and messages took20 milliseconds
+Find all reader and writers took 244 milliseconds
 Script Module: Mirror.Tests.dll
 [EmptyBehaviour] NetworkBehaviourProcessor
 [SyncVarGameObjectEqualExposedBehaviour] NetworkBehaviourProcessor
@@ -297,103 +297,47 @@ Script Module: Mirror.Tests.dll
 [VirtualTargetRpc] NetworkBehaviourProcessor
 [VirtualOverrideTargetRpcWithBase] NetworkBehaviourProcessor
 [TargetRpcBehaviour] NetworkBehaviourProcessor
-Weave behaviours and messages took97 milliseconds
-  ProcessSitesModule Mirror.Tests.dll elapsed time:00:00:00.0050015
-Find all reader and writers took 63 milliseconds
+Weave behaviours and messages took233 milliseconds
+  ProcessSitesModule Mirror.Tests.dll elapsed time:00:00:00.0090017
+Find all reader and writers took 152 milliseconds
 Script Module: WeaverTestExtraAssembly.dll
-Weave behaviours and messages took2 milliseconds
+Weave behaviours and messages took11 milliseconds
   ProcessSitesModule WeaverTestExtraAssembly.dll elapsed time:00:00:00
-Find all reader and writers took 87 milliseconds
+Find all reader and writers took 172 milliseconds
 Script Module: Unity.ProBuilder.AssetIdRemapUtility.dll
-Weave behaviours and messages took3 milliseconds
-Find all reader and writers took 69 milliseconds
+Weave behaviours and messages took4 milliseconds
+Find all reader and writers took 111 milliseconds
 Script Module: Mirror.CompilerSymbols.dll
 Weave behaviours and messages took0 milliseconds
 Mono: successfully reloaded assembly
-- Completed reload, in  6.655 seconds
+- Completed reload, in 10.699 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.77 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1914 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 90.3 MB.
-System memory in use after: 90.3 MB.
+System memory in use before: 90.4 MB.
+System memory in use after: 90.4 MB.
 
 Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2344.
-Total: 3.896500 ms (FindLiveObjects: 0.262400 ms CreateObjectMapping: 0.106000 ms MarkObjects: 3.310100 ms  DeleteObjects: 0.215600 ms)
+Total: 5.187400 ms (FindLiveObjects: 0.406300 ms CreateObjectMapping: 0.168800 ms MarkObjects: 4.341700 ms  DeleteObjects: 0.268600 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/FramedWok/PlayerController/PlayerController.cs
-  artifactKey: Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FramedWok/PlayerController/PlayerController.cs using Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52a48871716aa652d139afd19f75d595') in 0.033068 seconds
-  Import took 0.037244 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.131314 seconds.
-  path: Assets/FramedWok/PlayerController/PlayerController.cs
-  artifactKey: Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FramedWok/PlayerController/PlayerController.cs using Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '432c0af29cbf36bab9d5d6aa162f6aee') in 0.003755 seconds
-  Import took 0.007413 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005381 seconds.
-  path: Assets/FramedWok/PlayerController/PlayerController.cs
-  artifactKey: Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FramedWok/PlayerController/PlayerController.cs using Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '432c0af29cbf36bab9d5d6aa162f6aee') in 0.004340 seconds
-  Import took 0.008103 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 84.909512 seconds.
-  path: Assets/FramedWok/PlayerController/PlayerController.cs
-  artifactKey: Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FramedWok/PlayerController/PlayerController.cs using Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e6e31051b93132ff7bf243d4a53c275') in 0.003461 seconds
-  Import took 0.006923 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.650910 seconds.
-  path: Assets/FramedWok/PlayerController/PlayerController.cs
-  artifactKey: Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FramedWok/PlayerController/PlayerController.cs using Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fea3ae7b2e5442916f2cf453276c3109') in 0.002898 seconds
-  Import took 0.007078 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 83.216112 seconds.
-  path: Assets/FramedWok/PlayerController/PlayerController.cs
-  artifactKey: Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FramedWok/PlayerController/PlayerController.cs using Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0e72b4ca12f77316db6cb09771f8f6c') in 0.002947 seconds
-  Import took 0.007659 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.351609 seconds.
-  path: Assets/FramedWok/PlayerController/PlayerController.cs
-  artifactKey: Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FramedWok/PlayerController/PlayerController.cs using Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe4e3dd2f972596b36a4e25369d351dc') in 0.002873 seconds
-  Import took 0.007064 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002935 seconds.
-  path: Assets/FramedWok/PlayerController/PlayerController.cs
-  artifactKey: Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FramedWok/PlayerController/PlayerController.cs using Guid(e2fcc06fcd2f5004982757d9f6f7621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe4e3dd2f972596b36a4e25369d351dc') in 0.003016 seconds
-  Import took 0.005809 seconds .
+  path: Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs
+  artifactKey: Guid(691b1e3eb77b6a54584a4113a110122c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs using Guid(691b1e3eb77b6a54584a4113a110122c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6337b1997b2b834afe7f6bb2454bd82') in 0.037655 seconds
+  Import took 0.043302 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004454 seconds.
+Registered in 0.006986 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -408,21 +352,625 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.803 seconds
+- Completed reload, in  1.268 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 88.3 MB.
-System memory in use after: 88.4 MB.
+System memory in use before: 88.4 MB.
+System memory in use after: 88.5 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2346.
-Total: 2.355900 ms (FindLiveObjects: 0.199400 ms CreateObjectMapping: 0.041300 ms MarkObjects: 2.002900 ms  DeleteObjects: 0.110800 ms)
+Total: 2.814500 ms (FindLiveObjects: 0.361100 ms CreateObjectMapping: 0.226000 ms MarkObjects: 2.112200 ms  DeleteObjects: 0.113100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.154827 seconds.
+  path: Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs
+  artifactKey: Guid(691b1e3eb77b6a54584a4113a110122c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs using Guid(691b1e3eb77b6a54584a4113a110122c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97a24a51f099e7f51a667368b974fc10') in 0.010186 seconds
+  Import took 0.015119 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.950029 seconds.
+  path: Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs
+  artifactKey: Guid(691b1e3eb77b6a54584a4113a110122c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs using Guid(691b1e3eb77b6a54584a4113a110122c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97a24a51f099e7f51a667368b974fc10') in 0.003373 seconds
+  Import took 0.006916 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004465 seconds.
+Registered in 0.007368 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.265 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.4 MB.
+System memory in use after: 88.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2348.
+Total: 3.424600 ms (FindLiveObjects: 0.323300 ms CreateObjectMapping: 0.121700 ms MarkObjects: 2.842800 ms  DeleteObjects: 0.134600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.265529 seconds.
+  path: Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs
+  artifactKey: Guid(691b1e3eb77b6a54584a4113a110122c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs using Guid(691b1e3eb77b6a54584a4113a110122c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16bab2f543968f5ce8b9cf6e48804c2f') in 0.007274 seconds
+  Import took 0.012482 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.132170 seconds.
+  path: Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs
+  artifactKey: Guid(691b1e3eb77b6a54584a4113a110122c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs using Guid(691b1e3eb77b6a54584a4113a110122c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16bab2f543968f5ce8b9cf6e48804c2f') in 0.004808 seconds
+  Import took 0.008897 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008748 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.409 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2350.
+Total: 4.001200 ms (FindLiveObjects: 0.282100 ms CreateObjectMapping: 0.120800 ms MarkObjects: 3.450700 ms  DeleteObjects: 0.145900 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.78 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 51.5 MB.
+System memory in use after: 51.6 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2350.
+Total: 3.236100 ms (FindLiveObjects: 0.342200 ms CreateObjectMapping: 0.121300 ms MarkObjects: 2.661400 ms  DeleteObjects: 0.108500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013528 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.273 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.93 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2352.
+Total: 4.997600 ms (FindLiveObjects: 0.386700 ms CreateObjectMapping: 0.125500 ms MarkObjects: 4.286300 ms  DeleteObjects: 0.197000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004437 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.793 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2354.
+Total: 3.906900 ms (FindLiveObjects: 0.587100 ms CreateObjectMapping: 0.107200 ms MarkObjects: 3.106100 ms  DeleteObjects: 0.104700 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 51.5 MB.
+System memory in use after: 51.6 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2354.
+Total: 2.453900 ms (FindLiveObjects: 0.239100 ms CreateObjectMapping: 0.045100 ms MarkObjects: 2.067200 ms  DeleteObjects: 0.101500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004712 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.843 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2356.
+Total: 2.474500 ms (FindLiveObjects: 0.261300 ms CreateObjectMapping: 0.050300 ms MarkObjects: 2.065300 ms  DeleteObjects: 0.096100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005454 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.814 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2358.
+Total: 2.367000 ms (FindLiveObjects: 0.227200 ms CreateObjectMapping: 0.055100 ms MarkObjects: 1.983700 ms  DeleteObjects: 0.099800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004464 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.789 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2360.
+Total: 3.153400 ms (FindLiveObjects: 0.340000 ms CreateObjectMapping: 0.124200 ms MarkObjects: 2.584900 ms  DeleteObjects: 0.102600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005027 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.781 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2362.
+Total: 2.451800 ms (FindLiveObjects: 0.203200 ms CreateObjectMapping: 0.044200 ms MarkObjects: 2.103200 ms  DeleteObjects: 0.100200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1009.009843 seconds.
+  path: Assets/FPS/Prefabs/Gun Hit.prefab
+  artifactKey: Guid(09c78f0c22526af409b0d5ef9dfda4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Gun Hit.prefab using Guid(09c78f0c22526af409b0d5ef9dfda4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a5135211e3a3032272e0a010c2903f1') in 0.027236 seconds
+  Import took 0.030646 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008893 seconds.
+  path: Assets/FPS/Prefabs/Gun Hit.prefab
+  artifactKey: Guid(09c78f0c22526af409b0d5ef9dfda4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Gun Hit.prefab using Guid(09c78f0c22526af409b0d5ef9dfda4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a5135211e3a3032272e0a010c2903f1') in 0.005800 seconds
+  Import took 0.009359 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004775 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.784 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.83 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2364.
+Total: 2.461800 ms (FindLiveObjects: 0.349600 ms CreateObjectMapping: 0.127600 ms MarkObjects: 1.877800 ms  DeleteObjects: 0.105100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 70.812745 seconds.
+  path: Assets/FPS/Prefabs/Sariel.prefab
+  artifactKey: Guid(a48fe87901d2c304caf564c9541aa102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Sariel.prefab using Guid(a48fe87901d2c304caf564c9541aa102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d9c30a24464072679f79c5f1eb2341b') in 0.142808 seconds
+  Import took 0.148094 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/FPS/Prefabs/Mahk.prefab
+  artifactKey: Guid(a45835eb16659ae49a723801be8a28dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Mahk.prefab using Guid(a45835eb16659ae49a723801be8a28dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '531f692b4a363c8a42dbcdaa431025fd') in 0.048030 seconds
+  Import took 0.052245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.232966 seconds.
+  path: Assets/FPS/Prefabs/Mahk.prefab
+  artifactKey: Guid(a45835eb16659ae49a723801be8a28dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Mahk.prefab using Guid(a45835eb16659ae49a723801be8a28dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b9377158f3bae06fb4395382d9f4ab1') in 0.040620 seconds
+  Import took 0.045192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.703967 seconds.
+  path: Assets/FPS/Prefabs/Sariel.prefab
+  artifactKey: Guid(a48fe87901d2c304caf564c9541aa102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Sariel.prefab using Guid(a48fe87901d2c304caf564c9541aa102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74c384f5328eba00448b974b9198d9ae') in 0.048335 seconds
+  Import took 0.054014 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004605 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.806 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.5 MB.
+System memory in use after: 102.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2375.
+Total: 2.288000 ms (FindLiveObjects: 0.214100 ms CreateObjectMapping: 0.043000 ms MarkObjects: 1.927700 ms  DeleteObjects: 0.102000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.556838 seconds.
+  path: Assets/FPS/Prefabs/Gun Hit.prefab
+  artifactKey: Guid(09c78f0c22526af409b0d5ef9dfda4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Gun Hit.prefab using Guid(09c78f0c22526af409b0d5ef9dfda4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce94fb2e8cec324d6a97d9099d30c6aa') in 0.019091 seconds
+  Import took 0.022652 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004634 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.856 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.4 MB.
+System memory in use after: 102.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2377.
+Total: 2.704100 ms (FindLiveObjects: 0.228000 ms CreateObjectMapping: 0.045300 ms MarkObjects: 2.322600 ms  DeleteObjects: 0.107100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 396.174923 seconds.
+  path: Assets/FPS/Prefabs/Sariel.prefab
+  artifactKey: Guid(a48fe87901d2c304caf564c9541aa102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Sariel.prefab using Guid(a48fe87901d2c304caf564c9541aa102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17dbe09f4d54aec3660bd3975984e5ce') in 0.099243 seconds
+  Import took 0.105915 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004446 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.870 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.4 MB.
+System memory in use after: 102.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2380.
+Total: 2.839100 ms (FindLiveObjects: 0.343200 ms CreateObjectMapping: 0.123900 ms MarkObjects: 2.121500 ms  DeleteObjects: 0.247500 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 65.5 MB.
+System memory in use after: 65.6 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2380.
+Total: 3.214700 ms (FindLiveObjects: 0.366200 ms CreateObjectMapping: 0.116800 ms MarkObjects: 2.626700 ms  DeleteObjects: 0.103300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004885 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.878 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.5 MB.
+System memory in use after: 102.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2382.
+Total: 2.559000 ms (FindLiveObjects: 0.264300 ms CreateObjectMapping: 0.060900 ms MarkObjects: 2.125200 ms  DeleteObjects: 0.106500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 113.472036 seconds.
+  path: Assets/FPS/Prefabs/Sariel.prefab
+  artifactKey: Guid(a48fe87901d2c304caf564c9541aa102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Sariel.prefab using Guid(a48fe87901d2c304caf564c9541aa102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaa654f9be3f33ab2b4d2d6f3bc44d60') in 0.100514 seconds
+  Import took 0.106289 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.075163 seconds.
+  path: Assets/FPS/Prefabs/Sariel.prefab
+  artifactKey: Guid(a48fe87901d2c304caf564c9541aa102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Sariel.prefab using Guid(a48fe87901d2c304caf564c9541aa102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92e4a63a9e5689ddac5a790e6331fc95') in 0.050939 seconds
+  Import took 0.057843 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.4 MB.
+System memory in use after: 67.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2383.
+Total: 4.079900 ms (FindLiveObjects: 0.634900 ms CreateObjectMapping: 0.118700 ms MarkObjects: 3.174000 ms  DeleteObjects: 0.150900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005097 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.849 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.5 MB.
+System memory in use after: 102.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2385.
+Total: 2.793500 ms (FindLiveObjects: 0.249700 ms CreateObjectMapping: 0.041400 ms MarkObjects: 2.386500 ms  DeleteObjects: 0.114600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004588 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
@@ -442,22 +990,33 @@ RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.782 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 88.4 MB.
-System memory in use after: 88.4 MB.
+System memory in use before: 102.5 MB.
+System memory in use after: 102.5 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2348.
-Total: 2.853500 ms (FindLiveObjects: 0.277100 ms CreateObjectMapping: 0.086500 ms MarkObjects: 2.380300 ms  DeleteObjects: 0.107600 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2387.
+Total: 2.498300 ms (FindLiveObjects: 0.263700 ms CreateObjectMapping: 0.049300 ms MarkObjects: 2.074800 ms  DeleteObjects: 0.109600 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 65.3 MB.
+System memory in use after: 65.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2387.
+Total: 2.771400 ms (FindLiveObjects: 0.267500 ms CreateObjectMapping: 0.075100 ms MarkObjects: 2.286000 ms  DeleteObjects: 0.141300 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005816 seconds.
+Registered in 0.004948 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -472,15 +1031,73 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.794 seconds
+- Completed reload, in  0.911 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 88.4 MB.
-System memory in use after: 88.4 MB.
+System memory in use before: 102.3 MB.
+System memory in use after: 102.3 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2350.
-Total: 3.226500 ms (FindLiveObjects: 0.191200 ms CreateObjectMapping: 0.042000 ms MarkObjects: 2.887200 ms  DeleteObjects: 0.105000 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2389.
+Total: 2.374000 ms (FindLiveObjects: 0.281900 ms CreateObjectMapping: 0.051200 ms MarkObjects: 1.898100 ms  DeleteObjects: 0.141600 ms)
 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Import Request.
+  Time since last request: 289.641310 seconds.
+  path: Assets/FPS/Prefabs/Mahk.prefab
+  artifactKey: Guid(a45835eb16659ae49a723801be8a28dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Mahk.prefab using Guid(a45835eb16659ae49a723801be8a28dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd339d9a2c1bf5e8bbd6c1b9cbf621671') in 0.081627 seconds
+  Import took 0.086540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.420827 seconds.
+  path: Assets/FPS/Prefabs/Sariel.prefab
+  artifactKey: Guid(a48fe87901d2c304caf564c9541aa102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPS/Prefabs/Sariel.prefab using Guid(a48fe87901d2c304caf564c9541aa102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3305a66b5ad7c291674561ef8a6506f5') in 0.048905 seconds
+  Import took 0.054879 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.72 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.5 MB.
+System memory in use after: 67.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2390.
+Total: 2.481400 ms (FindLiveObjects: 0.285100 ms CreateObjectMapping: 0.085800 ms MarkObjects: 1.967500 ms  DeleteObjects: 0.141800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004785 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.853 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1867 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.3 MB.
+System memory in use after: 102.4 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2392.
+Total: 2.812000 ms (FindLiveObjects: 0.350500 ms CreateObjectMapping: 0.103000 ms MarkObjects: 2.202100 ms  DeleteObjects: 0.154400 ms)
+

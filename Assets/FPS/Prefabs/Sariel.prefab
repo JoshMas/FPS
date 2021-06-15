@@ -268,7 +268,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2975219006752696575}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 691b1e3eb77b6a54584a4113a110122c, type: 3}
   m_Name: 
@@ -285,6 +285,7 @@ MonoBehaviour:
   range: 50
   damage: 15
   crosshair: {fileID: 0}
+  gunEffect: {fileID: 2886731880282078912, guid: 09c78f0c22526af409b0d5ef9dfda4d9, type: 3}
 --- !u!114 &2912468606717592055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +293,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2975219006752696575}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79adb5d213d112746b15f97d300d42ee, type: 3}
   m_Name: 
@@ -304,7 +305,7 @@ MonoBehaviour:
   dead: 0
   teamNumber: 0
   teamSpawns: []
-  respawnTimer: 0
+  respawnTimer: 3
   maxHealth: 100
   currentHealth: 0
 --- !u!114 &8293570640237580897
@@ -314,7 +315,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2975219006752696575}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 546949781bd53a643a60851df2cb2274, type: 3}
   m_Name: 

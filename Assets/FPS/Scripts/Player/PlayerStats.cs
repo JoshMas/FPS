@@ -103,7 +103,7 @@ namespace Shooter.Player
             dead = true;
             
             deaths++;
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
             controller.enabled = false;
             weapons.enabled = false;
             yield return new WaitForSeconds(respawnTimer);
@@ -119,7 +119,7 @@ namespace Shooter.Player
             gameObject.transform.position = new Vector3(newSpawn.position.x, newSpawn.rotation.y, newSpawn.position.z);
             controller.enabled = true;
             weapons.enabled = true;
-            gameObject.SetActive(true);
+            //gameObject.SetActive(true);
             
             dead = false;
         }

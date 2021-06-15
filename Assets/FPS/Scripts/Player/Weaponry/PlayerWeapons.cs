@@ -29,6 +29,7 @@ namespace Shooter.Player.Weapons
 
         [SerializeField] private Image crosshair;
 
+        [SerializeField] private ParticleSystem gunEffect;
 
         Scoring GM;
         PlayerStats thisPlayer;
@@ -58,6 +59,9 @@ namespace Shooter.Player.Weapons
         // Update is called once per frame
         void Update()
         {
+            if (!hasAuthority)
+                return;
+
             if (rechamberTime > 0)
             {
                 rechamberTime -= Time.deltaTime;
@@ -100,8 +104,9 @@ namespace Shooter.Player.Weapons
                 Debug.Log((bloom));
             }
 
-            if (Physics.Raycast(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + gameObject.transform.TransformDirection(Vector3.forward) + currentBloom), out RaycastHit hit, range))
+            if (Physics.Raycast(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + currentBloom), out RaycastHit hit, range))
             {
+                Instantiate(gunEffect, hit.point, Quaternion.identity);
                 if (gameObject.CompareTag("Player"))
                 {
                     PlayerStats enemyStats = hit.collider.GetComponent<PlayerStats>();
@@ -131,7 +136,7 @@ namespace Shooter.Player.Weapons
 
 
             }
-            Debug.DrawLine(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + gameObject.transform.TransformDirection(Vector3.forward) + currentBloom) * 20f, Color.red, 2);
+            Debug.DrawLine(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + currentBloom) * 20f, Color.red, 2);
 
 
             rechamberTime = rateOfPrimaryFire;
