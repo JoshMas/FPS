@@ -37,6 +37,7 @@
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/FPSPlayerNet.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/FPSNetManager.cs" />
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/Lobby/PlayerNameCreate.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/Lobby/NetworkRoomPlayerLobby.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sOXKlK0rlW7Dob9ivqY4tiI7fk" />
@@ -104,6 +105,8 @@
       <workItem from="1622987191616" duration="608000" />
       <workItem from="1623135609281" duration="961000" />
       <workItem from="1623136615183" duration="11279000" />
+      <workItem from="1623727458643" duration="1669000" />
+      <workItem from="1623729336707" duration="3379000" />
     </task>
     <servers />
   </component>
