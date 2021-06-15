@@ -14,7 +14,7 @@ public class SelectCharacter : NetworkBehaviour
     {
         CmdSelect();
 
-        SceneManager.LoadSceneAsync("InGameMenus", LoadSceneMode.Additive);
+        //SceneManager.LoadSceneAsync("InGameMenus", LoadSceneMode.Additive);
         SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
     }
 
