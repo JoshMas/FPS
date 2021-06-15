@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,7 @@ namespace Shooter.Networking
 {
     public class NetworkManagerLobby : NetworkManager
     {
+        [SerializeField] int minPlayers;
         [Scene] [SerializeField] private string menuScene = string.Empty;
 
         [Header("Room")]
@@ -16,7 +18,9 @@ namespace Shooter.Networking
         public static event Action OnClientConnected;
         public static event Action OnClientDisconnected;
 
-        public override void OnStartServer() => spawnPrefabs = Resources.LoadAll<GameObject>("SoawnablePrefabs").ToList();
+        public List<NetworkRoomPlayerLobby> RoomPlayers { get; } = new List<NetworkRoomPlayerLobby>();
+
+        public override void OnStartServer() => spawnPrefabs = Resources.LoadAll<GameObject>("SpawnablePrefabs").ToList();
 
         public override void OnStartClient()
         {
@@ -50,7 +54,7 @@ namespace Shooter.Networking
                 return;
             }
 
-            if(SceneManager.GetActiveScene().name != menuScene)
+            if(SceneManager.GetActiveScene().path != menuScene)
             {
                 conn.Disconnect();
                 return;
@@ -59,13 +63,64 @@ namespace Shooter.Networking
 
         public override void OnServerAddPlayer(NetworkConnection conn)
         {
-            if (SceneManager.GetActiveScene().name == menuScene)
+            if (SceneManager.GetActiveScene().path == menuScene)
             {
+                bool isHost = RoomPlayers.Count == 0;
+
                 NetworkRoomPlayerLobby roomPlayerInstance = Instantiate(roomPlayerPrefab);
+
+                roomPlayerInstance.IsHost = isHost;
 
                 NetworkServer.AddPlayerForConnection(conn, roomPlayerInstance.gameObject);
             }
         }
+
+        public override void OnServerDisconnect(NetworkConnection conn)
+        {
+            if(conn.identity != null)
+            {
+                var player = conn.identity.GetComponent<NetworkRoomPlayerLobby>();
+
+                RoomPlayers.Remove(player);
+
+                NotifyPlayersOfReadyState();
+            }
+
+            base.OnServerDisconnect(conn);
+        }
+
+        public override void OnStopServer()
+        {
+            RoomPlayers.Clear();
+        }
+
+        public void NotifyPlayersOfReadyState()
+        {
+            foreach(var player in RoomPlayers)
+            {
+                player.HandleReadyToStart(IsReadyToStart());
+            }
+        }
+        private bool IsReadyToStart()
+        {
+            if(numPlayers < minPlayers)
+            {
+                return false;
+            }
+
+            foreach (var player in RoomPlayers)
+            {
+                if (!player.isReady)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        
+
 
     }
 }
