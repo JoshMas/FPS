@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using FramedWok.PlayerController;
-public class Defender : MonoBehaviour
+
+using Mirror;
+
+public class Defender : NetworkBehaviour
 {
     
 
@@ -59,6 +62,9 @@ public class Defender : MonoBehaviour
 
     private void Update()
     {
+        if (!hasAuthority)
+            return;
+
         if (Time.time > nextAltFireTime)
         {
             if (Input.GetKeyDown(KeyCode.Mouse1))

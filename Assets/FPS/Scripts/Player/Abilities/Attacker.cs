@@ -4,7 +4,10 @@ using UnityEngine;
 using Shooter.Player.Weapons;
 using Shooter.Player;
 using FramedWok.PlayerController;
-public class Attacker : MonoBehaviour
+
+using Mirror;
+
+public class Attacker : NetworkBehaviour
 {
     
 
@@ -28,6 +31,9 @@ public class Attacker : MonoBehaviour
 
     private void Update()
     {
+        if (!hasAuthority)
+            return;
+
         if (Time.time > nextAltFireTime)
         {
             if (Input.GetKeyDown(KeyCode.Mouse1))

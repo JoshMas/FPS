@@ -58,7 +58,6 @@ namespace Shooter.Player
         {
 
             StartCoroutine(GetHUD());
-            Debug.Log("");
            
 
             foreach (Spawn spawn in FindObjectsOfType<Spawn>()) 
