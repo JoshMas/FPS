@@ -270,6 +270,8 @@ namespace FramedWok.PlayerController
             animator.SetFloat("yAxis", Input.GetAxis("Vertical"));
 
             animator.SetBool("shoot1", Input.GetMouseButton(0));
+            if (Input.GetMouseButtonDown(1))
+                netAnimator.SetTrigger("shoot2");
         }
         /*
         [Command]
