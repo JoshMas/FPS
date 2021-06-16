@@ -60,7 +60,8 @@ namespace Shooter.Networking
         public override void OnStartClient()
         {
             Room.RoomPlayers.Add(this);
-
+            
+            
             UpdateDisplay();
         }
 
