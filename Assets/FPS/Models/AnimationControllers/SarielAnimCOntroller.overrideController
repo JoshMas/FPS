@@ -8,4 +8,18 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: SarielAnimCOntroller
   m_Controller: {fileID: 9100000, guid: 29b7eace487f8174cb66479cd9d8bdf9, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 1827226128182048838, guid: 5c73863a53efc1a40a647e9b387516d5, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: e43221683e26526469b6d2408d83d49f, type: 3}
+  - m_OriginalClip: {fileID: 1827226128182048838, guid: 1eb5fc644e56f71459b60d63ba73c637, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 4c4f7bc26be67c245a9b8868713e8cfe, type: 3}
+  - m_OriginalClip: {fileID: 1827226128182048838, guid: b57725023d99c874686ff93971dfc9a9, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: e3443411dce096d4db0319981f6b5179, type: 3}
+  - m_OriginalClip: {fileID: 1827226128182048838, guid: c0f1f5c6fd6cf6f4c8a2d09d37078efe, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: e3443411dce096d4db0319981f6b5179, type: 3}
+  - m_OriginalClip: {fileID: 1827226128182048838, guid: 312b8f6ea8679f347b2a38d859c871ea, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 935b16c7394149a4a8cbcb1bec9055de, type: 3}
+  - m_OriginalClip: {fileID: 1827226128182048838, guid: 2138298f78a006f45852ea2def7542a3, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: dcfc316ee8dbe30459b8aabfe9c891ac, type: 3}
+  - m_OriginalClip: {fileID: 1827226128182048838, guid: 79deda6c1ee653b42a7ea05f1b612e35, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: e0599fb29543e524d93225a2a6190558, type: 3}

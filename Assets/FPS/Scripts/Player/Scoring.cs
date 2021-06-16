@@ -57,7 +57,7 @@ namespace Shooter.Score
             while (scoreHUD.Count < 2)
             {
                 scoreHUD.AddRange(GameObject.FindGameObjectsWithTag("Score Text"));
-                Debug.Log(scoreHUD.Count);
+                //Debug.Log(scoreHUD.Count);
                 
                
                 yield return null;
@@ -66,7 +66,7 @@ namespace Shooter.Score
             for (int i = 0; i < scoreHUD.Count; i++)
             {
                 scoreTexts.Add(scoreHUD[i].GetComponent<Text>());
-                Debug.Log(scoreTexts[i]);
+                //Debug.Log(scoreTexts[i]);
                 teamScore.Add(0);
                 UpdateScore(i);
                 

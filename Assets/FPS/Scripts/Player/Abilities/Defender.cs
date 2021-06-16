@@ -37,13 +37,17 @@ public class Defender : MonoBehaviour
         if(gameObject.tag == "Red Player")
         {
             enemyObj = GameObject.FindGameObjectsWithTag("Blue Player");
-            rbs = new Rigidbody[enemyObj.Length];
         }
-        if (gameObject.tag == "Blue Player")
+        else if (gameObject.tag == "Blue Player")
         {
             enemyObj = GameObject.FindGameObjectsWithTag("Red Player");
-            rbs = new Rigidbody[enemyObj.Length];
         }
+        else
+        {
+            enemyObj = new GameObject[0];
+        }
+        
+        rbs = new Rigidbody[enemyObj.Length];
 
 
         for (int i = 0; i < enemyObj.Length; i++)

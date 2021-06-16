@@ -20,9 +20,13 @@ public class GravGrenade : MonoBehaviour
         {
             otherTeam = GameObject.FindGameObjectsWithTag("Blue Player");
         }
-        if (gameObject.tag == "Blue Player")
+        else if (gameObject.tag == "Blue Player")
         {
             otherTeam = GameObject.FindGameObjectsWithTag("Red Player");
+        }
+        else
+        {
+            otherTeam = new GameObject[0];
         }
 
         //blueObj = GameObject.FindGameObjectsWithTag("Blue Player");

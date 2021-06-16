@@ -18,22 +18,30 @@ public class Missile : MonoBehaviour
         {
             
             otherTeam = GameObject.FindGameObjectsWithTag("Blue Player");
-            target = new Transform[otherTeam.Length];
         }
-        if (gameObject.tag == "Blue Player")
+        else if (gameObject.tag == "Blue Player")
         {
             otherTeam = GameObject.FindGameObjectsWithTag("Red Player");
-            target = new Transform[otherTeam.Length];
         }
-       
-        
+        else
+        {
+            otherTeam = new GameObject[0];
+        }
+        target = new Transform[otherTeam.Length];
+
+        for (int i = 0; i < otherTeam.Length; ++i)
+        {
+            target[i] = otherTeam[i].transform;
+        }
     }
 
     void Update()
     {
-
         FindClosest(target);
-        transform.position = Vector3.MoveTowards(transform.position, tMin.position, speed * Time.deltaTime);
+        if (tMin == null)
+            transform.Translate(Vector3.forward * Time.deltaTime);
+        else
+            transform.position = Vector3.MoveTowards(transform.position, tMin.position, speed * Time.deltaTime);
         Destroy(this.gameObject, 5);
     }
 
@@ -63,7 +71,7 @@ public class Missile : MonoBehaviour
    
     private Transform FindClosest(Transform[] enemies)
     {
-        
+
         float distanceToClosestEnemy = Mathf.Infinity;
         Vector3 currentPos = transform.position;
         foreach(Transform t in enemies)
