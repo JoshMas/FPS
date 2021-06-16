@@ -1,14 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Shooter.Player;
 
 public class Support : MonoBehaviour
 {
-    #region Stats
-    public float curHealth = 100;
-    public float maxHealth = 100;
-    public float movement = 40;
-    #endregion
+    
 
     #region grenade
     public GameObject smokePrefab;
@@ -21,8 +18,11 @@ public class Support : MonoBehaviour
     private float nextAltFireTime = 0;
     private float nextPowerTime = 0;
     public float powerCD = 30f;
+    private float nextPassiveHealTime = 0;
+    public float passiveCD = 6f;
     #endregion
     private GameObject[] sameTeam;
+    private PlayerStats playerStats;
 
     private void Start()
     {
@@ -58,7 +58,12 @@ public class Support : MonoBehaviour
             }
         }
 
-        //Passive? regen health faster
+        if(Time.time > nextPassiveHealTime)
+        {
+            if(gameObject.GetComponent<PlayerStats>().currentHealth < playerStats.maxHealth)
+            Passive();
+            nextPassiveHealTime = Time.time + passiveCD;
+        }
 
 
     }
@@ -85,8 +90,13 @@ public class Support : MonoBehaviour
     {
         foreach(GameObject obj in sameTeam)
         {
-            //heal 
+            obj.GetComponent<PlayerStats>().currentHealth = playerStats.maxHealth; 
         }
+    }
+
+    private void Passive()
+    {
+        gameObject.GetComponent<PlayerStats>().currentHealth += 3;
     }
 
     private IEnumerator DestroyMissileAfterTime(GameObject smoke, float delay)

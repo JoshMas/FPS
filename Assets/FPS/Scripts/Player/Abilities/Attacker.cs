@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Shooter.Player.Weapons;
-
+using Shooter.Player;
+using FramedWok.PlayerController;
 public class Attacker : MonoBehaviour
 {
-    #region Stats
-    public float curHealth = 100;
-    public float maxHealth = 100;
-    public float movement = 50;
-    #endregion
+    
 
     #region missile
     public GameObject missilePrefab;
@@ -24,6 +21,8 @@ public class Attacker : MonoBehaviour
     public float powerCD = 20f;
     #endregion
     private PlayerWeapons playerWeapons;
+    private PlayerStats playerStats;
+    private PlayerController playerController;
 
     public bool kill = false;
 
@@ -44,7 +43,7 @@ public class Attacker : MonoBehaviour
             {
                 Power();
                 gameObject.GetComponent<PlayerWeapons>().rateOfPrimaryFire -= 5 * Time.deltaTime;
-                movement -= 25 * Time.deltaTime;
+                gameObject.GetComponent<PlayerController>().walkSpeed -= 25 * Time.deltaTime;
                 nextPowerTime = Time.time + powerCD;
             }
         }
@@ -77,7 +76,7 @@ public class Attacker : MonoBehaviour
     private void Power()
     {
         gameObject.GetComponent<PlayerWeapons>().rateOfPrimaryFire += 5;
-        movement += 25;
+        gameObject.GetComponent<PlayerController>().walkSpeed += 25;
         
     }
 

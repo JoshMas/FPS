@@ -5,11 +5,7 @@ using TMPro;
 using FramedWok.PlayerController;
 public class Defender : MonoBehaviour
 {
-    #region Stats
-    public float curHealth = 175;
-    public float maxHealth = 175;
-    public float movement = 40;
-    #endregion
+    
 
     #region grenade
     public GameObject grenadePrefab;
@@ -23,7 +19,7 @@ public class Defender : MonoBehaviour
     private float nextAltFireTime = 0;
     private float nextPowerTime = 0;
     public float powerCD = 20f;
-    public TMP_Text powerCDText;
+    
     #endregion
     #region Power
     public float pushRadius = 50;
@@ -78,7 +74,7 @@ public class Defender : MonoBehaviour
             }
         }
 
-        powerCDText.text = powerCD.ToString();
+       
 
 
         //passive
