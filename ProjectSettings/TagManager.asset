@@ -6,8 +6,10 @@ TagManager:
   tags:
   - Team 0
   - Team 1
-  - PlayerCamera
-  - WeaponTransform
+  - Red Player
+  - Blue Player
+  - Health Text
+  - Score Text
   layers:
   - Default
   - TransparentFX

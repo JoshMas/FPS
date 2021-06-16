@@ -30,6 +30,8 @@ namespace Shooter.Player
         private List<Spawn> teamSpawns = new List<Spawn>();
         [SerializeField]
         private float respawnTimer;
+
+        private bool isSetup = false;
         
         [Header("Health")]
         //[SerializeField]
@@ -47,7 +49,10 @@ namespace Shooter.Player
         private PlayerWeapons weapons;
        
      
-
+        public void Setup()
+        {
+            isSetup = true;
+        }
         void Start()
         {
 
@@ -81,7 +86,9 @@ namespace Shooter.Player
         // Update is called once per frame
         void Update()
         {
-           
+            if(!isSetup)
+            return;
+
             
 
             if(currentHealth <= 0)
@@ -103,7 +110,7 @@ namespace Shooter.Player
             dead = true;
             
             deaths++;
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
             controller.enabled = false;
             weapons.enabled = false;
             yield return new WaitForSeconds(respawnTimer);
@@ -119,7 +126,7 @@ namespace Shooter.Player
             gameObject.transform.position = new Vector3(newSpawn.position.x, newSpawn.rotation.y, newSpawn.position.z);
             controller.enabled = true;
             weapons.enabled = true;
-            gameObject.SetActive(true);
+            //gameObject.SetActive(true);
             
             dead = false;
         }

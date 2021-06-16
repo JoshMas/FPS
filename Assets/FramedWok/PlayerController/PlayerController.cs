@@ -1,9 +1,9 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 using Mirror;
 using UnityEngine.SceneManagement;
-using Shooter.Abilities;
 
 namespace FramedWok.PlayerController
 {
@@ -86,7 +86,6 @@ namespace FramedWok.PlayerController
         private bool dash = false;
         private Vector3 movement = Vector3.zero;
 
-        // Start is called before the first frame update
         void Start()
         {
             input = GetComponent<PlayerInput>();
@@ -94,32 +93,19 @@ namespace FramedWok.PlayerController
             animator = GetComponentInChildren<Animator>();
             netAnimator = GetComponent<NetworkAnimator>();
             Cursor.lockState = CursorLockMode.Locked;
-            if (isLocalPlayer)
+            Setup();
+        }
+        
+        [Client]
+        public void Setup()
+        {
+            if (hasAuthority)
             {
                 cameraPoint = GetComponentsInChildren<Transform>()[1];
                 Transform cameraMain = Camera.main.transform;
                 cameraMain.parent = cameraPoint;
                 cameraMain.position = cameraPoint.position;
                 cameraMain.rotation = cameraPoint.rotation;
-                SceneManager.LoadSceneAsync("LevelTest", LoadSceneMode.Additive);
-            }
-        }
-
-        public void CharacterSelect(int _charType)
-        {
-            //Will need to add somehting here later for character models
-            //Probably load from the Resources folder
-            switch (_charType)
-            {
-                case 0:
-                    //gameObject.AddComponent<Attacker>();
-                    break;
-                case 1:
-                    gameObject.AddComponent<Defender>();
-                    break;
-                case 2:
-                    gameObject.AddComponent<Support>();
-                    break;
             }
         }
 
@@ -149,6 +135,7 @@ namespace FramedWok.PlayerController
             //Jumping
             if (jump)
             {
+                StopCoroutine(nameof(StopDashOnCollision));
                 physics.Jump(jumpStrength);
                 jumpCounter++;
                 isGrounded = false;
@@ -323,6 +310,13 @@ namespace FramedWok.PlayerController
             isDashing = false;
         }
 
+        private IEnumerator StopDashOnCollision()
+        {
+            StopCoroutine(nameof(Dash));
+            yield return new WaitForSeconds(0.1f);
+            physics.RestrictVelocity(0, 1);
+        }
+
         /// <summary>
         /// On collision, check if it's hit the ground - if so, reset the jump counter
         /// Also, end any dash if the player is in teh middle of one
@@ -330,7 +324,7 @@ namespace FramedWok.PlayerController
         /// <param name="_collision"></param>
         private void OnCollisionEnter(Collision _collision)
         {
-            StopCoroutine(nameof(Dash));
+            StartCoroutine(nameof(StopDashOnCollision));
             isDashing = false;
             //physics.RestrictVelocity(walkSpeed, rateOfRestriction);
             isGrounded = true;

@@ -29,6 +29,9 @@ namespace Shooter.Player.Weapons
 
         [SerializeField] private Image crosshair;
 
+        [SerializeField] private ParticleSystem gunEffect;
+        private LineRenderer gunTrail;
+        private Vector3[] defaultTrailPos;
 
         Scoring GM;
         PlayerStats thisPlayer;
@@ -45,6 +48,11 @@ namespace Shooter.Player.Weapons
         {
             thisPlayer = gameObject.GetComponent<PlayerStats>();
             GM = FindObjectOfType<Scoring>();
+            gunTrail = GetComponent<LineRenderer>();
+            defaultTrailPos = new Vector3[2];
+            defaultTrailPos[0] = Vector3.up * 1000;
+            defaultTrailPos[1] = Vector3.up * 1000;
+            gunTrail.SetPositions(defaultTrailPos);
         }
 
         private void OnEnable()
@@ -58,6 +66,9 @@ namespace Shooter.Player.Weapons
         // Update is called once per frame
         void Update()
         {
+            if (!hasAuthority)
+                return;
+
             if (rechamberTime > 0)
             {
                 rechamberTime -= Time.deltaTime;
@@ -70,6 +81,10 @@ namespace Shooter.Player.Weapons
                 {
                     PrimaryFire();
 
+                }
+                if (Input.GetMouseButtonUp(1))
+                {
+                    CmdResetTrail();
                 }
             }
 
@@ -100,20 +115,21 @@ namespace Shooter.Player.Weapons
                 Debug.Log((bloom));
             }
 
-            RaycastHit hit;
-            if (Physics.Raycast(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + gameObject.transform.TransformDirection(Vector3.forward) + currentBloom), out hit, range))
+            if (Physics.Raycast(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + currentBloom), out RaycastHit hit, range))
             {
+                CmdGunEffect(hit.point);
+
                 if (gameObject.CompareTag("Player"))
                 {
                     PlayerStats enemyStats = hit.collider.GetComponent<PlayerStats>();
-                    
+
                     if (enemyStats != null)
                     {
                         if (hasAuthority)
                         {
                             DealDamage(enemyStats, damage); ;
                             enemyStats.UpdateHealth();
-                        
+
                         }
                         Debug.Log(enemyStats.currentHealth);
                         if (enemyStats.currentHealth <= 0)
@@ -122,17 +138,17 @@ namespace Shooter.Player.Weapons
                             GM.IncreaseScore(thisPlayer.teamNumber);
                         }
                     }
-                   
-                    
 
-                   
 
-                    
+
+
+
+
                 }
-              
+
 
             }
-            Debug.DrawLine(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + gameObject.transform.TransformDirection(Vector3.forward) + currentBloom) * 20f, Color.red, 2);
+            Debug.DrawLine(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + currentBloom) * 20f, Color.red, 2);
 
 
             rechamberTime = rateOfPrimaryFire;
@@ -145,7 +161,30 @@ namespace Shooter.Player.Weapons
             _target.LoseHealth(_damage);
         }
 
-        
-    }
+        [Command]
+        private void CmdGunEffect(Vector3 hit)
+        {
+            RpcGunEffect(hit);
+        }
 
+        [ClientRpc]
+        private void RpcGunEffect(Vector3 hit)
+        {
+            gunTrail.SetPosition(0, transform.position);
+            gunTrail.SetPosition(1, hit);
+            Instantiate(gunEffect.gameObject, hit, Quaternion.identity);
+        }
+
+        [Command]
+        private void CmdResetTrail()
+        {
+            RpcResetTrail();
+        }
+
+        [ClientRpc]
+        private void RpcResetTrail()
+        {
+            gunTrail.SetPositions(defaultTrailPos);
+        }
+    }
 }
