@@ -4,7 +4,8 @@ using UnityEngine;
 using Shooter.Player.Weapons;
 using Shooter.Player;
 using FramedWok.PlayerController;
-public class Attacker : MonoBehaviour
+using Mirror;
+public class Attacker : NetworkBehaviour
 {
     
 

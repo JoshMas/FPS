@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using FramedWok.PlayerController;
-public class Defender : MonoBehaviour
+using Mirror;
+public class Defender : NetworkBehaviour
 {
     
 
@@ -45,12 +46,15 @@ public class Defender : MonoBehaviour
             rbs = new Rigidbody[enemyObj.Length];
         }
 
-
-        for (int i = 0; i < enemyObj.Length; i++)
+        if(enemyObj != null)
         {
-            GameObject player = enemyObj[i];
-            rbs[i] = player.GetComponent<Rigidbody>();
+            for (int i = 0; i < enemyObj.Length; i++)
+            {
+                GameObject player = enemyObj[i];
+                rbs[i] = player.GetComponent<Rigidbody>();
+            }
         }
+        
     }
 
     private void Update()
@@ -78,16 +82,20 @@ public class Defender : MonoBehaviour
 
 
         //passive
-        foreach(GameObject enemy in enemyObj)
+        if(enemyObj != null)
         {
-            if(Vector3.Distance(enemy.transform.position, gameObject.transform.position) < passiveDistance)
+            foreach (GameObject enemy in enemyObj)
             {
-               if(enemy.GetComponent<PlayerController>() != null)
+                if (Vector3.Distance(enemy.transform.position, gameObject.transform.position) < passiveDistance)
                 {
-                    enemy.GetComponent<PlayerController>().walkSpeed -= 25;
+                    if (enemy.GetComponent<PlayerController>() != null)
+                    {
+                        enemy.GetComponent<PlayerController>().walkSpeed -= 25;
+                    }
                 }
             }
         }
+        
 
     }
 

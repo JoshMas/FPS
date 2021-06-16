@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Shooter.Player;
+using Mirror;
 
-public class Missile : MonoBehaviour
+public class Missile : NetworkBehaviour
 {
     public float speed = 1f;
     private PlayerStats player;
@@ -33,7 +34,7 @@ public class Missile : MonoBehaviour
     {
 
         FindClosest(target);
-        transform.position = Vector3.MoveTowards(transform.position, tMin.position, speed * Time.deltaTime);
+        
         Destroy(this.gameObject, 5);
     }
 
@@ -66,16 +67,20 @@ public class Missile : MonoBehaviour
         
         float distanceToClosestEnemy = Mathf.Infinity;
         Vector3 currentPos = transform.position;
-        foreach(Transform t in enemies)
+        if(enemies != null)
         {
-            float distanceToEnemy = Vector3.Distance(t.position, currentPos);
-            if(distanceToEnemy < distanceToClosestEnemy)
+            foreach (Transform t in enemies)
             {
-                tMin = t;
-                distanceToClosestEnemy = distanceToEnemy;
-               
+                float distanceToEnemy = Vector3.Distance(t.position, currentPos);
+                if (distanceToEnemy < distanceToClosestEnemy)
+                {
+                    tMin = t;
+                    distanceToClosestEnemy = distanceToEnemy;
+
+                }
             }
         }
+        transform.position = Vector3.MoveTowards(transform.position, tMin.position, speed * Time.deltaTime);
         return tMin;
          /*if(otherTeam.Length > 0)
          {

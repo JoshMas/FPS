@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Shooter.Player;
+using Mirror;
 
-public class Support : MonoBehaviour
+public class Support : NetworkBehaviour
 {
     
 
