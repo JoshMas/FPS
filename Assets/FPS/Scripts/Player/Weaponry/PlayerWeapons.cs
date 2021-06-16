@@ -30,6 +30,8 @@ namespace Shooter.Player.Weapons
         [SerializeField] private Image crosshair;
 
         [SerializeField] private ParticleSystem gunEffect;
+        private LineRenderer gunTrail;
+        private Vector3[] defaultTrailPos;
 
         Scoring GM;
         PlayerStats thisPlayer;
@@ -46,6 +48,11 @@ namespace Shooter.Player.Weapons
         {
             thisPlayer = gameObject.GetComponent<PlayerStats>();
             GM = FindObjectOfType<Scoring>();
+            gunTrail = GetComponent<LineRenderer>();
+            defaultTrailPos = new Vector3[2];
+            defaultTrailPos[0] = Vector3.up * 1000;
+            defaultTrailPos[1] = Vector3.up * 1000;
+            gunTrail.SetPositions(defaultTrailPos);
         }
 
         private void OnEnable()
@@ -74,6 +81,10 @@ namespace Shooter.Player.Weapons
                 {
                     PrimaryFire();
 
+                }
+                if (Input.GetMouseButtonUp(1))
+                {
+                    CmdResetTrail();
                 }
             }
 
@@ -106,7 +117,8 @@ namespace Shooter.Player.Weapons
 
             if (Physics.Raycast(camTransform.position, (camTransform.TransformDirection(Vector3.forward) + currentBloom), out RaycastHit hit, range))
             {
-                Instantiate(gunEffect, hit.point, Quaternion.identity);
+                CmdGunEffect(hit.point);
+
                 if (gameObject.CompareTag("Player"))
                 {
                     PlayerStats enemyStats = hit.collider.GetComponent<PlayerStats>();
@@ -149,7 +161,30 @@ namespace Shooter.Player.Weapons
             _target.LoseHealth(_damage);
         }
 
-        
-    }
+        [Command]
+        private void CmdGunEffect(Vector3 hit)
+        {
+            RpcGunEffect(hit);
+        }
 
+        [ClientRpc]
+        private void RpcGunEffect(Vector3 hit)
+        {
+            gunTrail.SetPosition(0, transform.position);
+            gunTrail.SetPosition(1, hit);
+            Instantiate(gunEffect.gameObject, hit, Quaternion.identity);
+        }
+
+        [Command]
+        private void CmdResetTrail()
+        {
+            RpcResetTrail();
+        }
+
+        [ClientRpc]
+        private void RpcResetTrail()
+        {
+            gunTrail.SetPositions(defaultTrailPos);
+        }
+    }
 }
