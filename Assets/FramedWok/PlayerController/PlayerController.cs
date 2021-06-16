@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+using Mirror;
+using UnityEngine.SceneManagement;
 
 namespace FramedWok.PlayerController
 {
@@ -12,11 +14,16 @@ namespace FramedWok.PlayerController
     /// </summary>
     [RequireComponent(typeof(PlayerInput))]
     [RequireComponent(typeof(PlayerPhysics))]
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : NetworkBehaviour
     {
         private PlayerInput input;
         private PlayerPhysics physics;
+        private Transform cameraPoint;
 
+        private Animator animator;
+        private NetworkAnimator netAnimator;
+
+        #region movement
         /// <summary>
         /// How quickly the player accelerates
         /// </summary>
@@ -25,7 +32,9 @@ namespace FramedWok.PlayerController
         /// The rate at which the player's current velocity is brought down 
         /// </summary>
         [SerializeField, Range(0, 1), Tooltip("How quickly the player's velocity is restricted to maximum. 0 means it's never used, 1 means it's used immediately")] private float rateOfRestriction = 0.5f;
+        #endregion
 
+        #region jump
         /// <summary>
         /// Enables/disable the jump
         /// </summary>
@@ -44,8 +53,10 @@ namespace FramedWok.PlayerController
         [SerializeField, Tooltip("The number of times the player can jump before landing")] private int numberOfJumps = 1;
         private int jumpCounter = 0;
         private bool isGrounded = true;
-        private float groundCheckCounter = 0.0f;
+        //private float groundCheckCounter = 0.0f;
+        #endregion
 
+        #region dash
         /// <summary>
         /// Enables/disables the dash
         /// </summary>
@@ -68,23 +79,143 @@ namespace FramedWok.PlayerController
         [SerializeField, Min(0)] private float dashCooldown = 1.0f;
         public float dashTimer = 0.0f;
         private bool isDashing = false;
+        #endregion
 
-        // Start is called before the first frame update
+        private Vector3 rotation = Vector3.zero;
+        private bool jump = false;
+        private bool dash = false;
+        private Vector3 movement = Vector3.zero;
+
         void Start()
         {
             input = GetComponent<PlayerInput>();
             physics = GetComponent<PlayerPhysics>();
+            animator = GetComponentInChildren<Animator>();
+            netAnimator = GetComponent<NetworkAnimator>();
             Cursor.lockState = CursorLockMode.Locked;
+            Setup();
+        }
+        
+        [Client]
+        public void Setup()
+        {
+            if (hasAuthority)
+            {
+                cameraPoint = GetComponentsInChildren<Transform>()[1];
+                Transform cameraMain = Camera.main.transform;
+                cameraMain.parent = cameraPoint;
+                cameraMain.position = cameraPoint.position;
+                cameraMain.rotation = cameraPoint.rotation;
+            }
         }
 
         // Update is called once per frame
+        [Client]
         void Update()
         {
+            if (!hasAuthority)
+                return;
+
+            SetMoveAnimValues();
+
+            rotation = input.GetCameraRotation();
+            jump = Input.GetKeyDown(input.jumpKey) && canJump && jumpCounter < numberOfJumps;
+            dash = Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0;
+            //Pause
+            if (Input.GetKeyDown(KeyCode.Escape))
+                Cursor.lockState = CursorLockMode.None;
+            if (dashTimer > 0)
+            {
+                dashTimer -= Time.deltaTime;
+            }
+
             //Set the camera angle
-            physics.Rotate(input.GetCameraRotation());
+            physics.Rotate(rotation);
 
             //Jumping
-            if (Input.GetKeyDown(input.jumpKey) && canJump && jumpCounter < numberOfJumps)
+            if (jump)
+            {
+                StopCoroutine(nameof(StopDashOnCollision));
+                physics.Jump(jumpStrength);
+                jumpCounter++;
+                isGrounded = false;
+
+                netAnimator.SetTrigger("jump");
+            }
+            //groundCheckCounter += Time.deltaTime;
+            //if(groundCheckCounter > 0.1f)
+            //{
+            //    isGrounded = physics.IsGrounded();
+            //    if (isGrounded)
+            //        jumpCounter = 0;
+            //    groundCheckCounter = 0;
+            //}
+
+            //Dashing
+            if (dash)
+            {
+                dashTimer = dashCooldown;
+                StartCoroutine(nameof(Dash));
+
+                netAnimator.SetTrigger("dash");
+            }
+            
+            //if (isServer)
+            //{
+            //    RpcActionStuff(rotation, jump, dash);
+
+            //}
+            //else
+            //{
+            //    CmdActionStuff(rotation, jump, dash);
+
+            //}
+            //CmdActionStuff(rotation, jump, dash);
+        }
+
+        /*
+        [Command]
+        private void CmdActionStuff(Vector3 _rotation, bool _jump, bool _dash)
+        {
+            //Validation (probably not though)
+
+            RpcActionStuff(_rotation, _jump, _dash);
+
+            ////Set the camera angle
+            //physics.Rotate(_rotation);
+
+            ////Jumping
+            //if (_jump)
+            //{
+            //    physics.Jump(jumpStrength);
+            //    jumpCounter++;
+            //    isGrounded = false;
+            //}
+            ////groundCheckCounter += Time.deltaTime;
+            ////if(groundCheckCounter > 0.1f)
+            ////{
+            ////    isGrounded = physics.IsGrounded();
+            ////    if (isGrounded)
+            ////        jumpCounter = 0;
+            ////    groundCheckCounter = 0;
+            ////}
+
+            ////Dashing
+            //if (_dash)
+            //{
+            //    dashTimer = dashCooldown;
+            //    StartCoroutine(nameof(Dash));
+            //}
+        }
+
+        [ClientRpc]
+        private void RpcActionStuff(Vector3 _rotation, bool _jump, bool _dash)
+        {
+            //Set the camera angle
+            physics.Rotate(_rotation);
+
+            //Jumping
+            if (_jump)
             {
                 physics.Jump(jumpStrength);
                 jumpCounter++;
@@ -100,25 +231,71 @@ namespace FramedWok.PlayerController
             //}
 
             //Dashing
-            if(Input.GetKeyDown(input.dashKey) && canDash && !isDashing && dashTimer <= 0)
+            if (_dash)
             {
                 dashTimer = dashCooldown;
                 StartCoroutine(nameof(Dash));
             }
-            if(dashTimer > 0)
-            {
-                dashTimer -= Time.deltaTime;
-            }
         }
+        */
 
+        [Client]
         private void FixedUpdate()
         {
+            if (!hasAuthority)
+                return;
+
+            movement = input.GetGroundMovementVector(isGrounded);
+            movement *= walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl);
+
             //Walking
-            physics.AddGroundAcceleration(input.GetGroundMovementVector(isGrounded) * walkSpeed * Time.deltaTime * (isGrounded ? 1 : airControl));
+            physics.SetGroundMovement(movement);
             //Restrict velocity while on the ground
             if (isGrounded)
-                physics.RestrictVelocity(walkSpeed, rateOfRestriction * Time.deltaTime);
+                physics.RestrictVelocity(0, rateOfRestriction * Time.deltaTime);
+            //if (isServer)
+            //{
+            //    RpcMoveStuff(movement);
+            //}
+            //else
+            //{
+            //    CmdMoveStuff(movement);
+            //}
+            //CmdMoveStuff(movement);
         }
+
+        private void SetMoveAnimValues()
+        {
+            animator.SetFloat("xAxis", Input.GetAxis("Horizontal"));
+            animator.SetFloat("yAxis", Input.GetAxis("Vertical"));
+
+            animator.SetBool("shoot1", Input.GetMouseButton(0));
+        }
+        /*
+        [Command]
+        private void CmdMoveStuff(Vector3 _movement)
+        {
+            //
+
+            RpcMoveStuff(_movement);
+
+            //Walking
+            //physics.SetGroundMovement(_movement);
+            ////Restrict velocity while on the ground
+            //if (isGrounded)
+            //    physics.RestrictVelocity(0, rateOfRestriction * Time.deltaTime);
+        }
+
+        [ClientRpc]
+        private void RpcMoveStuff(Vector3 _movement)
+        {
+            //Walking
+            physics.SetGroundMovement(_movement);
+            //Restrict velocity while on the ground
+            if (isGrounded)
+                physics.RestrictVelocity(0, rateOfRestriction * Time.deltaTime);
+        }
+        */
 
         /// <summary>
         /// Use the dash, and after a timer, cancel all momentum
@@ -126,11 +303,18 @@ namespace FramedWok.PlayerController
         private IEnumerator Dash()
         {
             isGrounded = false;
-            physics.Dash(physics.GetDashDirection(horizontalDashOnly, input.GetGroundMovementVector(isGrounded).normalized), dashStrength);
+            physics.Dash(physics.GetDashDirection(horizontalDashOnly, input.GetGroundMovementVector(false).normalized), dashStrength);
             isDashing = true;
             yield return new WaitForSeconds(dashDuration);
-            physics.RestrictVelocity(walkSpeed * 0.5f, 1);
+            physics.RestrictVelocity(0, 1);
             isDashing = false;
+        }
+
+        private IEnumerator StopDashOnCollision()
+        {
+            StopCoroutine(nameof(Dash));
+            yield return new WaitForSeconds(0.1f);
+            physics.RestrictVelocity(0, 1);
         }
 
         /// <summary>
@@ -140,7 +324,7 @@ namespace FramedWok.PlayerController
         /// <param name="_collision"></param>
         private void OnCollisionEnter(Collision _collision)
         {
-            StopCoroutine(nameof(Dash));
+            StartCoroutine(nameof(StopDashOnCollision));
             isDashing = false;
             //physics.RestrictVelocity(walkSpeed, rateOfRestriction);
             isGrounded = true;

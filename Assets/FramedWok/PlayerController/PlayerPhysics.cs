@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+using Mirror;
 
 namespace FramedWok.PlayerController
 {
@@ -13,27 +13,30 @@ namespace FramedWok.PlayerController
     {
         private Rigidbody playerRigidbody;
         private Collider playerCollider;
+        private Camera playerCamera;
 
         /// <summary>
         /// The length of the Raycast used to check if the playerCollider is on top of another collider
         /// </summary>
-        [SerializeField, Tooltip("This value should be slightly more than half your player model's height")] private float groundCheckLength = 1.05f;
+        //[SerializeField, Tooltip("This value should be slightly more than half your player model's height")] private float groundCheckLength = 1.05f;
 
         private void Awake()
         {
             playerRigidbody = GetComponent<Rigidbody>();
             playerRigidbody.freezeRotation = true;
+            playerRigidbody.isKinematic = false;
             playerRigidbody.useGravity = false;
             playerCollider = GetComponent<Collider>();
             if (playerCollider == null)
                 playerCollider = gameObject.AddComponent<CapsuleCollider>();
+            playerCamera = Camera.main;
         }
 
         /// <summary>
         /// Adds a force as a velocity change, for moving on the XZ plane
         /// </summary>
         /// <param name="_acceleration">The player's movement vector</param>
-        public void AddGroundAcceleration(Vector3 _acceleration)
+        public void SetGroundMovement(Vector3 _acceleration)
         {
             playerRigidbody.MovePosition(playerRigidbody.position + _acceleration);
             playerRigidbody.AddForce(Vector3.down * 19.6f, ForceMode.Acceleration);
@@ -47,8 +50,7 @@ namespace FramedWok.PlayerController
         public void RestrictVelocity(float _maximum, float _rate)
         {
             if(playerRigidbody.velocity.magnitude > _maximum)
-                playerRigidbody.velocity = Vector3.Lerp(playerRigidbody.velocity, Vector3.ClampMagnitude(playerRigidbody.velocity, _maximum), _rate);
-        }
+                playerRigidbody.velocity = Vector3.Lerp(playerRigidbody.velocity, Vector3.ClampMagnitude(playerRigidbody.velocity, _maximum), _rate);        }
 
         /// <summary>
         /// Rotates the player's transform and the camera to point in the new direction
@@ -56,7 +58,7 @@ namespace FramedWok.PlayerController
         public void Rotate(Vector3 _rotation)
         {
             transform.localEulerAngles = new Vector3(0, _rotation.y, 0);
-            Camera.main.transform.localEulerAngles = new Vector3(_rotation.x, 0, 0);
+            playerCamera.transform.localEulerAngles = new Vector3(_rotation.x, 0, 0);
         }
 
         /// <summary>
@@ -86,7 +88,7 @@ namespace FramedWok.PlayerController
         /// <param name="_restrictYAxis">If true, the dash can only travel on the XZ plane</param>
         public Vector3 GetDashDirection(bool _restrictYAxis, Vector3 _moveDir)
         {
-            Vector3 initialDir = Camera.main.transform.TransformPoint(Vector3.forward) - Camera.main.transform.position;
+            Vector3 initialDir = playerCamera.transform.TransformDirection(Vector3.forward);
             Vector3 direction = _moveDir == Vector3.zero ? initialDir : new Vector3(_moveDir.x, initialDir.y, _moveDir.z);
             if (_restrictYAxis)
             {
@@ -98,9 +100,9 @@ namespace FramedWok.PlayerController
         /// <summary>
         /// Returns true if the Raycast pointing downwards hits anything just below the collider
         /// </summary>
-        public bool IsGrounded()
-        {
-            return Physics.Raycast(transform.position, Vector3.down, groundCheckLength);
-        }
+        //public bool IsGrounded()
+        //{
+        //    return Physics.Raycast(transform.position, Vector3.down, groundCheckLength);
+        //}
     }
 }

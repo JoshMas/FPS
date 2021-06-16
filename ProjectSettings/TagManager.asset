@@ -4,13 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Team 0
+  - Team 1
   - Red Player
   - Blue Player
+  - Health Text
+  - Score Text
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 

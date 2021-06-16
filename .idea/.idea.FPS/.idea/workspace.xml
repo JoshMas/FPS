@@ -10,11 +10,34 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/FPS/Scripts/Networking/LobbyManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FPS/Scripts/Player/Scoring.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82EC470C-9131-4935-8AD0-C83AD628910C/6d/866433e6/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FPS/Scripts/Networking/Lobby/PlayerNameCreate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FPS/Scripts/Menus/Lobby.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FPS/Scripts/Networking/FPSPlayerNet.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/PlayerWeapons.cs" />
-      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs" />
       <option value="$PROJECT_DIR$/Assets/FramedWok/PlayerController/PlayerInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/PauseMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Abilities/Defender.cs" />
+      <option value="$PROJECT_DIR$/Assets/FramedWok/PlayerController/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Scoring.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/Weaponry/PlayerWeapons.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/UI.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/BattlecarsPlayerNet.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Player/PlayerStats.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/LobbyPlayerSlot.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Menus/Lobby.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/FPSPlayerNet.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/FPSNetManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/Lobby/PlayerNameCreate.cs" />
+      <option value="$PROJECT_DIR$/Assets/FPS/Scripts/Networking/Lobby/NetworkRoomPlayerLobby.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sOXKlK0rlW7Dob9ivqY4tiI7fk" />
@@ -23,13 +46,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.349689" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Builds/FPS\FPS.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\ryana\Documents\Builds\FPS" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -62,6 +95,18 @@
       <workItem from="1620744571058" duration="1546000" />
       <workItem from="1620785724776" duration="995000" />
       <workItem from="1620787024411" duration="1937000" />
+      <workItem from="1621321619904" duration="11010000" />
+      <workItem from="1621988763993" duration="2592000" />
+      <workItem from="1621991941068" duration="4939000" />
+      <workItem from="1621997447274" duration="402000" />
+      <workItem from="1622000661357" duration="5099000" />
+      <workItem from="1622592258086" duration="15024000" />
+      <workItem from="1622983587345" duration="533000" />
+      <workItem from="1622987191616" duration="608000" />
+      <workItem from="1623135609281" duration="961000" />
+      <workItem from="1623136615183" duration="11279000" />
+      <workItem from="1623727458643" duration="1669000" />
+      <workItem from="1623729336707" duration="3379000" />
     </task>
     <servers />
   </component>
@@ -70,6 +115,18 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
