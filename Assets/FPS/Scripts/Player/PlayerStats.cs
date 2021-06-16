@@ -8,6 +8,7 @@ using Shooter.Player.Weapons;
 using Shooter.Menus;
 
 
+
 namespace Shooter.Player
 {
     [RequireComponent(typeof(PlayerController))]

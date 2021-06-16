@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Shooter.Player;
 
 public class Missile : MonoBehaviour
 {
     public float speed = 1f;
-
+    private PlayerStats player;
     private Transform[] target;
     private GameObject[] otherTeam;
     Transform tMin = null;
@@ -48,7 +49,14 @@ public class Missile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("hit " + other.name + "!");
-
+        if(gameObject.tag == "Red Player" && other.gameObject.tag == "Blue Player")
+        {
+            player.currentHealth -= 50;
+        }
+        if (gameObject.tag == "Blue Player" && other.gameObject.tag == "Red Player")
+        {
+            player.currentHealth -= 50;
+        }
         Destroy(gameObject);
     }
 
