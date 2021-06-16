@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/FPS/Scenes/InGameMenus.unity
-    guid: a304b7f83e7369249800cb98a1323ed9
-  - enabled: 1
     path: Assets/FPS/Scenes/Offline.unity
     guid: 91c5a17fcd8ce734b883090798170b92
+  - enabled: 1
+    path: Assets/FPS/Scenes/InGameMenus.unity
+    guid: a304b7f83e7369249800cb98a1323ed9
   - enabled: 1
     path: Assets/FPS/Scenes/LevelTest.unity
     guid: b163372de585f0245bddeb1f342e3e1c
