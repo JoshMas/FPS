@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Mirror;
+using Telepathy;
 
 namespace Shooter.Networking
 {
@@ -15,10 +16,14 @@ namespace Shooter.Networking
         [Header("Room")]
         [SerializeField] private NetworkRoomPlayerLobby roomPlayerPrefab = null;
 
+        [Header("Game")] [SerializeField] private NetworkGamePlayerLobby gamePlayerPrefab = null;
+        
         public static event Action OnClientConnected;
         public static event Action OnClientDisconnected;
-
+        public static event Action<NetworkConnection> OnServerReadied;
+        
         public List<NetworkRoomPlayerLobby> RoomPlayers { get; } = new List<NetworkRoomPlayerLobby>();
+        public List<NetworkGamePlayerLobby> GamePlayers { get; } = new List<NetworkGamePlayerLobby>();
 
         public override void OnStartServer() => spawnPrefabs = Resources.LoadAll<GameObject>("SpawnablePrefabs").ToList();
 
@@ -119,9 +124,49 @@ namespace Shooter.Networking
             return true;
         }
 
+        public void StartGame()
+        {
+            if (SceneManager.GetActiveScene().path == menuScene)
+            {
+                if (!IsReadyToStart())
+                {
+                    return;
+                }
+                Debug.Log("Hello there");
+                ServerChangeScene("LevelTest");
+                
+            }
+        }
+
+        public override void ServerChangeScene(string newSceneName)
+        {
+            if (SceneManager.GetActiveScene().name == menuScene && newSceneName.StartsWith("Level"))
+            {
+                for (int i = RoomPlayers.Count - 1; i >= 0; i--)
+                {
+                    var conn = RoomPlayers[i].connectionToClient;
+                    var gameplayInstance = Instantiate(gamePlayerPrefab);
+                    gameplayInstance.SetDisplayName(RoomPlayers[i].DisplayName);
+                    
+                    NetworkServer.Destroy(conn.identity.gameObject);
+                    
+                    NetworkServer.ReplacePlayerForConnection(conn, gameplayInstance.gameObject);
+                }
+                
+               
+            }
+            base.ServerChangeScene(newSceneName);
+        }
+
+        public override void OnServerReady(NetworkConnection conn)
+        {
+            base.OnServerReady(conn);
+            
+            OnServerReadied?.Invoke(conn);
+        }
+
+     
         
-
-
     }
 }
 

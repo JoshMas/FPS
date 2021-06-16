@@ -27,12 +27,14 @@ namespace Shooter.Networking
         public bool isReady = false;
 
         private bool isHost;
-
+        
         public bool IsHost
         {
             set
             {
+                
                 isHost = value;
+               
                 startGameButton.gameObject.SetActive(value);
             }
         }
@@ -130,15 +132,24 @@ namespace Shooter.Networking
             Room.NotifyPlayersOfReadyState();
         }
 
-        [Command]
-
+        public void StartGame()
+        {
+            if (!isLocalPlayer) return;
+            if (!isHost) return;
+            
+            CmdStartGame();
+        }
+       
         // Starts the game if the person is the host
+        [Command]
         public void CmdStartGame()
         {
             if(Room.RoomPlayers[0].connectionToClient != connectionToClient)
             {
                 return;
             }
+            
+            Room.StartGame();
         }
     }
 }
